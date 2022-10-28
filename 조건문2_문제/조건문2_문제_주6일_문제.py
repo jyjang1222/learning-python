@@ -1,3 +1,5 @@
+import random
+
 '''
 	[문제]	  
 		철수는 최근 무인도를 구입하고, 그 나라의 왕이 되었다.
@@ -15,4 +17,20 @@
 			7 : 일요일
 			8 : 화요일 
 			...
-'''  
+'''
+
+day = random.randint(1, 31)
+
+if day % 6 == 1:
+	print(day, "일요일")
+if day % 6 == 2:
+	print(day, "화요일")
+if day % 6 == 3:
+	print(day, "수요일")
+if day % 6 == 4:
+	print(day, "목요일")
+if day % 6 == 5:
+	print(day, "금요일")
+if day % 6 == 0:
+	print(day, "토요일")
+

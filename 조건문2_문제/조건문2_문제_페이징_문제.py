@@ -1,3 +1,5 @@
+import random
+
 ''' 
     [문제]
         랜덤 1~2000 사이의 숫자를 저장하고, 다음과 같이 출력하시오.
@@ -15,3 +17,11 @@
         
         1001 ~ 1010 사이 값이면, 101
 '''
+
+num = random.randint(1, 2000)
+
+if num % 10 == 0:
+    print(num, num // 10)
+if num % 10 != 0:
+    print(num, num // 10 + 1)
+
