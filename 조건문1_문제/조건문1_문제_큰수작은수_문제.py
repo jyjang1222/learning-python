@@ -1,3 +1,5 @@
+import random
+
 '''
     [문제]
         1부터 10 사이의 랜덤 숫자 두 개를 출력한다.
@@ -10,3 +12,12 @@
         [예2]
             8, 1
 '''
+
+num1 = random.randint(1, 5)
+num2 = random.randint(6, 10)
+rand = random.randint(0, 1)
+
+if rand == 0:
+    print(num1, num2)
+if rand == 1:
+    print(num2, num1)
