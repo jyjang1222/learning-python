@@ -28,3 +28,15 @@ if max < c:
 
 print(a , " ", b, " ", c)
 print("가장 큰 값 : ", max)
+
+# 내문제풀이 - 1차
+max = 0
+
+if a > b and a > c:
+	max += a
+if b > a and b > c:
+	max += b
+if c > a and c > b:
+	max += c
+
+print(max)

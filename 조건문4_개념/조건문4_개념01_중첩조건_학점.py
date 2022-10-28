@@ -67,3 +67,20 @@ if 81 <= score and score <= 90:
         print("B")
 if 0 <= score and score <= 80:
     print("재시험")
+
+# 내문제풀이 - 1차
+print("---------")
+score = random.randint(0, 100)
+grade = "재시험"
+
+if score >= 98:
+	grade = "A+"
+if 98 > score and score >= 91:
+	grade = "A"
+if 91> score and score >= 88:
+	grade = "B+"
+if 88 > score and score >= 81:
+	grade = "B"
+
+print(score)
+print(grade)

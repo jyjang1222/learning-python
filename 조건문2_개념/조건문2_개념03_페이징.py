@@ -21,8 +21,8 @@
 '''
 import random
 
-# num = random.randint(1, 200)
-num = 40
+num = random.randint(1, 200)
+# num = 40
 
 page = 0
 if num % 10 == 0:
@@ -31,3 +31,10 @@ if num % 10 != 0:
 	page = num - num % 10 + 1
 
 print(num, " ", page)
+
+
+# 내문제풀이 - 1차
+if num % 10 == 0:
+	print((num // 10 - 1) * 10 + 1)
+if num % 10 != 0:
+	print(num // 10 * 10 + 1)
