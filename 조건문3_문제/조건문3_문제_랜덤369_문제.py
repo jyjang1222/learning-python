@@ -21,13 +21,21 @@ num = random.randint(1, 99)
 박수 = ""
 
 # 내가푼풀이 - 1차
-if num >= 10:
-	if num // 10 % 3 == 0:
+# if num >= 10:
+# 	if num // 10 % 3 == 0:
+# 		박수 += "짝"
+# 	if num % 10 % 3 == 0 and num % 10 != 0:
+# 		박수 += "짝"
+# if num < 10:
+# 	if num % 3 == 0:
+# 		박수 += "짝"
+
+# print(num, 박수)
+
+# 2차 풀이
+if num // 10 % 3 == 0 and num >= 10:
 		박수 += "짝"
-	if num % 10 % 3 == 0 and num % 10 != 0:
-		박수 += "짝"
-if num < 10:
-	if num % 3 == 0:
+if num % 10 % 3 == 0 and num % 10 != 0:
 		박수 += "짝"
 
 print(num, 박수)

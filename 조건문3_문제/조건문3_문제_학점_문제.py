@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         0에서 100 사이의 랜덤 숫자를 시험 점수로 저장한다.
@@ -14,3 +15,17 @@
             82 ==> B
             23 ==> 재시험
 '''
+
+num = random.randint(70, 100)
+# num = 88
+
+if num == 100 or num == 98:
+    print(num, "A+")
+elif num >= 91:
+    print(num, "A")
+elif num == 88:
+    print(num, "B+")
+elif num >= 81:
+    print(num, "B")
+else:
+    print(num, "재시험")

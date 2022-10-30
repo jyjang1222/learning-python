@@ -1,3 +1,4 @@
+import random
 '''
 [문제] 		
     철수는 지금 모두의 마블 게임을 하고 있다.
@@ -23,3 +24,27 @@
 
     [4] 20 이상의 값이 나오면 "승리"를 출력한다.
 '''	
+
+current = 9
+num1 = random.randint(1, 6)
+num2 = random.randint(1, 6)
+
+if num1 != num2:
+    current += num1 + num2
+    print("주사위 합이", num1 + num2,"입니다. 현재위치:", current)
+    if current == 14 or current == 15 or current == 16:
+        print("system: 함정에 걸렸습니다. 주사위 2개를 던집니다.")
+        num1 = random.randint(1, 6)
+        num2 = random.randint(1, 6)
+        print("주사위 합이", num1 + num2,"입니다.")
+        if num1 + num2 <= 6:
+            print("6이하이므로 처음위치로 갑니다.")
+            current = 0
+        if num1 + num2 > 7:
+            print("7이상이므로 함정을 탈출합니다. 17칸으로 이동합니다.")
+            current = 17
+if num1 == num2:
+    print("주사위수", num1, num2, "주사위 숫자가 같습니다. 6칸 더 전진")
+    current += num1 + num2 + 6
+if current >= 20:
+    print("현재위치:", current, "승리")
