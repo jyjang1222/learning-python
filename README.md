@@ -6,15 +6,12 @@
 *파이썬만 허용되기때문에 쓰지 않는것이 좋다.
 
 ## 궁금했던 사항
-Q. 조건문에서 식이 길어질 경우 쓰는 방식
+Q. 조건문에서 식이 길어질 경우 쓰는 방식  
 A.  
-<pre><code>
-if (cond1 == 'val1' and cond2 == 'val2' and 
+<pre><code> if (cond1 == 'val1' and cond2 == 'val2' and 
        cond3 == 'val3' and cond4 == 'val4'):
-    do_something
-</code></pre>
-<pre><code>
-if (   
+    do_something </code></pre>
+<pre><code> if (   
        cond1 == 'val1' and cond2 == 'val2' and 
        cond3 == 'val3' and cond4 == 'val4'
    ):
@@ -22,7 +19,6 @@ if (
 
 if    (cond1 == 'val1' and cond2 == 'val2' and 
        cond3 == 'val3' and cond4 == 'val4'):
-    do_something
-</code></pre>
+    do_something </code></pre>
 ## 다시풀어볼 문제
 1. 조건문3_문제_랜덤369
