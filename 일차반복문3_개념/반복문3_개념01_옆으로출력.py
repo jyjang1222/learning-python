@@ -8,14 +8,24 @@
     아래와 같이 표현하면 줄 바꿈이 삭제되어 옆으로 출력된다.         
     print(변수)  ==> print(변수, end=" ")
 '''
+# 풀이
 i = 1
 
 while i <= 30:
-    print(i, end=" ")
+    print(i, end = " ")
     i += 1
 
-print()
-print("Hello, Python!")
+
+
+
+# i = 1
+
+# while i <= 30:
+#     print(i, end=" ")
+#     i += 1
+
+# print()
+# print("Hello, Python!")
 
 
 

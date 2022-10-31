@@ -9,18 +9,35 @@
 	합 = 20
 	개수 = 2
 '''
-total = 0
+
+# 풀이
+i = 5
+sum = 0
 count = 0
 
-i = 5
 while i <= 15:
 	if i % 4 == 0:
-		print(i, end=" ")
-		total += i
+		print(i)
+		sum += i
 		count += 1
 	i += 1
-print()
-print("total =", total)
-print("count =", count)
+
+print(sum, count)
+
+
+
+# total = 0
+# count = 0
+
+# i = 5
+# while i <= 15:
+# 	if i % 4 == 0:
+# 		print(i, end=" ")
+# 		total += i
+# 		count += 1
+# 	i += 1
+# print()
+# print("total =", total)
+# print("count =", count)
 
 

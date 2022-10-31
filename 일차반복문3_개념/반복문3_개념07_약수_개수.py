@@ -9,19 +9,39 @@
 	개수 =  8
 '''
 
+# 풀이
 num = 30
-
-total = 0
+i = 1
+sum = 0
 count = 0
 
-i = 1
 while i <= num:
 	if num % i == 0:
-		print(i, end=" ")
-		total += i
+		sum += i
 		count += 1
 	i += 1
-print()
-print("total =", total)
-print("count =", count)
+
+print(sum, count)
+
+
+
+
+
+
+
+# num = 30
+
+# total = 0
+# count = 0
+
+# i = 1
+# while i <= num:
+# 	if num % i == 0:
+# 		print(i, end=" ")
+# 		total += i
+# 		count += 1
+# 	i += 1
+# print()
+# print("total =", total)
+# print("count =", count)
 

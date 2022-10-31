@@ -6,15 +6,30 @@
 	합 = 39
 '''
 
-num = 18
-total = 0
+# 풀이
 
+num = 18
 i = 1
-while i <= num:
+sum = 0
+
+while i <= 18:
 	if num % i == 0:
-		print(i, end=" ")
-		total += i
+		sum += i
 	i += 1
 
-print()
-print("total =", total)
+print(sum)
+
+
+
+# num = 18
+# total = 0
+
+# i = 1
+# while i <= num:
+# 	if num % i == 0:
+# 		print(i, end=" ")
+# 		total += i
+# 	i += 1
+
+# print()
+# print("total =", total)
