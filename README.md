@@ -17,7 +17,7 @@ A.
    ):
     do_something
 
-if    (cond1 == 'val1' and cond2 == 'val2' and 
+if (cond1 == 'val1' and cond2 == 'val2' and 
        cond3 == 'val3' and cond4 == 'val4'):
     do_something </code></pre>
 ## 다시풀어볼 문제
