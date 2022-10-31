@@ -25,3 +25,16 @@
     2
     1
 '''
+
+i = 1
+num = 20
+
+while i <= 20:
+    if 5 <= num and num <= 15 and num % 3 == 0:
+        print("안녕")
+        num -= 1
+        i += 1
+        continue
+    print(num)
+    num -= 1
+    i += 1

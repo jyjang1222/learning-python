@@ -16,3 +16,18 @@
         1
 '''
 
+
+
+
+num = 10
+i = 1
+
+while i <= 10:
+    if num % 3 == 0:
+        print("안녕")
+        num -= 1
+        i += 1
+        continue
+    print(num)
+    num -= 1
+    i += 1

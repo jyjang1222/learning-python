@@ -14,3 +14,13 @@
         25 서울
         ...
 '''
+
+i = 1
+
+while i <= 30:
+    if not(5 < i and i < 25):
+        print(i, "서울")
+        i += 1
+    else:
+        print(i, "경기")
+        i += 1

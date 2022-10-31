@@ -13,3 +13,16 @@
         224
         225
 '''
+
+i = 100
+
+while i <= 300:
+    if i % 8 == 0 and i % 100 // 10 == 2:
+        print(i)
+        i += 1
+        continue
+    if i % 9 == 0 and i % 10 == 5:
+        print(i)
+        i += 1
+        continue
+    i += 1

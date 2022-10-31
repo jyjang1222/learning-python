@@ -14,3 +14,16 @@
 		2
 		1
 '''
+
+num = 10
+i = 1
+
+while i <= 10:
+	if 3 <= num and num <= 6:
+		print("a")
+		num -= 1
+		i += 1
+		continue
+	print(num)
+	num -= 1
+	i += 1
