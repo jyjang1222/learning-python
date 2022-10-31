@@ -5,3 +5,11 @@
 	[정답]
 		45
 '''
+
+num = 180
+i = 1
+
+while i <= num:
+	if num % i == 0 and i % 100 // 10 == 4:
+		print(i)
+	i += 1

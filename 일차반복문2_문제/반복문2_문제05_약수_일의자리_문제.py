@@ -6,3 +6,11 @@
 		4
 		24
 '''
+
+num = 120
+i = 1
+
+while i <= num:
+	if num % i == 0 and i % 10 == 4:
+		print(i)
+	i += 1

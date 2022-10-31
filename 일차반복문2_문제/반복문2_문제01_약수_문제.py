@@ -9,3 +9,11 @@
 		9
 		18
 '''
+
+i = 1
+num = 18
+
+while i <= num:
+	if num % i == 0:
+		print(i)
+	i += 1

@@ -5,3 +5,12 @@
 	[정답]
 		500
 '''
+
+num = 1000
+i = 1
+
+while i <= num:
+	if 200 <= i and i <= 800:
+		if num % i == 0 and i % 1000 // 100 == 5:
+			print(i)
+	i += 1

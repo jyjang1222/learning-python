@@ -5,3 +5,11 @@
 	[정답]
 		495
 '''
+
+i = 1
+num = 1980
+
+while i <= num:
+	if num % i == 0 and i % 1000 // 100 == 4:
+		print(i)
+	i += 1
