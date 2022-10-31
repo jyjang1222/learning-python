@@ -9,3 +9,17 @@
         total = 171
         count = 1
 '''
+
+# 풀이
+num = 200
+i = 100
+sum = 0
+count = 0
+
+while i <= num:
+	if i % 9 == 0 and i % 100 // 10 == 7:
+		sum += i
+		count += 1
+	i += 1 
+
+print(sum, count)

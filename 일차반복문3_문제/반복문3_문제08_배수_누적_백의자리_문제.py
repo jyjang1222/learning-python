@@ -9,3 +9,17 @@
 		total = 10512
 		count = 6
 '''
+
+# 풀이
+num = 2000
+i = 1000
+sum = 0
+count = 0
+
+while i <= num:
+	if i % 16 == 0 and i % 1000 // 100 == 7:
+		sum += i
+		count += 1
+	i += 1 
+
+print(sum, count)

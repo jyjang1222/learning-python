@@ -9,3 +9,17 @@
 		total = 72
 		count = 8
 '''
+
+# 풀이
+num = 30
+i = 1
+sum = 0
+count = 0
+
+while i <= num:
+	if num % i == 0:
+		sum += i
+		count += 1
+	i += 1
+
+print(sum, count)

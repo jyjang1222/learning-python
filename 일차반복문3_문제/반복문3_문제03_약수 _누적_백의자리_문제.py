@@ -9,3 +9,17 @@
         total = 400
         count = 1
 '''
+
+# 풀이
+num = 2000
+i = 1
+sum = 0
+count = 0
+
+while i <= num:
+	if num % i == 0 and i % 1000 // 100 == 4:
+		sum += i
+		count += 1
+	i += 1
+
+print(sum, count)

@@ -9,3 +9,17 @@
 		total = 2277
 		count = 11	
 '''
+
+# 풀이
+num = 300
+i = 100
+sum = 0
+count = 0
+
+while i <= num:
+	if i % 9 == 0 and i % 2 == 1:
+		sum += i
+		count += 1
+	i += 1 
+
+print(sum, count)

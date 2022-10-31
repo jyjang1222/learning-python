@@ -9,3 +9,17 @@
         total = 588
         count = 4
 '''
+
+# 풀이
+num = 200
+i = 100
+sum = 0
+count = 0
+
+while i <= num:
+	if i % 6 == 0 and i % 10 == 2:
+		sum += i
+		count += 1
+	i += 1 
+
+print(sum, count)

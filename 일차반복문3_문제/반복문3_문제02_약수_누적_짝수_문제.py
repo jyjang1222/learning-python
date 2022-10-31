@@ -8,3 +8,17 @@
 		total = 26
 		count = 3
 '''
+
+# 풀이
+num = 18
+i = 1
+sum = 0
+count = 0
+
+while i <= num:
+	if num % i == 0 and i % 2 == 0:
+		sum += i
+		count += 1
+	i += 1
+
+print(sum, count)
