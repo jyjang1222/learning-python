@@ -23,3 +23,21 @@ while i <= 4:
     print(num)
     num -= 1
     i += 1
+
+# while문 연습
+
+j = 6
+while j >= 2:
+    print(j)
+    j -= 1
+    # 65432
+    
+
+k = 6
+j = 2
+
+while j <= 6:
+    print(num)
+    # 65432
+    j += 1
+    k -= 1

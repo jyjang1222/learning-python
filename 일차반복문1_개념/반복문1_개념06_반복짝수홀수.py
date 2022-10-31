@@ -14,16 +14,28 @@
 	홀수
 	10
 '''
-
+# 풀이
 i = 1
 while i <= 10:
-	# 홀수 일 때
 	if i % 2 == 1:
 		print("홀수")
-	# 짝수 일 때
-	if i % 2 == 0:
-		print(i)
+		i += 1
+		continue
+	print(i)
 	i += 1
+
+
+
+
+# i = 1
+# while i <= 10:
+# 	# 홀수 일 때
+# 	if i % 2 == 1:
+# 		print("홀수")
+# 	# 짝수 일 때
+# 	if i % 2 == 0:
+# 		print(i)
+# 	i += 1
 
 
 

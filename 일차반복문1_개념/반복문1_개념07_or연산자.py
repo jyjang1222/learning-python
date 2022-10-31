@@ -24,13 +24,27 @@
     aa
     aa
 '''
-
+# 풀이
 i = 1
 while i <= 20:
-    # 5이하 이거나 15이상일 때
-    if 15 <= i or i <= 5:
+    if not(5 < i and i < 15):
         print("aa")
-    # 5초과 그리고 15미만일 때
-    if 5 < i and i < 15:
-        print(i)
+        i += 1
+        continue
+    print(i)
     i += 1
+
+
+
+
+
+
+# i = 1
+# while i <= 20:
+#     # 5이하 이거나 15이상일 때
+#     if 15 <= i or i <= 5:
+#         print("aa")
+#     # 5초과 그리고 15미만일 때
+#     if 5 < i and i < 15:
+#         print(i)
+#     i += 1

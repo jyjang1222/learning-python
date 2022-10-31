@@ -15,15 +15,28 @@
 	10
 '''
 
+# 풀이
 i = 1
 while i <= 10:
-	# 3의 배수 O
 	if i % 3 == 0:
 		print("삼의배수")
-	# 3의 배수 X
-	if i % 3 != 0:
-		print(i)
-	i = i + 1
+		i += 1
+		continue
+	print(i)
+	i += 1
+
+
+
+
+# i = 1
+# while i <= 10:
+# 	# 3의 배수 O
+# 	if i % 3 == 0:
+# 		print("삼의배수")
+# 	# 3의 배수 X
+# 	if i % 3 != 0:
+# 		print(i)
+# 	i = i + 1
 
 
 
