@@ -16,11 +16,25 @@
     ....
     8 % 8       약수
 '''
-num = 8
+# 풀이
 
 i = 1
-while i <= num:
-    if num % i == 0:
+
+while i <= 8:
+    if 8 % i == 0:
         print(i)
     i += 1
+
+
+
+
+
+
+# num = 8
+
+# i = 1
+# while i <= num:
+#     if num % i == 0:
+#         print(i)
+#     i += 1
 

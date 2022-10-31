@@ -17,7 +17,6 @@ i = 1
 while i <= 30:
     if i % 2 == 1:
         print(i, "남")
-        i += 1
     if i % 2 == 0:
         print(i, "여")
-        i += 1
+    i += 1

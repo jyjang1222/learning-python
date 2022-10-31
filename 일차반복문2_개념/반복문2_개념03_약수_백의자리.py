@@ -9,12 +9,30 @@
 	1980 % 1000 = 980
 	980 // 100 = 9
 '''
-num = 1980
+
+# 풀이
 
 i = 1
+num = 1980
+
 while i <= num:
-	if num % i == 0:
-		if i % 1000 // 100 == 4:
-			print(i)
+	if num % i == 0 and i % 1000 // 100 == 4:
+		print(i)
 	i += 1
+
+
+
+
+
+
+
+
+# num = 1980
+
+# i = 1
+# while i <= num:
+# 	if num % i == 0:
+# 		if i % 1000 // 100 == 4:
+# 			print(i)
+# 	i += 1
 

@@ -5,20 +5,36 @@
 	1
 	3
 '''
-num = 48
 
+# 풀이
 i = 1
-while i <= num:
-    if num % i == 0 and i % 2 == 1:
+
+while i <= 48:
+    if 48 % i == 0 and i % 2 == 1:
         print(i)
     i += 1
 
-print("------------")
 
-i = 1
-while i <= num:
-    if num % i == 0:
-        if i % 2 == 1:
-            print(i)
-    i += 1
+
+
+
+
+
+
+# num = 48
+
+# i = 1
+# while i <= num:
+#     if num % i == 0 and i % 2 == 1:
+#         print(i)
+#     i += 1
+
+# print("------------")
+
+# i = 1
+# while i <= num:
+#     if num % i == 0:
+#         if i % 2 == 1:
+#             print(i)
+#     i += 1
 

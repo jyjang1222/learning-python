@@ -9,12 +9,29 @@
 	327 % 100 = 27
 	27 // 10  = 2
 '''
-num = 900
+
+# 풀이
 
 i = 1
-while i <= num:
+num = 900
+
+while i <= 500:
 	if num % i == 0:
 		if 100 <= i and i <= 500:
 			if i % 100 // 10 == 8:
 				print(i)
 	i += 1
+
+
+
+
+
+# num = 900
+
+# i = 1
+# while i <= num:
+# 	if num % i == 0:
+# 		if 100 <= i and i <= 500:
+# 			if i % 100 // 10 == 8:
+# 				print(i)
+# 	i += 1

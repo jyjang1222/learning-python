@@ -26,10 +26,8 @@ i = 1
 while i <= 30:
     if i <= 5:
         print(i, "과장")
-        i += 1
     elif i <= 15:
         print(i, "대리")
-        i += 1
     else:
         print(i, "사원")
-        i += 1
+    i += 1
