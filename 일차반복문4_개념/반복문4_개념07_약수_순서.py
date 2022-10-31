@@ -5,15 +5,30 @@
 [정답]
 	25
 '''
-count = 0
 
+# 풀이
+num = 0
+count = 0
 i = 1
-while i <= 75:
+
+while True:
 	if 75 % i == 0:
 		count += 1
-
+		num = i
 		if count == 5:
-			print(i)
+			print(num)
+			break
 	i += 1
+
+# count = 0
+
+# i = 1
+# while i <= 75:
+# 	if 75 % i == 0:
+# 		count += 1
+
+# 		if count == 5:
+# 			print(i)
+# 	i += 1
 
 

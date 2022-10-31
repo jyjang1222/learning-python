@@ -5,15 +5,40 @@
 [정답]
 	99
 '''
-count = 0
+
+# 풀이
 
 i = 1
-while i <= 1980:
-	if 1980 % i == 0:
-		if i % 100 // 10 == 9:
-			count += 1
+num = 1980
+count = 0
 
-			if count == 2:
-				print(i)
-
+while i <= num:
+	if num % i == 0 and i % 100 // 10 == 9:
+		count += 1
+		if count == 2:
+			print(i)
+			break
 	i += 1
+
+
+
+
+
+
+
+
+
+
+
+# count = 0
+
+# i = 1
+# while i <= 1980:
+# 	if 1980 % i == 0:
+# 		if i % 100 // 10 == 9:
+# 			count += 1
+
+# 			if count == 2:
+# 				print(i)
+
+# 	i += 1

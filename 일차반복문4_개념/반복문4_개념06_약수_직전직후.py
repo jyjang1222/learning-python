@@ -8,20 +8,36 @@
     56
 '''
 
-front = 0
-back = 0
+# 풀이 (푸는데 시간 좀 걸렸음)
 
+num = 0
+num2 = 0
 i = 1
-while i <= 280:
-    if 280 % i == 0:
-        if i < 50:
-            front = i
-        if i >= 50 and back == 0:
-            back = i
-    i += 1
 
-print(front)
-print(back)
+while i <= 280:
+    if i < 50 and 280 % i == 0:
+        num = i
+    if i > 50 and 280 % i == 0:
+        num2 = i
+        break
+    i += 1
+    
+print(num, num2)
+
+# front = 0
+# back = 0
+
+# i = 1
+# while i <= 280:
+#     if 280 % i == 0:
+#         if i < 50:
+#             front = i
+#         if i >= 50 and back == 0:
+#             back = i
+#     i += 1
+
+# print(front)
+# print(back)
 
 
 

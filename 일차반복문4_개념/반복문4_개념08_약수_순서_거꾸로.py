@@ -5,14 +5,30 @@
 [정답]
 	142
 '''
+
+# 풀이
+
+i = 1
+j = 852
 count = 0
 
-i = 852
-while i >= 1:
-	if 852 % i == 0:
+while i <= 852:
+	if 852 % j == 0:
 		count += 1
-
 		if count == 5:
-			print(i)
+			print(j)
+			break
+	j -= 1
+	i += 1
 
-	i -= 1
+# count = 0
+
+# i = 852
+# while i >= 1:
+# 	if 852 % i == 0:
+# 		count += 1
+
+# 		if count == 5:
+# 			print(i)
+
+# 	i -= 1
