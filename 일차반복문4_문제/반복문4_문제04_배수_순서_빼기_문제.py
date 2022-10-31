@@ -6,8 +6,38 @@
     [정답]       
         26
 '''
+
+i = 13
+count = 0
+num1 = 0
+num2 = 0
+
+while True:
+    count += 1
+    if count == 4:
+        num1 = i
+    if count == 6:
+        num2 = i
+        print(num2, num1, num2 - num1)
+        break
+    i += 13
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
-    [설명]
+    [힌트]
         아래 식은 카운트를 한 번만 사용하는 것이 아니라 
         두 번 사용한 경우이다.
 '''
+
+

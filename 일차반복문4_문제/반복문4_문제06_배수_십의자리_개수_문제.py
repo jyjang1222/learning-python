@@ -6,3 +6,15 @@
 	[정답]
 		1056 1152 1256 1352 
 '''
+
+
+i = 8
+count = 0
+
+while True:
+	if i % 8 == 0 and i >= 1000 and i % 100 // 10 == 5:
+		count += 1
+		print(i)
+		if count == 4:
+			break
+	i += 8

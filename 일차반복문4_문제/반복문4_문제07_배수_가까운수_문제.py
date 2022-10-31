@@ -5,3 +5,22 @@
  	[정답]
 		102
 '''
+
+i = 6
+num1 = 0
+num2 = 0
+tmp = 0
+
+
+while True:
+	if i <= 100:
+		num1 = i
+	if i > 100:
+		num2 = i
+	i += 6
+
+tmp = 100 - num1
+	
+if tmp < num2 - 100:
+	print(tmp)
+print(i)

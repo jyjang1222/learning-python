@@ -5,3 +5,11 @@
 	[정답]
  		36
 '''
+
+i = 1
+
+while True:
+	if i % 9 == 0 and i % 10 == 6:
+		print(i)
+		break
+	i += 1

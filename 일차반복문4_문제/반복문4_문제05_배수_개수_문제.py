@@ -7,3 +7,13 @@
 		105 112 119 126 133 
 '''
 
+i = 7
+count = 0
+
+while True:
+	if i % 7 == 0 and i >= 100:
+		count += 1
+		print(i)
+		if count == 5:
+			break
+	i += 7
