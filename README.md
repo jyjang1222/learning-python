@@ -7,18 +7,6 @@
 
 ## 궁금했던 사항
 Q. 조건문에서 식이 길어질 경우 쓰는 방식  
-A.  
-<pre><code> if (cond1 == 'val1' and cond2 == 'val2' and 
-       cond3 == 'val3' and cond4 == 'val4'):
-    do_something </code></pre>
-<pre><code> if (   
-       cond1 == 'val1' and cond2 == 'val2' and 
-       cond3 == 'val3' and cond4 == 'val4'
-   ):
-    do_something
-
-if (cond1 == 'val1' and cond2 == 'val2' and 
-       cond3 == 'val3' and cond4 == 'val4'):
-    do_something </code></pre>
+A. 조건이 짧아지도록 식을 짧아지게 하거나(변수를 만들어서) 조건을 중첩하도록 하자
 ## 다시풀어볼 문제
 1. 조건문3_문제_랜덤369
