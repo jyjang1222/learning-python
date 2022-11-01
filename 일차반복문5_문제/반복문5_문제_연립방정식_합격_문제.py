@@ -8,3 +8,14 @@
 	[정답]
 		94
 '''
+
+score1 = 80
+score2 = 72
+score3 = 0
+# avg = (score1 + score2 + score3) / 3
+
+while True:
+	if (score1 + score2 + score3) / 3 >= 82:
+		print(score3)
+		break
+	score3 += 1
