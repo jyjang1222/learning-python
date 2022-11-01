@@ -5,3 +5,10 @@
 	900
 '''
 
+i = 0
+
+while True:
+	i += 45
+	if i % 60 == 0 and i % 75 == 0:
+		print(i)
+		break

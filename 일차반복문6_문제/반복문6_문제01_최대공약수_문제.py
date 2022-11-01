@@ -4,3 +4,13 @@
 	[정답]
 		15
 '''
+
+i = 1
+max = 0
+
+while i <= 75:
+	if 45 % i == 0 and 60 % i == 0 and 75 % i == 0:
+		max = i
+	i += 1
+
+print(max)
