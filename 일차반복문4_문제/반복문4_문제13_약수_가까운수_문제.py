@@ -6,3 +6,20 @@
 	[정답]
 		100
 '''
+
+i = 2
+prev = 0
+next = 0
+
+while i <= 200:
+	if i <= 80 and 200 % i == 0:
+		prev = i
+	if i > 80 and 200 % i == 0:
+		next = i
+		break
+	i += 2
+
+if next - 80 > 80 - prev:
+	print(prev)
+else:
+	print(next)

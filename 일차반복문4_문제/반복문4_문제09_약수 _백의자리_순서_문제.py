@@ -5,3 +5,15 @@
 	[정답]
 		396
 '''
+
+i = 1
+count = 0
+num = 1980
+
+while i <= num:
+	if num % i == 0 and i % 1000 // 100 == 3:
+		count += 1
+		if count == 2:
+			print(i)
+			break
+	i += 1
