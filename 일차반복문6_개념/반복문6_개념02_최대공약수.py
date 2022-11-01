@@ -4,13 +4,27 @@
 [출력]
 	45
 '''
-answer = 0
+
+# 풀이 
 
 i = 1
-while i <= 45:
+max = 0
+
+while i <= 90:
 	if 90 % i == 0 and 45 % i == 0:
-		answer = i
-		# print(i, end=" ")
+		max = i
 	i += 1
 
-print(answer)
+print(max)
+
+
+# answer = 0
+
+# i = 1
+# while i <= 45:
+# 	if 90 % i == 0 and 45 % i == 0:
+# 		answer = i
+# 		# print(i, end=" ")
+# 	i += 1
+
+# print(answer)

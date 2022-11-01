@@ -4,17 +4,32 @@
 [정답]
 	60 120 180 240 300 
 '''
+
+# 풀이
+
+num = 0
 count = 0
 
-i = 12
-
-run = 1
-while run == 1:
-	if i % 12 == 0 and i % 15 == 0:
-		print(i, end=" ")
+while True:
+	num += 12
+	if num % 12 == 0 and num % 15 == 0:
 		count += 1
-
+		print(num, end = " ")
 		if count == 5:
-			run = 0
-	i += 1
+			break
+
+
+# count = 0
+
+# i = 12
+
+# run = 1
+# while run == 1:
+# 	if i % 12 == 0 and i % 15 == 0:
+# 		print(i, end=" ")
+# 		count += 1
+
+# 		if count == 5:
+# 			run = 0
+# 	i += 1
 

@@ -8,11 +8,22 @@
 [정답]
 	24
 '''
-i = 8
 
-run = 1
-while run == 1:
-	if i % 8 == 0 and i % 12 == 0:
-		print(i)
-		run = 0
-	i += 1
+# 풀이
+
+num = 0
+
+while True:
+	num += 8
+	if num % 12 == 0:
+		print(num)
+		break
+
+# i = 8
+
+# run = 1
+# while run == 1:
+# 	if i % 8 == 0 and i % 12 == 0:
+# 		print(i)
+# 		run = 0
+# 	i += 1
