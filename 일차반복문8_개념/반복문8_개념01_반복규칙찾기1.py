@@ -8,12 +8,18 @@
 		4 5 6
 '''
 
-a = 0
-b = 1
-c = 2
+i = 0
 
-while a < 5:
-	print(a, b, c)
-	a += 1
-	b += 1
-	c += 1
+while i <= 4:
+	print(i, i + 1, i + 2)
+	i += 1
+
+# a = 0
+# b = 1
+# c = 2
+
+# while a < 5:
+# 	print(a, b, c)
+# 	a += 1
+# 	b += 1
+# 	c += 1
