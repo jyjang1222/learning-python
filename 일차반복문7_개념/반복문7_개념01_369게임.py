@@ -15,24 +15,46 @@
 '''
 
 i = 1
+박수 = ""
+
 while i <= 50:
-    십의자리 = i // 10
-    일의자리 = i % 10
-
-    count = 0
-    if 십의자리 == 3 or 십의자리 == 6 or 십의자리 == 9:
-        count += 1
-    if 일의자리 == 3 or 일의자리 == 6 or 일의자리 == 9:
-        count += 1  
-
-    if count == 2:
-        print("짝짝")  
-    if count == 1:
-        print("짝")
-    if count == 0:
-        print(i)
-        
+    박수 = ""
+    # 기존코드
+    # if not(i % 10 == 3 or i % 10 == 6 or i % 10 == 9):
+    #     if not(i // 10 == 3 or i // 10 == 6 or i // 10 == 9):
+    #         print(i, end = "")
+    # ----------------------
+    if i // 10 == 3 or i // 10 == 6 or i // 10 == 9:
+        박수 += "짝"
+    if i % 10 == 3 or i % 10 == 6 or i % 10 == 9:
+        박수 += "짝"
+    # 정답을 본후 코드개선사항
+    if 박수 == "":
+        print(i, end = "")
+    # -----------------------
+    print(박수)
     i += 1
+
+
+# i = 1
+# while i <= 50:
+#     십의자리 = i // 10
+#     일의자리 = i % 10
+
+#     count = 0
+#     if 십의자리 == 3 or 십의자리 == 6 or 십의자리 == 9:
+#         count += 1
+#     if 일의자리 == 3 or 일의자리 == 6 or 일의자리 == 9:
+#         count += 1  
+
+#     if count == 2:
+#         print("짝짝")  
+#     if count == 1:
+#         print("짝")
+#     if count == 0:
+#         print(i)
+        
+#     i += 1
 
 
 

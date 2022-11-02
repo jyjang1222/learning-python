@@ -59,4 +59,23 @@
 		50 66
 '''
 
-    
+i = 1
+floor = 1
+count = 0
+
+while i <= 50:
+	if i // 10 == 4:
+		if floor % 10 == 4:
+			floor += 1
+		print(i, floor)
+		floor += 1
+		i += 1
+		continue
+	if i % 10 == 4 :
+		floor += 1
+	if floor == 40:
+		floor += 10
+	print(i, floor)
+
+	floor += 1
+	i += 1

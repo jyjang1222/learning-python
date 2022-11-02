@@ -13,3 +13,15 @@
             98 1
             99 2
 '''
+
+i = 1
+count = 0
+
+while i < 100:
+    count = 0
+    if i % 10 == 3 or i % 10 == 6 or i % 10 == 9:
+        count += 1
+    if i // 10 == 3 or i // 10 == 6 or i // 10 == 9:
+        count += 1
+    print(i, count)
+    i += 1
