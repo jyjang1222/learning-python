@@ -33,8 +33,8 @@ while 철수위치 >= 1:
 	
 	if turn == True:
 		print("왼발 =", 철수위치)
-	if turn == False:
-		print("오른발 =", 철수위치)
+	# if turn == False:
+	# 	print("오른발 =", 철수위치)
 
 	철수위치 -= 1
 

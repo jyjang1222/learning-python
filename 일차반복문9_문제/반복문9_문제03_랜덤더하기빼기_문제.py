@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		숫자 5개를 랜덤으로 뽑고, 
@@ -18,3 +19,17 @@
 
 r = 0
 op = 0
+
+i = 1
+while i <= 5:
+	r = random.randint(1, 9)
+	print(r, end = " ")
+	if i == 5:
+		break
+	op = random.randint(0, 1)
+	if op == 0:
+		op = "+"
+	else:
+		op = "-"
+	print(op, end = " ")
+	i += 1

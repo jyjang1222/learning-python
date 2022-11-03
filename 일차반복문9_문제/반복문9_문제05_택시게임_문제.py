@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		철수의 위치는 y = 0 , x = 0 이다.
@@ -17,3 +18,18 @@
 '''
 y = 0
 x = 0
+count = 0
+
+while count <= 5:
+	num = random.randint(1, 4)
+	if num == 1:
+		y += 1
+	if num == 2:
+		x += 1
+	if num == 3:
+		y -= 1
+	if num == 4:
+		x -= 1
+	count += 1
+
+print(x, y)

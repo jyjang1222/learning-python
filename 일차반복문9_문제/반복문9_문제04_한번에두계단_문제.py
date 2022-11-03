@@ -14,7 +14,20 @@
 '''
 
 철수위치 = 50
+turn = True
+count = 0
+
 
 while 철수위치 > 0:
-	
+	if count % 5 == 0 and count != 0:  # 발바꿔서 출력
+		print()
+		turn = not(turn)
+	if turn == True:  # 왼발
+		if 철수위치 % 4 == 0:
+			print("왼", 철수위치, end = " ")
+			count += 1
+	if turn == False:  # 왼발
+		if 철수위치 % 4 == 2:
+			print("우", 철수위치, end = " ")
+			count += 1
 	철수위치 -= 2

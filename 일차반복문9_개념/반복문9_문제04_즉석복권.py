@@ -14,8 +14,6 @@ import random
 
 # 풀이
 
-# arr = [1, 7]
-tmp = 0
 count = 0
 
 i = 1
@@ -31,13 +29,6 @@ if count >= 3:
 	print("당첨")
 else:
 	print("꽝")
-
-
-
-
-
-
-
 
 
 # 정답
