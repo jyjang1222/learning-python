@@ -1,3 +1,5 @@
+import random
+
 '''
 [문제] 
 	랜덤으로 1~10을 10번 출력하고, 가장 큰 수를 출력하시오. 
@@ -9,25 +11,44 @@
 	반복 횟수 = 2
 '''
 
-import random
-
-# 3 5 2 7 10 7 8 7 6 10 
+# 풀이
+num = 0
 max = 0
 count = 0
 
 i = 0
-while i < 10:
-	r = random.randint(1, 10)
-	if max < r:
-		max = r
-		count = 0
-	if max == r:
+while i <= 10:
+	num = random.randint(1, 10)
+	if num == max:
 		count += 1
-
-	print(r, end=" ")
-
+	if num > max:
+		max = num
+	print(num, end = " ")
 	i += 1
 
-print()
-print("가장 큰 수 =", max)
+print("\n가장 큰 수", max)
 print(count)
+
+
+# import random
+
+# # 3 5 2 7 10 7 8 7 6 10 
+# max = 0
+# count = 0
+
+# i = 0
+# while i < 10:
+# 	r = random.randint(1, 10)
+# 	if max < r:
+# 		max = r
+# 		count = 0
+# 	if max == r:
+# 		count += 1
+
+# 	print(r, end=" ")
+
+# 	i += 1
+
+# print()
+# print("가장 큰 수 =", max)
+# print(count)

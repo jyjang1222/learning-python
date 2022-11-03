@@ -1,3 +1,5 @@
+import random
+
 '''
 [문제]
 	랜덤으로 1 또는 7을 10번 출력한다. 
@@ -10,31 +12,58 @@
 	꽝
 '''
 
-import random
+# 풀이
 
+# arr = [1, 7]
+tmp = 0
 count = 0
 
-result = False
-
-# 1 1 1 7 7 7 1 1 7 7 
-i = 0
-while i < 10:
-	r = random.randint(1, 2)
-	if r == 2:
-		r = 7
-	print(r, end=" ")
-
-	if r == 7:
+i = 1
+while i <= 10:
+	num = random.randint(0, 1)
+	if num == 0:
+		num = 7
 		count += 1
-	if r != 7:
-		count = 0
-	
-	if count == 3:
-		result = True
-
+	print(num, end =" ")
 	i += 1
 
-if result == True:
+if count >= 3:
 	print("당첨")
-if result == False:
+else:
 	print("꽝")
+
+
+
+
+
+
+
+
+
+# 정답
+# count = 0
+
+# result = False
+
+# # 1 1 1 7 7 7 1 1 7 7 
+# i = 0
+# while i < 10:
+# 	r = random.randint(1, 2)
+# 	if r == 2:
+# 		r = 7
+# 	print(r, end=" ")
+
+# 	if r == 7:
+# 		count += 1
+# 	if r != 7:
+# 		count = 0
+	
+# 	if count == 3:
+# 		result = True
+
+# 	i += 1
+
+# if result == True:
+# 	print("당첨")
+# if result == False:
+# 	print("꽝")

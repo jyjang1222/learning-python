@@ -4,27 +4,24 @@
 		
 		[예시]
 			0 1
-
 			1 2
 			2 2
-
 			3 3
 			4 3
 			5 3
-
 			6 4
 			7 4
 			8 4
 			9 4
 '''
 
-i = 0
+count = 0
 
-j = 1
-while j <= 4:
-	k = 1
-	while k <= j:
-		print(i, j)
-		i += 1
-		k += 1
-	j += 1
+i = 1
+while i <= 4:
+	j = 1
+	while j <= i:
+		print(count, i)
+		count += 1
+		j += 1
+	i += 1

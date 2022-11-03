@@ -1,3 +1,4 @@
+import random
 '''
 [문제]
 	2~5 사이의 숫자를 랜덤으로 저장하고,
@@ -14,21 +15,41 @@
 		랜덤 ==> 5
 		[출력] 6 + 5 + 2 + 7 + 8 = 28
 '''
-import random
 
-count = random.randint(2, 5)
-print("반복 횟수 =", count)
+# 풀이
 
-total = 0
+quiz = random.randint(2, 5)
+num = random.randint(1, 9)
+sum = 0
+count = 0
 
-i = 0
-while i < count:
-	r = random.randint(1, 9)
-	total += r
-	print(r, end="")
-
-	if i < count - 1:
-		print(end=" + ")
+i = 1
+while i <= quiz:
+	print(num, end = " ")
+	sum += num
+	if i == quiz:
+		break
+	print("+", end = " ")
 	i += 1
 
-print(" =", total)
+print("=", sum)
+
+
+# 정답
+
+# count = random.randint(2, 5)
+# print("반복 횟수 =", count)
+
+# total = 0
+
+# i = 0
+# while i < count:
+# 	r = random.randint(1, 9)
+# 	total += r
+# 	print(r, end="")
+
+# 	if i < count - 1:
+# 		print(end=" + ")
+# 	i += 1
+
+# print(" =", total)
