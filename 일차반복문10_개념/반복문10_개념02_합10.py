@@ -1,3 +1,4 @@
+import random
 '''
 [문제]
     1~9 사이의 랜덤 숫자 2개를 저장하고
@@ -7,20 +8,43 @@
     y = 1
 '''
 
-import random
+# 풀이
+num1 = 0
+num2 = 0
 
-x = 0
-y = 0
+while True:
+    num1 = random.randint(1, 9)
+    num2 = random.randint(1, 9)
+    sum = num1 + num2
+    if sum == 10:
+        print(num1, num2, sum)
+        break
 
-run = 1
-while run == 1:
-    x = random.randint(1, 9)
-    y = random.randint(1, 9)
 
-    total = x + y
-    if total == 10:
-        run = 0
-print("x =", x)
-print("y =", y)
+
+
+
+
+
+
+
+
+
+
+
+
+# x = 0
+# y = 0
+
+# run = 1
+# while run == 1:
+#     x = random.randint(1, 9)
+#     y = random.randint(1, 9)
+
+#     total = x + y
+#     if total == 10:
+#         run = 0
+# print("x =", x)
+# print("y =", y)
 
 

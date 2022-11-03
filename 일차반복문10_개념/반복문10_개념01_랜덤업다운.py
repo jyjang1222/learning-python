@@ -1,3 +1,4 @@
+import random
 '''
 [문제]
     com은 1~100 사이의 숫자를 한 개 저장한다.
@@ -8,21 +9,37 @@
     me는 com의 숫자를 맞출 때까지 계속 숫자를 랜덤으로 뽑는다. 
     숫자를 맞추면 게임은 종료된다.
 '''
-import random
 
+# 풀이
 com = random.randint(1, 100)
-print("com =", com)
 
-run = 1
-while run == 1:
+while True:
     me = random.randint(1, 100)
-    
-    if com < me:
-        print(me, "크다")
     if com > me:
-        print(me, "작다")
+        print(com, me, "com이 크다")
+        continue
+    if com < me:
+        print(com, me, "com이 작다")
+        continue
     if com == me:
-        print(me, "같다")
-        run = 0
+        print(com, me, "같다")
+        break
+
+
+# 정답
+# com = random.randint(1, 100)
+# print("com =", com)
+
+# run = 1
+# while run == 1:
+#     me = random.randint(1, 100)
+    
+#     if com < me:
+#         print(me, "크다")
+#     if com > me:
+#         print(me, "작다")
+#     if com == me:
+#         print(me, "같다")
+#         run = 0
 
 
