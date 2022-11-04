@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [조건1] 리스트에 랜덤숫자(1~100) 5개를 추가하고,
@@ -10,5 +11,11 @@
 
 a = []
 
+for i in range(5):
+    num = random.randint(1, 100)
+    a.append(num)
 
+print(a)
+idx = random.randint(0, len(a))
 
+print(idx, a[idx])

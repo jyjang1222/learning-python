@@ -12,14 +12,27 @@
 
 # [문제1]
 a = [0, 10, 20, 30, 40, 50]
+idx = len(a) - 1
+tmp = a[0]
 
+for i in range(idx):
+	a[i] = a[i + 1]
+
+a[idx] = tmp
+print(a)
 
 
 # [문제2]
 b =  [10, 20, 30, 40, 50, 0]
+idx = len(b) - 1
+tmp = b[idx]
 
+for i in range(idx):
+	b[idx] = b[idx - 1]
+	idx -= 1
 
-
+b[0] = tmp
+print(b)
 
 
 

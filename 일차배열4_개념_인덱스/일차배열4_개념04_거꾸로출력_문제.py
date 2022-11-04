@@ -6,6 +6,8 @@
 '''
 a = [21,44,12,54,60]
 
+idx = len(a) - 1
 
-
-
+for i in range(len(a)):
+	print(a[idx])
+	idx -= 1
