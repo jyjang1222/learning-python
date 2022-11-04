@@ -8,8 +8,13 @@
 
 a = [1210,1343,1524,1212,7452]
 
-for i in range(5):
-    if a[i] % 1000 // 100 == 2:
-        print(a[i])
+for i in a:
+    if i % 1000 // 100 == 2:
+        print(i)
+
+
+# for i in range(5):
+#     if a[i] % 1000 // 100 == 2:
+#         print(a[i])
 
 

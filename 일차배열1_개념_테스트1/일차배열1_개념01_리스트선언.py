@@ -23,6 +23,10 @@ print(a[0]) # 10
 print(a[1]) # 20
 print(a[2]) # 30
 print(a[3]) # 40
+for i in a:
+    print(i, end = " ")
+for i in range(5, 10):
+    print(i, end = " ")
 # print(a[4]) # 없는 방 번호를 사용하면 에러가 발생된다. 
 # 주석을 지우고 실행해보면 에러 발생.
 

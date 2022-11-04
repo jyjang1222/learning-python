@@ -8,8 +8,13 @@
 
 a = [510,423,124,512,252,23,312,453,122]
 
-for i in range(5):
-    if a[i] % 100 // 10 == 2:
-        print(a[i])
+for i in a:
+    if i % 100 // 10 == 2:
+        print(i)
+
+
+# for i in range(5):
+#     if a[i] % 100 // 10 == 2:
+#         print(a[i])
 
 

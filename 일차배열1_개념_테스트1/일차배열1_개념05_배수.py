@@ -8,8 +8,29 @@
 
 a = [10,43,24,12,52]
 
-for i in range(5):
+for i in range(len(a)):
     if a[i] % 3 == 0:
         print(a[i])
+
+for i in a:
+    if i % 3 == 0:
+        print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(5):
+#     if a[i] % 3 == 0:
+#         print(a[i])
 
 
