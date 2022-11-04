@@ -11,3 +11,7 @@ b = [54,6,4,12,50]
 total = [0,0,0,0,0]
 
 
+for i in range(len(a)):
+    total[i] = a[i] + b[i]
+
+print(total)
