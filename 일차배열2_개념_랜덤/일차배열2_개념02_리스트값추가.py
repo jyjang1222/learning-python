@@ -21,9 +21,21 @@ print("-------------------------------")
         아래 b 리스트에 랜덤숫자(1~10)를 다섯 개 저장 후 출력하시오.
 '''
 import random
+
 b = []
-print("b : " , b)
+
 for i in range(5):
-    r = random.randint(1, 10)
-    b.append(r)
-print("b : " , b)
+    num = random.randint(1, 10)
+    b.append(num)
+
+print(b)
+
+
+
+
+# b = []
+# print("b : " , b)
+# for i in range(5):
+#     r = random.randint(1, 10)
+#     b.append(r)
+# print("b : " , b)

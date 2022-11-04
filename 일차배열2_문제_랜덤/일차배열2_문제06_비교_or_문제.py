@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [조건1] 리스트에 랜덤 숫자(1~100) 20개를 추가한다.
@@ -11,3 +12,13 @@
 '''
 
 arr = []
+
+for i in range(20):
+    num = random.randint(1, 100)
+    arr.append(num)
+
+print(arr)
+
+for i in arr:
+    if not(30 <= i and i <= 70) and i % 4 == 0:
+        print(i)

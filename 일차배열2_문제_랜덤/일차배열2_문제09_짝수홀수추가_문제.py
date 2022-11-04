@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		두 개의 변수 a, b에 숫자를 랜덤(1~9 사이의 숫자)으로 저장한다.
@@ -17,8 +18,25 @@
 a = []
 b = []
 
+for i in range(5):
+	a.append(random.randint(1, 9))
+	b.append(random.randint(1, 9))
+
 arr1 = []
 arr2 = []
 
+for i in range(5):
+	if a[i] > b[i]:
+		arr1.append(a[i])
+	elif a[i] < b[i]:
+		arr2.append(b[i])
+	else:
+		arr1.append(a[i])
+		arr2.append(b[i])
+
+print(a)
+print(b)
+print(arr1)
+print(arr2)
 
 

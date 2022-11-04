@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         랜덤 숫자(1~10) 다섯 개를 arr에 추가하고
@@ -9,3 +10,14 @@
 
 arr = []
 total = []
+
+for i in range(5):
+    num = random.randint(1, 10)
+    arr.append(num)
+
+print(arr)
+
+for i in arr:
+    total.append(i * 2)
+
+print(total)

@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [조건1] 리스트 두 개에 1~100 사이의 랜덤 값 다섯 개를 저장한다.
@@ -9,5 +10,15 @@
 a = []
 b = []
 
+for i in range(5):
+    num = random.randint(1, 100)
+    a.append(num)
+    num = random.randint(1, 100)
+    b.append(num)
+
+    if a[i] % 2 == 0 and b[i] % 2 == 0:
+        print(a[i], b[i], "짝수")
+    if a[i] % 2 == 1 and b[i] % 2 == 1:
+        print(a[i], b[i], "홀수")
 
 

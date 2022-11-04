@@ -7,6 +7,7 @@ import random
 
 a = []
 b = []
+
 for i in range(5):
     r = random.randint(1, 10)
     a.append(r)

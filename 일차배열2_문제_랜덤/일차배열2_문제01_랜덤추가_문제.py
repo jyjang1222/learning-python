@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         랜덤 숫자(1~5)를 한 개 저장한다. 
@@ -11,4 +12,9 @@
         arr = [5,5,5,5,5]  
 '''
 arr = []
+num = random.randint(1, 5)
 
+for i in range(num):
+    arr.append(num)
+
+print(arr)
