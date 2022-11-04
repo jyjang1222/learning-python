@@ -14,6 +14,8 @@ candy = [80,53,36,22]
 count = []
 remainder = []
 
+for i in candy:
+	count.append(i // 25)
+	remainder.append(i % 25)
 
-
-
+print(count, remainder)

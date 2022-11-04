@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         a리스트와 b리스트에 랜덤 숫자(1~100)를 다섯 개씩 저장하고,
@@ -13,6 +14,26 @@
 
 a = []
 b = []
+total1 = 0
+total2 = 0
 
+for i in range(5):
+    num = random.randint(1, 100)
+    a.append(num)
+    total1 += a[i]
+    num = random.randint(1, 100)
+    b.append(num)
+    total2 += b[i]
 
+print(a)
+print(b)
 
+print(total1)
+print(total2)
+
+if total1 > total2:
+    print(total1)
+if total1 < total2:
+    print(total2)
+else:
+    print(total1, total2)

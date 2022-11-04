@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [조건1] 리스트에 랜덤숫자(1~100) 5개를 추가한다.
@@ -14,6 +15,17 @@
 '''
 
 a = []
+sum = 0
+count = 0
 
+for i in range(5):
+    num = random.randint(1, 100)
+    a.append(num)
+    if a[i] > 50:
+        print(a[i], end = " ")
+        sum += a[i]
+        count += 1
 
+print("\n", sum)
+print(count)
 

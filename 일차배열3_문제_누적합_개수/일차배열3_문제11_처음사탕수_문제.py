@@ -25,4 +25,10 @@
 candy = []
 count =	[3, 2, 1, 0]
 remainder = [5, 3, 11, 22]
+n = 25
 
+for i in range(len(count)):
+	val = count[i] * n + remainder[i]
+	candy.append(val)
+
+print(candy)

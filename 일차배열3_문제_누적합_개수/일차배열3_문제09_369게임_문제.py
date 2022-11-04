@@ -8,3 +8,9 @@
 
 a = []
 
+for i in range(1, 51):
+    if i % 10 != 3 or i % 10 != 6 or i % 10 != 9:
+        if i % 2 == 0:
+            a.append(i)
+
+print(a)

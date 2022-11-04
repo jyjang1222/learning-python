@@ -22,6 +22,19 @@ x = 5
 dir = [3, 2, 1, 0, 1]
 speed = [4, 3, 1, 2, 3]
 
+for i in range(len(dir)):
+	if dir[i] == 0:
+		y += speed[i]
+	if dir[i] == 1:
+		x += speed[i]
+	if dir[i] == 2:
+		y -= speed[i]
+	if dir[i] == 3:
+		x -= speed[i]
+
+print(x, y)
+
+
 
 
 

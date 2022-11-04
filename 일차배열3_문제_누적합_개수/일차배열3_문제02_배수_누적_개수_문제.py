@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [조건1] 배열에 랜덤숫자(1~100) 5개를 추가하고,
@@ -16,3 +17,16 @@
 '''
 
 arr = []
+sum = 0
+count = 0
+
+for i in range(5):
+    num = random.randint(1, 100)
+    arr.append(num)
+    if arr[i] % 2 == 0:
+        print(arr[i], end = " ")
+        sum += arr[i]
+        count += 1
+
+print("\nsum:", sum)
+print(count)
