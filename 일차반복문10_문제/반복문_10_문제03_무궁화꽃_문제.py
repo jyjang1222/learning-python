@@ -1,3 +1,4 @@
+import random
 '''
 [문제]
 	철수는 오징어게임에 참가하였다.
@@ -13,3 +14,21 @@
 		[7] 10턴 안에 도착 못 하면 시간초과로 패배하며 종료한다.
 		[8] 철수의 이동 경로를 전부 출력하시오.
 '''
+위치 = 0
+count = 0
+
+while True:
+	num1 = random.randint(1, 4)
+	num2 = random.randint(3, 5)
+	if num1 > num2:
+		print("패배")
+		break
+	위치 += num1
+	print(위치)
+	if 위치 >= 25:
+		print("승리")
+		break
+	if count >= 10:
+		print("패배")
+		break
+	count += 1

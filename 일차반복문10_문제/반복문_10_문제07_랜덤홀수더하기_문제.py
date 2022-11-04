@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		랜덤으로 2~5 를 저장하고, 
@@ -15,3 +16,26 @@
 			랜덤 ==> 5
 			[출력] 1 + 5 + 3 + 7 + 1 = 17
 '''
+
+r = 0
+op = 1
+sum = 0
+num = random.randint(2, 5)
+
+i = 1
+while i <= num:
+	r = random.randint(1, 9)
+	print(r, end = " ")
+	if op % 2 == 1:
+		sum += r
+	if op % 2 == 0:
+		sum -= r
+	if i == num:
+		print("총합:", sum)
+		break
+	op = random.randint(1, 9)
+	if op % 2 == 1:
+		print("+", end = " ")
+	else:
+		print("-", end = " ")
+	i += 1

@@ -13,16 +13,19 @@ import random
 
 com = random.randint(1, 100)
 print("com =", com)
+min = 1
+max = 100
 
 run = 1
 while run == 1:
-    me = random.randint(1, 100)
+    me = random.randint(min, max)
     
     if me < com:
         print(me, "Up!")
+        min = me
     if me > com:
         print(me, "Down!")
-
+        max = me
     if com == me:
         print(me, "정답!")
         run = 0

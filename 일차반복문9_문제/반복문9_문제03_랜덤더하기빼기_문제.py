@@ -19,17 +19,22 @@ import random
 
 r = 0
 op = 0
+sum = 0
 
 i = 1
 while i <= 5:
 	r = random.randint(1, 9)
 	print(r, end = " ")
+	if op == 0:
+		sum += r
+	if op == 1:
+		sum -= r
 	if i == 5:
+		print("총합:", sum)
 		break
 	op = random.randint(0, 1)
 	if op == 0:
-		op = "+"
+		print("+", end = " ")
 	else:
-		op = "-"
-	print(op, end = " ")
+		print("-", end = " ")
 	i += 1
