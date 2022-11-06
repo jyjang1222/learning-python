@@ -8,4 +8,10 @@
 
 a = [10, 20, 30, 40]
 b = []
+idx = len(a) - 1
 
+for i in range(len(a)):
+	b.append(a[idx])
+	idx -= 1	
+
+print(b)
