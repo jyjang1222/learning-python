@@ -1,3 +1,4 @@
+import random
 '''
 	[문제] 
 		numberList는 학생들의 번호를 저장한 리스트이다.
@@ -15,6 +16,8 @@
 
 numberList = [1001, 1002, 1003, 1004, 1005]
 scoreList =   [87, 11, 45, 98, 23]
+r = random.randint(0, 4)
 
+print(r, numberList[r], scoreList[r])
 
 

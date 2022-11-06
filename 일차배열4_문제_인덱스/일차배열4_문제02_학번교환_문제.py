@@ -13,3 +13,11 @@
 
 numberList = [1001, 1002, 1003, 1004, 1005]
 scoreList =  [87, 11, 45, 98, 23]
+tmp = scoreList[0]
+
+for i in range(len(scoreList) - 1):
+	scoreList[i] = scoreList[i + 1]
+
+scoreList[len(scoreList) - 1] = tmp
+
+print(scoreList)
