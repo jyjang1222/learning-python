@@ -19,11 +19,13 @@ import random
 '''
 
 a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-idx = random.randint(0, 9)
+r = random.randint(0, 9)
+idx = r
 
-for i in range(idx):
+for i in range(1, r + 1):
 	a[idx] = i
-	if i == len(a):
-		a[i - len(a)] = i
+	idx += 1
+	if idx >= len(a):
+		idx = 0
 
-print(a)
+print(r, a)
