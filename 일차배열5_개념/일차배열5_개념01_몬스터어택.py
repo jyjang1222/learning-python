@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         철수는 게임을 하고 있다. 
@@ -12,30 +13,45 @@
     [정답]
 
 '''
-import random
 
 monster = [9,7,8,6]
+# monster = [20,20,20,20]
 power = 5
+attack = 0
 
-count = 0
-
-run = True
-while run:
-    if count == 5:
-        run = False
-
-    r = random.randint(0, len(monster) - 1)
-
-    if monster[r] > 0:
-        if monster[r] - power < 0:
-            monster[r] = 0
-        else:
-            monster[r] -= power
-
-        print(r, "번째 몬스터 공격!", monster)
-        count += 1
-    elif monster[r] == 0:
+while True:
+    r = random.randint(0, 3)
+    if monster[r] == 0:
         print("체력이 0인 몬스터입니다. 다시 선택해주세요!")
+        continue
+    if monster[r] != 0:
+        print("몬스터", r, "공격!")
+        monster[r] -= power
+        attack += 1
+    if monster[r] < 0:
+        monster[r] = 0
+    print("남은 체력", monster)
+    if attack == 5:
+        break
+
+# count = 0
+
+# run = True
+# while run:
+#     r = random.randint(0, len(monster) - 1)
+
+#     if monster[r] > 0:
+#         if monster[r] - power < 0:
+#             monster[r] = 0
+#         else:
+#             monster[r] -= power
+
+#         print(r, "번째 몬스터 공격!", monster)
+#         count += 1
+#     if count == 5:
+#         run = False
+#     elif monster[r] == 0:
+#         print("체력이 0인 몬스터입니다. 다시 선택해주세요!")
     
 
 

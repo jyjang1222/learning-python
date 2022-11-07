@@ -7,13 +7,24 @@
 	[정답]
 		16100
 '''
+
 item = [1001, 1002, 1003, 1004]
-price =[500, 1200, 4300, 2300]
+price = [500, 1200, 4300, 2300]
 order = [0, 1, 3, 3, 2, 2, 1]
+
 total = 0
 
-for i in range(len(order)):
-	print(price[order[i]])
-	total = total + price[order[i]]
+for i in order:
+	total += price[i]
 
 print(total)
+
+
+
+# total = 0
+
+# for i in range(len(order)):
+# 	print(price[order[i]])
+# 	total = total + price[order[i]]
+
+# print(total)

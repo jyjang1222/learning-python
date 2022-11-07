@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		a리스트에 랜덤(0~9) 사이의 랜덤 값을 4개 저장한 후 출력한다. 
@@ -9,20 +10,30 @@
 			[5, 2, 0, 4] False
 '''
 
-import random
-
 a = []
+bool = True
+
 for i in range(4):
 	r = random.randint(0, 9)
 	a.append(r)
-print(a)
+	if r % 2 == 1:
+		bool = False
+
+print(a, bool)
+
+
+# a = []
+# for i in range(4):
+# 	r = random.randint(0, 9)
+# 	a.append(r)
+# print(a)
     
-count = 0
-for i in range(len(a)):
-    if a[i] % 2 == 0:
-    	count += 1
+# count = 0
+# for i in range(len(a)):
+#     if a[i] % 2 == 0:
+#     	count += 1
 		
-if count == len(a):
-    print(True)
-else:
-    print(False)
+# if count == len(a):
+#     print(True)
+# else:
+#     print(False)

@@ -17,18 +17,41 @@ count1 = 0
 count7 = 0
 
 while True:
-	if count1 + count7 == 7:
-		break
-
 	r = random.randint(0, 1)
-
-	if r == 0 and count7 <= 3:
-		a.append(7)
+	if len(a) == 7:
+		break
+	if r == 0:
+		r = 7
 		count7 += 1
-	elif r == 1 and count1 <= 4:
-		a.append(1)
+		if count7 >= 4:
+			continue
+	if r == 1:
 		count1 += 1
+		if count1 >= 5:
+			continue
+	a.append(r)
+
+
 print(a)
+
+
+
+# count1 = 0
+# count7 = 0
+
+# while True:
+# 	if count1 + count7 == 7:
+# 		break
+
+# 	r = random.randint(0, 1)
+
+# 	if r == 0 and count7 < 3:
+# 		a.append(7)
+# 		count7 += 1
+# 	elif r == 1 and count1 < 4:
+# 		a.append(1)
+# 		count1 += 1
+# print(a)
 
 
     
