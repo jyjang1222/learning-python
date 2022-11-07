@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		랜덤(2~10)의 숫자를 저장하고 
@@ -13,6 +14,15 @@
 '''
 
 arr = []
+r = random.randint(2, 10)
+idx = r + 1
+j = 1
 
+for i in range(1, idx):
+	arr.append(j)
+	j += 1
+	if j == 4:
+		j = 1
 
+print(r, arr)
 

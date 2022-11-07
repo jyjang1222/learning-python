@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		공간이 10개인 a리스트가 있다. 
@@ -16,5 +17,16 @@
 '''
 
 a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+r1 = random.randint(0, 9)
+r2 = random.randint(1, 10)
+idx = r1
+n = r2 + 1
 
+for i in range(1, n):
+	a[idx] = i
+	idx -= 1
+	if idx < 0:
+		idx = len(a) - 1
+
+print(r1, r2, a)
 

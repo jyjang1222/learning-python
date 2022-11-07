@@ -9,6 +9,20 @@
 a = [1 ,3, 7]
 b = [0, 0, 0, 0, 0, 0]
 
+idxEnd = len(a) - 1
+j = 0
+k = 0
 
+for i in range(len(b)):
+   if i % 2 == 0 and i > 0:
+      k += 1
+   b[i] = a[idxEnd - k]
+   
+# b[0] = a[idxEnd]
+# b[1] = a[idxEnd]
+# b[2] = a[idxEnd - 1]
+# b[3] = a[idxEnd - 1]
+# b[4] = a[idxEnd - 2]
+# b[5] = a[idxEnd - 2]
 
-
+print(b)

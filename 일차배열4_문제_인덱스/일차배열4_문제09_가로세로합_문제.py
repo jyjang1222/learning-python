@@ -16,3 +16,28 @@ a = [1, 2, 3, 4,
 garo = [0, 0, 0]
 sero = [0, 0, 0, 0]
 
+count = 0
+tmp = 0
+j = 0
+
+# 가로
+for i in a:
+	tmp += i
+	count += 1
+	if count == 4:
+		garo[j] = tmp
+		tmp = 0
+		count = 0
+		j += 1
+		
+print(garo)
+
+# 세로
+count2 = 0
+
+for i in a: 
+	sero[count2] += i
+	count2 += 1
+	if count2 == 4:
+		count2 = 0
+print(sero)

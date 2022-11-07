@@ -12,6 +12,6 @@ idx = len(a) - 1
 
 for i in range(len(a)):
 	b.append(a[idx])
-	idx -= 1	
+	idx -= 1
 
 print(b)
