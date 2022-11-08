@@ -6,6 +6,16 @@
 '''
 
 
-a = [0,0,2,0,3,0,4,0,0,5]
+a = [1,0,2,0,3,0,4,2,0,5]
 
+idxEnd = len(a) - 1
+count = 0
+tmp = 0
 
+for i in range(len(a)):
+	if a[idxEnd - i] != 0:
+		tmp = a[idxEnd - count]
+		a[idxEnd - count] = a[idxEnd - i]
+		a[idxEnd - i] = tmp
+		count += 1
+print(a)

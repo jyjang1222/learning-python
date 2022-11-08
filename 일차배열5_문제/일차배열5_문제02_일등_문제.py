@@ -11,3 +11,21 @@
 numberList = [1001, 1002, 1003, 1004, 1005]
 scoreList = [87, 11, 45, 98, 23]
 
+max = 0
+min = 100
+best = 0
+worst = 0
+count = 0
+
+for i in scoreList:
+	if max < i:
+		max = i
+		best = count
+	if min > i:
+		min = i
+		worst = count
+	count += 1
+
+print(numberList[best], max)
+print(numberList[worst], min)
+	

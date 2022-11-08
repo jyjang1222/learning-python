@@ -30,14 +30,15 @@ order = [0, 1, 3, 3, 2, 2, 1]
 total = 0
 
 for i in range(len(order)):
-	if count[order[i]] > 0:
-		count[order[i]] -= 1
-		print(count)
-	else:
-		print("주문불가")
-print(order)
+	count[order[i]] -= 1
+	total += price[order[i]]
+	if count[order[i]] < 0:
+		print("order =", order[i], "주문불가")
+		count[order[i]] = 0
+		total -= price[order[i]]
+		continue
+	print("order =", order[i], "count =", count)
 
-
-
+print(total)
 
 

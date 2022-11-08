@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		a리스트에 랜덤(0 ~ 100) 사이의 랜덤 값을 4개 저장한 후 출력한다. 
@@ -12,6 +13,20 @@
 			[53, 25, 12, 41] "벌칙"
 '''
 a = []
+count = 0
+
+for i in range(4):
+	r = random.randint(0, 100)
+	a.append(r)
+	if r >= 60:
+		count += 1
+
+if count == 4:
+	print(a, "상품")
+elif count == 0:
+	print(a, "벌칙")
+else:
+	print(a)
 
 
 

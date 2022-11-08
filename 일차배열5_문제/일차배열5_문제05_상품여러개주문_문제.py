@@ -20,13 +20,31 @@
   
 '''
 item = [1001, 1002, 1003, 1004]
-price =[500, 1200, 4300, 2300]
+price = [500, 1200, 4300, 2300]
 
 order = [0, 1, 3, 3, 2, 2, 1]
 count = [3, 2, 2, 1, 3, 4, 3]
 
+total = 0
 
+# 첫풀이
+# arr = []
 
+# for i in range(len(item)):
+# 	arr.append(0)
 
+# for i in range(len(order)):
+# 	arr[order[i]] += count[i]
 
+# print(arr)
 
+# for i in range(len(arr)):
+# 	total += price[i] * arr[i]
+
+# print(total)
+
+# 두번째풀이
+for i in range(len(order)):
+	total += price[order[i]] * count[i]
+
+print(total)

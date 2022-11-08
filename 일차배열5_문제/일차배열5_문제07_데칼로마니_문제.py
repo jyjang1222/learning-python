@@ -11,3 +11,11 @@
 
 
 a = [1,5,4,4,5,1]
+res = True
+idxEnd = len(a) - 1
+
+for i in range(len(a) // 2):
+	if a[i] != a[idxEnd - i]:
+		res = False
+
+print(res)

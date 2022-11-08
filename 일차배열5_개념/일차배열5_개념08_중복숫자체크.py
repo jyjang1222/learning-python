@@ -16,12 +16,12 @@ while True:
 
    r = random.randint(1, 4)
    chk = False
-   if len(a) >= 1:
 
-      for i in a:
-         if i == r:
-            chk = True
-            break
+   for i in a:
+      if i == r:
+         chk = True
+         break
+         
    if chk == False:
       a.append(r)
 
