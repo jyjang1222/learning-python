@@ -15,10 +15,17 @@ b = [40,50,60]
 
 c = []
 
-for i in range(len(a)):
-	c.append(a[i])
+for i in a:
+	c.append(i)
+for i in b:
+	c.append(i)
 
-for i in range(len(b)):
-	c.append(b[i])
-	
 print(c)
+
+# for i in range(len(a)):
+# 	c.append(a[i])
+
+# for i in range(len(b)):
+# 	c.append(b[i])
+	
+# print(c)

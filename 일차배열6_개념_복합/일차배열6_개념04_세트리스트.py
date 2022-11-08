@@ -9,15 +9,28 @@
 '''
 
 a = [1001, 40, 1002, 60, 1003, 65, 1004, 70]
-
-total = 0
+sum = 0
 avg = 0
+n = len(a) // 2
 
-for i in range(len(a)):
+for i in range(1, len(a)):
 	if i % 2 == 1:
-		total += a[i]
+		sum += a[i]
 
-size = len(a) // 2
-avg = total / size
-print("총점 =", total)
-print("평균 =", avg)
+avg = round(sum / n, 2)
+
+print(sum, avg)
+
+
+
+# total = 0
+# avg = 0
+
+# for i in range(len(a)):
+# 	if i % 2 == 1:
+# 		total += a[i]
+
+# size = len(a) // 2
+# avg = total / size
+# print("총점 =", total)
+# print("평균 =", avg)

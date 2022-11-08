@@ -19,19 +19,33 @@
 
 candy = [80,53,46,23]
 count =[]
-print("candy : " , candy)
-print("count : " , count)
+# print("candy : " , candy)
+# print("count : " , count)
 
 for i in range(len(candy)):
-	person = candy[i] // 25
-	count.append(person)
+	count.append(candy[i] // 25)
+
 	if i < len(candy) - 1:
 		candy[i + 1] += candy[i] % 25
 		candy[i] = 0
-	else:
-		candy[i] = candy[i] % 25
+	if i == len(candy) - 1:
+		candy[len(candy) - 1] %= 25
+
 print(candy)
 print(count)
+
+
+
+# for i in range(len(candy)):
+# 	person = candy[i] // 25
+# 	count.append(person)
+# 	if i < len(candy) - 1:
+# 		candy[i + 1] += candy[i] % 25
+# 		candy[i] = 0
+# 	else:
+# 		candy[i] = candy[i] % 25
+# print(candy)
+# print(count)
 
 
 

@@ -9,27 +9,54 @@
 		6월 11일
 '''
 
-monthList =[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
 month = 3
 day = 3
+meet = 0
 
-total = 0
-for i in range(month - 1):
-	total += monthList[i]
-total += day
-print("total =", total)
+for i in range(month):
+	meet += monthList[i]
 
-total += 100
-print("total =", total)
+meet += day
 
-i = 0
-while True:
-	temp = total
-	total -= monthList[i]
-	if total < 0 :
-		print((i+1), temp)
-		break
-	i += 1
+party = meet + 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# month = 3
+# day = 3
+
+# total = 0
+# for i in range(month - 1):
+# 	total += monthList[i]
+# total += day
+# print("total =", total)
+
+# total += 100
+# print("total =", total)
+
+# i = 0
+# while True:
+# 	temp = total
+# 	total -= monthList[i]
+# 	if total < 0 :
+# 		print((i+1), temp)
+# 		break
+# 	i += 1
 	
 
 

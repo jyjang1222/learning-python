@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		철수는 마블 게임을 하고 있다.
@@ -25,21 +26,30 @@
 
 '''
 
-import random
 
 map = [1,0,0,0,0,0,0,0,0,0]
 print(map)
 
-position = 0
 
-for i in range(4):
-	move = random.randint(1, 6)
 
-	map[position] = 0
 
-	position += move
-	position %= len(map)
 
-	map[position] = 1
 
-	print(move, map)
+
+
+
+
+
+# position = 0
+
+# for i in range(4):
+# 	move = random.randint(1, 6)
+
+# 	map[position] = 0
+
+# 	position += move
+# 	position %= len(map)
+
+# 	map[position] = 1
+
+# 	print(move, map)
