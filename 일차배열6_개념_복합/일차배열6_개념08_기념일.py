@@ -15,27 +15,24 @@ month = 3
 day = 3
 meet = 0
 
-for i in range(month):
+# 달은 1부터시작이라서 1을 빼준다
+for i in range(month - 1):
 	meet += monthList[i]
 
 meet += day
-
 party = meet + 100
 
 
+month = 1
+day = 0
+for i in range(len(monthList)):
+	party -= monthList[i]
+	month += 1
+	if party - monthList[i] < 0:
+		day = party
+		break
 
-
-
-
-
-
-
-
-
-
-
-
-
+print(month, day)
 
 # month = 3
 # day = 3

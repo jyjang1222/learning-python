@@ -11,33 +11,39 @@ import random
 	[예시]
 		(1) 시작
 			map = [1,0,0,0,0,0,0,0,0,0]
-		
   		(2) 주사위 : 5
 			map = [0,0,0,0,0,1,0,0,0,0]
-
 		(3) 주사위 : 3
 			map = [0,0,0,0,0,0,0,0,1,0]
-   
 		(4) 주사위 : 6
 			map = [0,0,0,0,1,0,0,0,0,0]
-   
-		(5) 주사위 :4
+		(5) 주사위 : 4
 			map = [0,0,0,0,0,0,0,0,1,0]
-
 '''
-
 
 map = [1,0,0,0,0,0,0,0,0,0]
 print(map)
 
+idx = 0
+for i in range(len(map)):
+	if map[i] == 1:
+		idx = i
+# print(idx)	
 
-
-
-
-
-
-
-
+for i in range(4):
+	r = random.randint(1, 6)
+	# 현재위치 idx를 찾는 반복문
+	for j in range(len(map)):
+		if map[j] == 1:
+			idx = j
+			map[j] = 0
+	# 현재위치 idx에 주사위눈+
+	idx += r
+	# idx가 map길이를 넘어서면 처음으로
+	if idx > len(map) - 1:
+		idx -= len(map)
+	map[idx] = 1
+	print(r, map, idx)
 
 
 # position = 0
