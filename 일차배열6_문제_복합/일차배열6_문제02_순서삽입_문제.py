@@ -1,3 +1,4 @@
+import random
 '''
     [문제]  
         아래 a리스트는 순서대로 값이 저장되어있다.
@@ -12,4 +13,19 @@
 '''
 
 a = [10, 20, 30, 40, 50, 60]
+r = random.randint(1, 70)
+print(r)
+a.append(r)
+print(a)
+
+tmp = 0
+
+i = len(a) - 1
+while i > 0:
+    if a[i] < a[i - 1]:
+        tmp = a[i - 1]
+        a[i - 1] = a[i]
+        a[i] = tmp
+        print(a)
+    i -= 1
 

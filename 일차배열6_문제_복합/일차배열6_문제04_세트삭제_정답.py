@@ -13,7 +13,12 @@ a = [1001, 40, 1002, 60, 1003, 65, 1004, 70]
 index = random.randint(0, len(a) - 1)
 print("index =", index)
 
-a.remove(a[index])
-a.remove(a[index])
+if index % 2 == 0:
+	a.remove(a[index])
+	a.remove(a[index])
+else:
+	a.remove(a[index])
+	a.remove(a[index - 1])
+
 
 print(a)

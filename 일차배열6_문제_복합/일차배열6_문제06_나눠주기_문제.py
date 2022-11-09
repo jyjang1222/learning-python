@@ -10,3 +10,11 @@
 c = [10,20,30,40,50,60]
 a = []
 b = []
+
+for i in range(len(c) // 2):
+	a.append(c[i])
+for i in range(len(c) // 2, len(c)):
+	b.append(c[i])
+print(a)
+print(b)
+

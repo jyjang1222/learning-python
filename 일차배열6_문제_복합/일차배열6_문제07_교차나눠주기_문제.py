@@ -10,3 +10,12 @@ c = [10,20,30,40,50,60]
 
 a = []
 b = []
+
+for i in range(len(c)):
+	if i % 2 == 0:
+		a.append(c[i])
+	else:
+		b.append(c[i])
+
+print(a)
+print(b)

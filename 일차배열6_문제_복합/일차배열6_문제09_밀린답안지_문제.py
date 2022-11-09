@@ -15,6 +15,22 @@
 정답 = [1,4,3,3,2]
 밀린답 = [0,1,4,3,2]
 
+score = 0
+tmp = 0
+
+for i in range(len(밀린답) - 1):
+	tmp = 밀린답[i + 1]
+	밀린답[i + 1] = 밀린답[i]
+	밀린답[i] = tmp
+
+print(밀린답)
+
+for i in range(len(정답)):
+	if 정답[i] == 밀린답[i]:
+		score += 20
+
+print(score)
+
 
 
 

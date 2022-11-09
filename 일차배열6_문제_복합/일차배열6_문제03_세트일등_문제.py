@@ -8,3 +8,14 @@
 '''
 a = [1001, 40, 1002, 82, 1003, 65, 1004, 70]
 
+best = 0
+bestIdx = 0
+
+for i in range(len(a)):
+	if i % 2 == 1:
+		if best < a[i]:
+			bestIdx = i - 1
+			best = a[i]
+			
+print(bestIdx)
+print(best)

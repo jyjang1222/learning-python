@@ -15,7 +15,7 @@ import random
 a = [10, 20, 30, 40, 50, 60]
 
 r = random.randint(1, 70)
-r = 50
+r = 5
 print("r =", r)
 
 index = -1

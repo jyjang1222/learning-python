@@ -25,9 +25,9 @@ map = [1,0,0,0,0,0,0,0,0,0]
 print(map)
 
 idx = 0
-for i in range(len(map)):
-	if map[i] == 1:
-		idx = i
+# for i in range(len(map)):
+# 	if map[i] == 1:
+# 		idx = i
 # print(idx)	
 
 for i in range(4):

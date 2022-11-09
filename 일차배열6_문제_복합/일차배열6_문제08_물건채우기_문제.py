@@ -20,4 +20,17 @@
 
 list = [3, 5, 2, 1, 2]
 count = 6
+max = 5
 
+for i in range(len(list)):
+	if list[i] < max:
+		# 재고수가 필요량보다 같거나 많을때
+		if count >= max - list[i]:
+			count -= (max - list[i])
+			list[i] = 5
+		# 재고수가 필요량보다 적을때
+		else:
+			list[i] += count
+			count = 0
+
+print(list)
