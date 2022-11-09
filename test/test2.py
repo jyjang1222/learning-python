@@ -51,6 +51,22 @@ while True:
 
 print()
 # 2
+# 1차 풀이
+# while True:
+#     count = 0
+#     for i in range(2):
+#         dice1 = random.randint(1, 6)
+#         dice2 = random.randint(1, 6)
+#         print(dice1, dice2, count)
+#         if dice2 - dice1 == 1 or dice1 - dice2 == 1:
+#             count += 1
+#             print(dice1, dice2, count)
+#         if count == 2:
+#             break
+#     if count == 2:
+#         break
+
+# 2차 풀이
 count = 0
 while True:
     dice1 = random.randint(1, 6)
