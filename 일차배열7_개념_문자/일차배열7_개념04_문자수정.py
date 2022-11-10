@@ -30,4 +30,11 @@ print("--------------------")
 c = 'hello world'
 print(c)
 c = c.replace('h' , 'k')
+c.replace('k', 'h')
 print(c)
+
+a = [1, 2]
+a.append(3)
+print(a)
+a.remove(3)
+print(a)

@@ -10,9 +10,12 @@ print(text[1])
     [문제]
         text변수에서 y만빼고 출력하시오.
 '''
-for i in range(len(text)):
-    if text[i] != 'y':
-        print(text[i], end="")
+# for i in range(len(text)):
+#     if text[i] != 'y':
+#         print(text[i], end="")
+for i in text:
+    if i != 'y':
+        print(i, end = " ")
 print()
 print("--------------------------------")
 '''

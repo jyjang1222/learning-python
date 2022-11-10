@@ -1,3 +1,4 @@
+import random
 """
     [문제]
         stno는 학생번호리스트이다.
@@ -10,20 +11,30 @@
         stno = [1001, 1003, 1004]
         stname = ["김철수" , "신정아" , "이영희"]
 """
-import random
+stno = [1001, 1003, 1004]
+stname = ["김철수" , "신정아" , "이영희"]
 
+r = random.randint(0, 2)
 
-stno = [1001, 1002, 1003, 1004]
-stname = ["김철수" , "이만수" , "신정아" , "이영희"]
+stno.remove(stno[r])
+stname.remove(stname[r])
 
-
-r = random.randint(1001, 1004)
-print("r : " , r)
-for i in range(len(stno)):
-    if stno[i] == r:
-        del(stno[i])
-        del(stname[i])
-        break
-
+print(r)
 print(stno)
 print(stname)
+
+
+# stno = [1001, 1002, 1003, 1004]
+# stname = ["김철수" , "이만수" , "신정아" , "이영희"]
+
+
+# r = random.randint(1001, 1004)
+# print("r : " , r)
+# for i in range(len(stno)):
+#     if stno[i] == r:
+#         del(stno[i])
+#         del(stname[i])
+#         break
+
+# print(stno)
+# print(stname)

@@ -16,3 +16,9 @@ if "a" < "b":
 
 if "a" > "b":
     print("ddd")
+
+if "a" < "A":
+    print("AAA")
+    
+if "a" > "A":
+    print("BBB")
