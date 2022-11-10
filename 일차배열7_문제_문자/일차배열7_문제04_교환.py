@@ -15,5 +15,20 @@ stname = ["김철수" , "이만수" , "신정아" , "이영희"]
 stkor = [10 , 20 , 30 , 40]
 steng = [60 , 80 , 32 , 13]
 
+while True:
+    r1 = random.randint(0, 3)
+    r2 = random.randint(0, 3)
+    if r1 != r2:
+        break
+
+print(stno[r1], stno[r2])
+
+tmp = 0
+
+tmp = stkor[r1]
+stkor[r1] = stkor[r2]
+stkor[r2] = tmp
+
+print(stkor)
 
 

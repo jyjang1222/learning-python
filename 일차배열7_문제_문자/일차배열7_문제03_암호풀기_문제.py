@@ -8,4 +8,33 @@
     [정답]
         qwer1234
 '''
-password = "qawbecrd1e2f3g4h"
+pw = "qawbecrd1e2f3g4h"
+
+# 1 틀림
+# c = 'a'
+# tmp = int(c)
+# for i in range(len(pw)):
+#     if i % 2 == 1:
+#         if int(pw[i]) == int(tmp):
+#             pw = pw.replace(pw[i], '')
+#     tmp += 1
+
+# 2 틀림
+# idx홀수제거
+# i = 0
+# while i < len(pw):
+#     if i % 2 == 1:
+#         pw.replace(pw[i], '')
+#         print(pw)
+#         # i -= 1
+#     i += 1
+# print(pw)
+
+# 3 맞춤
+# tmp에 짝수만 넣기
+tmp = ""
+for i in range(len(pw)):
+    if i % 2 == 0:
+        tmp += pw[i]
+
+print(tmp)

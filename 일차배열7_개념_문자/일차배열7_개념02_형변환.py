@@ -10,8 +10,9 @@
 '''
 a = "10"
 # print(a + 10) # 에러가 발생한다. 문자열은 숫자와 더하기를 할 수 없다.
-a = int(a)
-print(a + 10)
+# a = int(a)
+# print(a + 10)
+print(int(a) + 10)
 
 
 b = 10

@@ -10,4 +10,10 @@
 password = "qwer1234"
 sample = "abcdefghijklmnopqrstuvwxyz"
 
+tmp = ""
 
+for i in range(len(password)):
+    tmp += password[i]
+    tmp += sample[i]
+
+print(tmp)
