@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		[1] 랜덤숫자 1~9 다섯 개를 리스트에 추가한다.
@@ -11,4 +12,21 @@
 '''
 
 a = []
-temp = []
+# temp = []
+num = 0
+
+
+for i in range(5):
+	r = random.randint(1, 9)
+	a.append(r)
+
+j = 1
+i = len(a) - 1
+while i >= 0:
+	if a[i] % 2 == 1:
+		num += a[i] * j
+		j *= 10
+	i -= 1
+
+print(a)
+print(num * 2)

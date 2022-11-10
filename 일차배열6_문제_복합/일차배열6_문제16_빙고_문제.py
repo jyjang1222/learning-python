@@ -8,3 +8,52 @@
 a = [0, 0, 1,
      0, 1, 1,
      1, 0, 1]
+
+# a = [1, 1, 1,
+#      0, 0, 0,
+#      0, 0, 0]
+
+# a = [1, 1, 1,
+#      1, 1, 1,
+#      0, 0, 0]
+
+# a = [1, 1, 1,
+#      1, 1, 1,
+#      1, 1, 1]
+
+# 가로로 연속 1이면 빙고 + 1
+# 세로로 연속 1이면 빙고 + 1
+# 대각선으로 연속 1이면 빙고 + 1
+
+bingo = 0
+count = 0
+
+# 가로빙고 체크
+for i in range(0, 7, 3):
+    for j in range(3):
+        if a[i + j] == 1:
+            count += 1
+        if count == 3:
+            bingo += 1
+    count = 0
+
+# 세로빙고 체크
+# 036 147 259
+for i in range(3):
+    for j in range(0, 7, 3):
+        if a[i + j] == 1:
+            count += 1
+        if count == 3:
+            bingo += 1
+    count = 0
+
+# 대각선빙고 체크
+# 048 246 
+if a[4] == 1:
+    if a[0] == 1 and a[8] == 1:
+        bingo += 1
+    if a[2] == 1 and a[6] == 1:
+        bingo += 1
+
+
+print(bingo)

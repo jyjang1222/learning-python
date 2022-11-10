@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		철수는 철수의 마블 게임을 개발 중이다. 
@@ -32,3 +33,45 @@
 
 map1 = [1,0,0,0,0,0,0,0,0,0]
 map2 = [0,0,0,0,0,0,0,0,0,0]
+
+idx = 0
+map = 1
+
+print("map1  ", map1)
+print("map2  ", map2)
+
+for i in range(4):
+	r1 = random.randint(1, 6)
+	r2 = random.randint(1, 6)
+
+	sum = r1 + r2
+	
+	
+	# 현재위치가 map1일때
+	if map == 1:
+		map1[idx] = 0
+		# 주사위합이 map1 남은길이 보다 같거나크면 map2로 이동
+		if (len(map1) - 1) - idx <= sum:
+			# 이동거리(주사위합) - map1남은길이 -> 맵전환후 이동거리
+			idx = sum - (len(map1) - 1 - idx) - 1
+			map2[idx] = 1
+			map = 2
+		else:
+			idx = sum % len(map1)
+			map1[idx] = 1
+	# 현재위치가 map2일때
+	elif map == 2:
+		map2[idx] = 0
+		# 주사위합이 map2 남은길이 보다 같거나크면 map1로 이동
+		# idx는 0 부터시작이라서 1을 빼줘야한다..
+		if (len(map2) - 1) - idx <= sum:
+			idx = sum - (len(map2) - 1 - idx) - 1
+			map1[idx] = 1
+			map = 1
+		else:
+			idx = sum % len(map2)
+			map2[idx] = 1
+
+	print(sum, "map1", map1)
+	print(sum, "map2", map2)
+	# sum % len(map1) 이동

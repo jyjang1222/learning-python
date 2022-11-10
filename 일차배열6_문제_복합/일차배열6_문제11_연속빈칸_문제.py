@@ -13,37 +13,36 @@ import random
 		r = 4
 		[0,1,0,0,0,1,0,0]  : "창고부족"
 '''
-
 a = [0,1,0,0,0,1,0,0]
+a = [0,1,0,0,0,1,0,0,0,0,1,0,0,1]
 size = random.randint(1, 5)
-size = 3
+size = 4
 
 idx = 0
-count = 0
+empty = 0
 for i in range(len(a) - 1):
 	# 0 나올때 idx
 	if a[i] == 0:
 		idx = i
+	# 남은공간이 사이즈보다 같거나커야 체크 가능
+	if (len(a) - 1) - idx >= size:
 		# 남은공간체크
-		# 남은공간이 사이즈보다 커야 체크 가능
-		if len(a) - 1 - idx >= size:
-			for j in range(size + 1):
-				if a[idx + j] == 0:
-					count += 1
-				else:
-					break
-		# 사이즈보다 남은공간이 같거나크다면
-		if count >= size:
-			# 0나온 idx부터 1로 채움
-			for k in range(size):
-				a[idx + k] = 1
-				print(a)
-		# 사이즈보다 남은공간이 작다면
-		else:
-			# 다음 0을 찾아서 다음 반복으로
-			continue
-	else:
-		pass
+		for j in range(size):
+			if a[idx + j] == 0:
+				empty += 1
+			else:
+				empty = 0
+				break
+	if empty >= size:
+		break
 
-# print(size, a)
+# 사이즈보다 남은공간이 같거나크다면
+if empty >= size:
+	# 0나온 idx부터 1로 채움
+	for i in range(size):
+		a[idx + i] = 1
+else:
+	print("공간부족")
+
+print(size, a)
 

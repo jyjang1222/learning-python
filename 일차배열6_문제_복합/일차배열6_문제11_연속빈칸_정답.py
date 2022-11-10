@@ -17,6 +17,7 @@ import random
 a = [0,1,0,0,0,1,0,0]
 
 size = random.randint(1, 5)
+size = 1
 print("size =", size)
 
 start = 0

@@ -17,4 +17,15 @@
 '''
 
 a = [3, 1, 2, 7, 2, 3, 4, 6, 1]
+count = 0
+max = 0
 
+for i in range(1, len(a)):
+	if a[i - 1] < a[i]:
+		count += 1
+		if max < count:
+			max = count
+	else:
+		count = 0
+
+print(max)
