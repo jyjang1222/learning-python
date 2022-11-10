@@ -9,20 +9,23 @@
 print("--[문제1]--")
 
 # 1
-# count = 0
+count = 0
 
-# for i in range(1000):
-#     if i % 10 == 9 or i % 10 == 0:
-#         continue
-#     if i >= 10:
-#         if i // 10 == 9:
-#             continue
-#     if count == 99:
-#         break
-#     print(i, end = " ")
-#     count +=1
+for i in range(1000):
+    if i % 10 == 9 or i % 10 == 0:
+        continue
+    if i >= 10:
+        if i // 10 == 9:
+            continue
+    if i % 100 // 10 == 0:
+        continue
+    if count == 99:
+        break
+    print(i, end = " ")
+    count +=1
 
-# print()
+print(count)
+print()
 # 2
 count = 0
 i = 0
