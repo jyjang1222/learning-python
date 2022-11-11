@@ -30,20 +30,34 @@ for i in range(7):
 	elif r == 1:
 		lotto.append(7)
 		count7 += 1
+
+lotto = [1,1,1,7,7,7,1]
+# lotto = [1,7,7,7,1,1,1]
+# lotto = [7,7,7,1,1,1,1]
 print(lotto)
 
 check = False
-count = 0
-for i in range(7):
-	if lotto[i] == 7:
-		count += 1
 
+# 수정전 풀이
+# count = 0
+# for i in range(7):
+# 	if lotto[i] == 7:
+# 		count += 1
+
+# 		if count == 3:
+# 			check = True
+# 	else:
+# 		count = 0
+
+
+# 풀이수정
+for i in range(len(lotto)):
+	count = 0
+	if i <= (len(lotto) - 3):
+		for j in range(3):
+			if lotto[i + j] == 7:
+				count += 1
 		if count == 3:
 			check = True
-	else:
-		count = 0
 
-if count == 3:
-	print("당첨")
-else:
-	print("꽝")
+print(check)
