@@ -15,7 +15,9 @@ import random
 lotto = []
 count1 = 0
 count7 = 0
-res = True
+res = False
+
+
 
 while True:
 	if len(lotto) == 7:
@@ -32,13 +34,18 @@ while True:
 		lotto.append(r)
 		count1 += 1
 
-for i in range(1, len(lotto)):
+# lotto = [1,7,7,7,1,1,1]
+# lotto = [1,1,1,7,7,7,1]
+# lotto = [7,7,7,1,1,1,1]
+
+for i in range(len(lotto)):
 	count = 0
-	if lotto[i] == 7:
-		count += 1
-		if count >= 1:
-			if lotto[i - 1] != lotto[i]:
-				res = False
-				
+	if i <= (len(lotto) - 3):
+		for j in range(3):
+			if lotto[i + j] == 7:
+				count += 1
+		if count == 3:
+			res = True
+		
 print(lotto, res)
 	
