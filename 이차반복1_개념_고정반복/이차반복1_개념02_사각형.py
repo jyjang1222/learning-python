@@ -1,3 +1,4 @@
+import random
 '''
 	[사각형그리기]
 		랜덤으로 세로(3~6)을 저장하고, 각 길이에 맞게 사각형을 그려보시오. 
@@ -11,17 +12,23 @@
 		#####
 '''
 
-import random
+r = random.randint(3, 6)
 
-sero = random.randint(3, 6)
-print("세로 :", sero)
+for i in range(r):
+	for j in range(5):
+		print("#", end = "")
+	print()
 
-print("--------------------")
-for i in range(sero):
-    print("#####")
+
+# sero = random.randint(3, 6)
+# print("세로 :", sero)
+
+# print("--------------------")
+# for i in range(sero):
+#     print("#####")
 	
-print("--------------------")
-for i in range(sero):
-    for j in range(5):
-        print("#", end="")
-    print()
+# print("--------------------")
+# for i in range(sero):
+#     for j in range(5):
+#         print("#", end="")
+#     print()
