@@ -40,4 +40,31 @@ for i in range(1, r):
 
 
 
+# 정답
 
+# import random
+# r = random.randint(50, 100)
+# r = 50
+# c = 0
+# i = 1
+# while i <= 50:
+#     if r % i == 0:
+#         c += 1
+#         print(i)
+#     i += 1
+
+# print("------------------------------")
+# print("c : " , c)
+# center = 0
+# if c % 2 == 1:
+#     center = c // 2 + 1
+# if c % 2 == 0:
+#     center = c // 2 
+# i = 1
+# c2 =0
+# while i <= 50:
+#     if r % i == 0:
+#         c2 += 1
+#         if c2 == center:
+#             print(i)
+#     i += 1 

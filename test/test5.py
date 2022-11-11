@@ -44,4 +44,21 @@ while True:
 
 r2 = random.randint(j, j * 10 - 1)
 
-print(r2)
+print(j, j * 10 - 1, r2)
+
+
+
+# 정답
+# print("--[문제1]--")
+# import random
+# r = random.randint(3, 8)
+# i = 1
+# a = 1
+# print(r)
+# while i < r:
+#     a *= 10
+#     i += 1
+# b = a * 10 - 1
+# print(a , " " , b)
+# r  = random.randint(a , b)
+# print(r)
