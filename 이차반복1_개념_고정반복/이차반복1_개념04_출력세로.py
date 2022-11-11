@@ -103,12 +103,12 @@ for i in range(1, r + 1):
 #     a = i + 1
 #     print(a + r * 0, a + r * 1 , a + r * 2)
 
-print("----")
-for i in range(r):
-    a = i + 1
-    for j in range(3):
-        print(a +  j * r, end=" ")
-    print()
+# print("----")
+# for i in range(r):
+#     a = i + 1
+#     for j in range(3):
+#         print(a +  j * r, end=" ")
+#     print()
 
 
 
