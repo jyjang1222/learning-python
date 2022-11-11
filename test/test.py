@@ -32,20 +32,20 @@ for i in range(3):
     for j in range(3):
         if 철수왼 == i and 철수오 == j:
             print("철수는", r[i],"와", r[j],"를 냈다")
-        elif 철수왼 == i and 철수오 == j:
-            print("철수는", r[i],"와", r[j],"를 냈다")
-        elif 철수왼 == i and 철수오 == j:
-            print("철수는", r[i],"와", r[j]," 냈다")
+        # elif 철수왼 == i and 철수오 == j:
+        #     print("철수는", r[i],"와", r[j],"를 냈다")
+        # elif 철수왼 == i and 철수오 == j:
+        #     print("철수는", r[i],"와", r[j]," 냈다")
 
 # 영희의 가위바위보 츨력
 for i in range(3):
     for j in range(3):
         if 영희왼 == i and 영희오 == j:
             print("영희는", r[i],"와", r[j],"를 냈다")
-        elif 영희왼 == i and 영희오 == j:
-            print("영희는", r[i],"와", r[j],"를 냈다")
-        elif 영희왼 == i and 영희오 == j:
-            print("영희는", r[i],"와", r[j]," 냈다")        
+        # elif 영희왼 == i and 영희오 == j:
+        #     print("영희는", r[i],"와", r[j],"를 냈다")
+        # elif 영희왼 == i and 영희오 == j:
+        #     print("영희는", r[i],"와", r[j]," 냈다")        
 
 # 둘중선택
 철수선택 = random.randint(0, 1)
