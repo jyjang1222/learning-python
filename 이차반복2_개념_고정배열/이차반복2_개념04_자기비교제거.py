@@ -18,10 +18,28 @@
 
 a = [10,30,40,10,20,30,50]
 
+# 
 for i in range(len(a)):
-    for j in range(len(a)):
-        if i != j and a[i] != 0 and a[i] == a[j] :
-            a[i] = 0
-            a[j] = 0
+	print(a[i], end = ":")
+	for j in range(len(a)):
+		if i != j:
+			if a[i] != 0 or a[j] != 0:
+				if a[i] == a[j]:
+					a[i] = 0
+					a[j] = 0
+	print(a)
+
+
+
+
+
+
+
+
+# for i in range(len(a)):
+#     for j in range(len(a)):
+#         if i != j and a[i] != 0 and a[i] == a[j] :
+#             a[i] = 0
+#             a[j] = 0
             
-print(a)
+# print(a)

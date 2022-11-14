@@ -10,9 +10,21 @@ a = [10, 20, 30, 40]
 b = [10, 5, 20, 9]
 c = []
 
-for i in range(len(a)):
-    for j in range(len(b)):
-        if a[i] == b[j]:
-        	c.append(a[i])
-  
+# num = 0
+
+for i in a:
+	for j in b:
+		if i == j:
+			c.append(i)
+
 print(c)
+
+
+
+# 정답
+# for i in range(len(a)):
+#     for j in range(len(b)):
+#         if a[i] == b[j]:
+#         	c.append(a[i])
+  
+# print(c)

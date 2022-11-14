@@ -9,22 +9,29 @@
 		20 보다 큰 점수는 54, 90 이다. 
 '''
 
-a = [10, 54, 90, 20]
+a = [10, 54, 90, 20, 54]
+# cnt = 0
+for i in range(len(a)):
+	print(a[i], "보다 크거나 같은 점수는")
+	cnt = 0
+	for j in range(len(a)):
+		# 본인인덱스 제외
+		if i == j:
+			j += 1
+			continue
+		# 같거나 큰점수 출력
+		if a[i] == a[j] or a[i] <= a[j]: 
+			cnt += 1
+			print(a[j], end = " ")
+	if cnt == 0:
+		print("없다")
+	else:
+		print("이다.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-# for i in range(len(a)):
-# 	for j in range(len(a)):
-# 		if i != j and a[i] <= a[j]: # 본인 인덱스는 제외해야 한다.
-# 			print(a[j] , end=" ")
-# 	print()
+print()
+# 정답
+for i in range(len(a)):
+	for j in range(len(a)):
+		if i != j and a[i] <= a[j]: # 본인 인덱스는 제외해야 한다.
+			print(a[j] , end=" ")
+	print()
