@@ -14,3 +14,13 @@
 		10 : 4
 '''
 a = [10,30,40,10,20,30,50,10,10]
+
+for i in range(len(a)):
+	cnt = 0
+	for j in range(len(a)):
+		if a[i] == a[j]:
+			cnt += 1
+	print(a[i], cnt)
+
+
+

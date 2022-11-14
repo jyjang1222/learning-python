@@ -21,6 +21,13 @@ count = [   0,    0,    0,    0,    0,    0]
 
 purchase = [1002, 1003, 1004, 1001, 1001]
 
+for i in range(len(purchase)):
+	for j in range(len(item)):
+		if purchase[i] == item[j]:
+			count[j] += 1
+
+print(count)
+
 
 
 

@@ -12,7 +12,12 @@
 		
 '''
 number = [1001, 1002, 1003, 1004, 1005, 1006]
-score =  [4,    65,   23,   1,    45,   7]
+score = [4,    65,   23,   1,    45,   7]
 
 search = [1002, 1004, 1003, 1001, 1005]
 
+# idx = 0
+for i in range(len(search)):
+	for j in range(len(number)):
+		if search[i] == number[j]:
+			print(number[j], ":", score[j])

@@ -10,7 +10,16 @@
     [정답]
         [-80, -60, -40, -20]
 '''
+
 a = [10, 20, 30, 40]
 total = []
 
+for i in range(len(a)):
+	calc = a[i]
+	for j in range(len(a)):
+		if a[i] != a[j]:
+			calc -= a[j]
+	total.append(calc)
+
+print(total)
 
