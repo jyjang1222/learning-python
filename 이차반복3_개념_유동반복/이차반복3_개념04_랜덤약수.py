@@ -12,11 +12,38 @@
 '''
 import random
 
+arr = []
+
 for i in range(5):
     r = random.randint(10, 100)
-    print(r, end=" : ")
+    arr.append(r)
 
-    for j in range(r):
-        if r % (j + 1) == 0:
-            print(j + 1, end=" ")
+print(arr)
+
+for i in arr:
+    print(i, end = ":")
+    j = 1
+    while True:
+        if i % j == 0:
+            print(j, end = " ")
+        if j == i:
+            break
+        j += 1
     print()
+
+
+
+
+
+
+
+
+
+# for i in range(5):
+#     r = random.randint(10, 100)
+#     print(r, end=" : ")
+
+#     for j in range(r):
+#         if r % (j + 1) == 0:
+#             print(j + 1, end=" ")
+#     print()

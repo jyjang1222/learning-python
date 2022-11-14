@@ -1,3 +1,4 @@
+import random
 '''
 	[문제] 
 		1~10 사이의 랜덤 숫자를 다섯 번 반복해서 저장하고, 
@@ -13,16 +14,27 @@
 		22
 '''
 
-import random
-
-a = []
-
 for i in range(5):
 	r = random.randint(1, 10)
-	a.append(r)
-print(a)
-
-for i in range(5):
-	for j in range(a[i]):
-		print(a[i], end="")
+	for j in range(r):
+		print(r, end = "")
 	print()
+
+
+
+
+
+
+
+# 정답
+# a = []
+
+# for i in range(5):
+# 	r = random.randint(1, 10)
+# 	a.append(r)
+# print(a)
+
+# for i in range(5):
+# 	for j in range(a[i]):
+# 		print(a[i], end="")
+# 	print()

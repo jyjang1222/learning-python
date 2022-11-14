@@ -9,7 +9,28 @@
 		*
 '''
 
-for i in range(4):
-	for j in range(4-i):
-		print("*", end="")
+for i in range(4, 0, -1):
+	for j in range(i):
+		print("*", end = "")
 	print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# for i in range(4):
+# 	for j in range(4-i):
+# 		print("*", end="")
+# 	print()
