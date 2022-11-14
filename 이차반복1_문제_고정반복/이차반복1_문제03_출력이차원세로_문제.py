@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		3~6 사이의 랜덤 숫자 하나를 저장하고 그 숫자만큼 아래와 같은 규칙으로 출력하시오.
@@ -17,3 +18,10 @@
 		1 2 3 
   
 '''
+
+r = random.randint(3, 6)
+
+for i in range(3):
+	for j in range(1, r + 1):
+		print(j, end = " ")
+	print()

@@ -15,6 +15,7 @@
 import random
 
 r = random.randint(3, 6)
+r = 5
 print("r =", r)
 
 x = r * 3

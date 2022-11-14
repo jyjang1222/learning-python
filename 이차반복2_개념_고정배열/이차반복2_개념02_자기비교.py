@@ -8,10 +8,23 @@
 		90 보다 큰 점수는 없다.
 		20 보다 큰 점수는 54, 90 이다. 
 '''
+
 a = [10, 54, 90, 20]
 
-for i in range(len(a)):
-	for j in range(len(a)):
-		if i != j and a[i] <= a[j]: # 본인 인덱스는 제외해야 한다.
-			print(a[j] , end=" ")
-	print()
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(len(a)):
+# 	for j in range(len(a)):
+# 		if i != j and a[i] <= a[j]: # 본인 인덱스는 제외해야 한다.
+# 			print(a[j] , end=" ")
+# 	print()
