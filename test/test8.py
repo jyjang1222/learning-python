@@ -46,3 +46,30 @@ for i in range(5):
         print()
 
 print(tmp)
+
+print()
+# 정답
+# i = 0
+# op = 0
+# r = random.randint(1, 9)
+# if r % 2 == 1:
+#         op = 1
+# if r % 2 == 0:
+#         op = 2
+# total = r
+# print(total , end=" ")
+# while i < 5:
+#         r = random.randint(1, 9)
+#         if op == 1:
+#                 print("+" , end=" ")
+#                 total += r
+#         if op == 2:
+#                 print("-" , end=" ")
+#                 total -= r
+#         print(r , end=" ")
+#         if r % 2 == 1:
+#                 op = 1
+#         if r % 2 == 0:
+#                 op = 2
+#         i += 1
+# print("=" , total)
