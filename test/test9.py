@@ -24,7 +24,7 @@ j = 1
 while i <= a:
     j *= 10
     i += 1
-print(j)
+# print(j)
 # print(r2 % j)
 # 자리홀수
 # if r % 2 == 1:
@@ -35,6 +35,35 @@ print((r2 % j) // (j // 10))
 
 
 
+# 학생풀이1
+digits = random.randint(3, 8)
+print("digits =", digits)
+
+start = 10 ** (digits - 1)
+end = 10 ** digits - 1
+
+num = random.randint(start, end)
+print("num =", num)
+
+if digits % 2 != 0:
+    i = 1
+    j = digits // 2
+    while j >= 1:
+        num %= 10 ** (digits - i)
+        j -= 1
+        i += 1
+    result = num // 10 ** (digits - i)
+if digits % 2 == 0:
+    i = 1
+    j = digits // 2 - 1
+    while j >= 1:
+        num %= 10 ** (digits - i)
+        j -= 1
+        i += 1
+    result = num // 10 ** (digits - i)
+
+print(result)
+
 
 
 
@@ -44,32 +73,30 @@ print((r2 % j) // (j // 10))
 
 
 # 정답
-# r = random.randint(3,8)
-# i = 1
-# a = 1
-# size = 0
-# while i < r:
-#     a *= 10
-#     size += 1
-#     i += 1
+# import random
+i = 1
+a = 1
+while i < r:
+    a *= 10
+    i += 1
 
-# b = a * 10 - 1
-# print(r , a, b, size)
-# center = 0
-# if size % 2 == 1:
-#     center = size // 2 + 1
-# else:
-#     center = size //2 
+b = a * 10 - 1
+print(r , a, b)
+center = 0
+if r % 2 == 1:
+    center = r // 2 + 1
+else:
+    center = r // 2
 
-# print("center : " , center)
-# r = random.randint(a, b)
-# print("rand : " , r)
-# run = 1
-# i = 0
-# while run == 1:
-#     temp = r % 10
-#     if i == center:
-#         print("중앙값 : " , temp)
-#         run = 0
-#     r //= 10
-#     i += 1
+print("center : " , center)
+r2 = random.randint(a, b)
+print("rand : " , r2)
+run = 1
+i = r  # 자리수는 뒤에서 부터 구한다. 
+while run == 1:
+    temp = r2 % 10
+    r2 //= 10
+    if i == center:
+        print("중앙값 : " , temp)
+        run = 0
+    i -= 1
