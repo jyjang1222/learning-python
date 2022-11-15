@@ -17,15 +17,45 @@
 a = [43,55,65,11]
 count = []
 
-for i in range(len(a)):
 
-	val = 0
-	for j in range(a[i]):
-		if a[i] % (j + 1) == 0:
-			print(j + 1, end=" ")
-			val += 1
+for i in a:
+	cnt = 0
+	j = 1
+	while j <= i:
+		if i % j == 0:
+			cnt += 1
+			print(j, end = " ")
+		j += 1
+	count.append(cnt)
 	print()
 
-	count.append(val)
-
 print(count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# for i in range(len(a)):
+
+# 	val = 0
+# 	for j in range(a[i]):
+# 		if a[i] % (j + 1) == 0:
+# 			print(j + 1, end=" ")
+# 			val += 1
+# 	print()
+
+# 	count.append(val)
+
+# print(count)

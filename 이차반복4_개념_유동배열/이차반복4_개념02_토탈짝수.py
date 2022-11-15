@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [1] 랜덤(1~50) 에서 3의 배수 3개의 합을 total 에 추가한다. 
@@ -12,27 +13,53 @@
 
         total = [93, 63, 75, 63, 48]
 '''
-import random
+
 
 total = []
 
 for i in range(5):
-
-    result = 0
-    count = 0
-    while True:
+    sum = 0
+    cnt = 0
+    while cnt < 3:
         r = random.randint(1, 50)
-
         if r % 3 == 0:
-            result += r
-            print(r, end=" ")
-            count += 1
-        
-        if count == 3:
-            break
-    print(" :", result)
+            print(r, end = " ")
+            sum += r
+            cnt += 1
+    total.append(sum)
+    print("sum:", sum)
 
-    total.append(result)
+print(total)
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# for i in range(5):
+
+#     result = 0
+#     count = 0
+#     while True:
+#         r = random.randint(1, 50)
+
+#         if r % 3 == 0:
+#             result += r
+#             print(r, end=" ")
+#             count += 1
+        
+#         if count == 3:
+#             break
+#     print(" :", result)
+
+#     total.append(result)
 
 
 '''
