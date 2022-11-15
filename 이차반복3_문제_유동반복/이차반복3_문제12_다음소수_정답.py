@@ -14,6 +14,7 @@
 import random
 
 r = random.randint(2, 1000)
+# r = 727
 print("r =", r)
 
 num = r + 1

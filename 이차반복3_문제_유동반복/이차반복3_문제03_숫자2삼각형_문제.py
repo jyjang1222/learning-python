@@ -16,14 +16,13 @@ import random
 '''
 
 r = random.randint(1, 9)
-cnt = 0
+r = 9
 
-# while True:
-# 	i = 1
-# 	if cnt == r:
-# 		break
-# 	j = i
-# 	while True:
-# 		print(j, end = " ")
-# 	cnt += 1
-# 	i += 1
+for i in range(r):
+	n = 1
+	for j in range(i):
+		print(n, end = " ")
+		n += 1
+		if n > 3:
+			n = 1
+	print()

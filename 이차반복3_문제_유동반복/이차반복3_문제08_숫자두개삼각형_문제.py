@@ -8,3 +8,13 @@
 		1 2 3 4 5 6 7 8
 '''
 
+cnt = 0
+i = 2
+while cnt < 4:
+	j = 1
+	while j <= i:
+		print(j, end =  " ")
+		j += 1
+	print()
+	cnt += 1
+	i += 2

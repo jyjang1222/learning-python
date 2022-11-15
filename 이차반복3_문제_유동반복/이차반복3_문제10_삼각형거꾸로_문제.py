@@ -10,3 +10,12 @@
 		2 3 4 5 6 7
 		1 2 3 4 5 6 7
 '''
+n = 7
+i = n
+while i >= 1:
+	j = i
+	while j <= n:
+		print(j, end = " ")
+		j += 1
+	print()
+	i -= 1
