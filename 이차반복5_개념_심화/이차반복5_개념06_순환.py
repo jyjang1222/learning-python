@@ -1,3 +1,4 @@
+import random 
 '''
 	[문제]
 		랜덤(1~5)숫자 하나를 저장하고 그 숫자만큼 a 리스트를 순환시키시오.
@@ -11,22 +12,44 @@
 		a = [40,50,10,20,30]
   		a = [30,40,50,10,20]
 '''
-import random 
 
 a = [10,20,30,40,50]
-
 r = random.randint(1, 5)
-print("r =", r)
+# r = 5
+print(r)
+tmp = 0
 
 for i in range(r):
-	index = len(a) - 1
-	temp = a[index]
-
-	while index > 0:
-		a[index] = a[index - 1]
-		index -= 1
-	a[0] = temp
+	tmp = a[len(a) - 1]
+	for j in range(len(a) - 1, 0, -1):
+		a[j] = a[j - 1]
+	a[0] = tmp
 	print(a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# r = random.randint(1, 5)
+# print("r =", r)
+
+# for i in range(r):
+# 	index = len(a) - 1
+# 	temp = a[index]
+
+# 	while index > 0:
+# 		a[index] = a[index - 1]
+# 		index -= 1
+# 	a[0] = temp
+# 	print(a)
 
 
     

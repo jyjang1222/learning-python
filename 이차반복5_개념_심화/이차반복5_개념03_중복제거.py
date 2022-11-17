@@ -10,17 +10,43 @@
 
 a = [10,20,30,40,20]
 b = [10,3,20,10,20,50]
+t = 0
 
 for i in range(len(a)):
-	check = -1
 	for j in range(len(b)):
 		if a[i] == b[j]:
-			check = a[i]
+			# t에 삭제할값 저장
+			t = a[i]
 			b[j] = 0
+	print(t)
+	if a[i] == t:
+		a[i] = 0
 
-	if check != -1:
-		for j in range(len(a)):
-			if check == a[j]:
-				a[j] = 0
-print("a =", a)
-print("b =", b)
+print(a)
+print(b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(len(a)):
+# 	check = -1
+# 	for j in range(len(b)):
+# 		if a[i] == b[j]:
+# 			check = a[i]
+# 			b[j] = 0
+
+# 	if check != -1:
+# 		for j in range(len(a)):
+# 			if check == a[j]:
+# 				a[j] = 0
+# print("a =", a)
+# print("b =", b)

@@ -15,31 +15,75 @@
 	[정답]
 		max = [55, 65]
 '''
+
 a = [43,55,65,11]
 count = []
 max = []
 
+mx = 0
+
 for i in range(len(a)):
-	
 	cnt = 0
-	for j in range(a[i]):
-		if a[i] % (j + 1) == 0:
-			print(j + 1, end=" ")
+	for j in range(1, a[i] + 1):
+		if a[i] % j == 0:
 			cnt += 1
+	if mx < cnt:
+		mx = cnt
 	count.append(cnt)
-print()
 
-print("count =", count)
+# print(mx, count)
 
-maxCount = 0
-maxIndex = 0
-for i in range(len(count)):
-	if maxCount < count[i]:
-		maxCount = count[i]
-		maxIndex = i
-print(maxCount)
-
-for i in range(len(count)):
-	if maxCount == count[i]:
+for i in range(len(a)):
+	cnt = 0
+	for j in range(1, a[i] + 1):
+		if a[i] % j == 0:
+			cnt += 1
+	if cnt == mx:
 		max.append(a[i])
+
+print(count)
 print(max)
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(len(a)):
+	
+# 	cnt = 0
+# 	for j in range(a[i]):
+# 		if a[i] % (j + 1) == 0:
+# 			print(j + 1, end=" ")
+# 			cnt += 1
+# 	count.append(cnt)
+# print()
+
+# print("count =", count)
+
+# maxCount = 0
+# maxIndex = 0
+# for i in range(len(count)):
+# 	if maxCount < count[i]:
+# 		maxCount = count[i]
+# 		maxIndex = i
+# print(maxCount)
+
+# for i in range(len(count)):
+# 	if maxCount == count[i]:
+# 		max.append(a[i])
+# print(max)

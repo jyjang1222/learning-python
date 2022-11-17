@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		a리스트안에는 1~5의 값이 추가되어 있다. 
@@ -16,24 +17,43 @@
 		r = 1 : [2, 4]
 		r = 6 : 삭제불가
 '''
-import random
 
 a = [1,2,3,4,5]
 
 for i in range(10):
+	chk = False
 	r = random.randint(1, 10)
-	print("r =", r, end=" : ")
-
-	check = -1
 	for j in range(len(a)):
-		if r == a[j]:
-			check = j
-			break
-	
-	if check != -1:
-		del a[check]
-		print(a)
+		if a[j] == r:
+			chk = True
+	if chk:
+		a.remove(r)
+		print(r, a)
 	else:
-		print("삭제불가")
+		print(r, "삭제불가")
+
+
+
+
+
+
+# 정답
+# a = [1,2,3,4,5]
+
+# for i in range(10):
+# 	r = random.randint(1, 10)
+# 	print("r =", r, end=" : ")
+
+# 	check = -1
+# 	for j in range(len(a)):
+# 		if r == a[j]:
+# 			check = j
+# 			break
+	
+# 	if check != -1:
+# 		del a[check]
+# 		print(a)
+# 	else:
+# 		print("삭제불가")
 
 		
