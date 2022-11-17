@@ -14,6 +14,12 @@
 '''
 a = [3,5,2,4]
 count = [5,6,1,3]
-
 b = []
 
+i = 0
+while i < len(a):
+    for j in range(count[i]):
+        b.append(a[i])
+    i += 1
+
+print(b)

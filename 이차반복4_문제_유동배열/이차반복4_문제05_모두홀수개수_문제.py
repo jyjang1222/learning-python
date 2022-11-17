@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		(1) 랜덤(1 ~ 9) 사이의 랜덤값을 4개를 저장 후 비교한다. 
@@ -11,3 +12,30 @@
 			...
 '''
 total = []
+
+for i in range(5):
+	a = []
+	for i in range(4):
+		r = random.randint(1, 9)
+		a.append(r)
+	
+	print(a)
+
+	bool = True
+	for i in range(len(a)):
+		# 하나라도 짝수면 false
+		if a[i] % 2 != 1:
+			bool = False
+	
+	if bool:
+		total.append(1)
+	else:
+		total.append(2)
+	
+	print(total)
+
+
+
+
+
+

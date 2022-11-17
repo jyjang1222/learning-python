@@ -44,7 +44,7 @@ while True:
 		if check == False:
 			me[i] = r
 		i += 1
-	print("me =", me)
+	print(com, "me =", me)
 
 	ball = 0
 	strike = 0

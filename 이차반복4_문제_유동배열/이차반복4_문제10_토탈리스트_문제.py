@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		[1] 1~9 사이의 랜덤 숫자 다섯개의 합을 total에 추가한다. 
@@ -16,3 +17,14 @@
 		total = [26, 24, 23, 33, 13, 21, 27, 17, 23, 29]
 '''
 total = []
+
+for i in range(10):
+	sum = 0
+	for j in range(5):
+		r = random.randint(1, 9)
+		sum += r
+	print(sum, end = " ")
+	total.append(sum)
+
+print()
+print(total)
