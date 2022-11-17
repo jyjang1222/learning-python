@@ -16,4 +16,28 @@
 		b = [32, 0, 0, 0, 0, 0, 0]
 '''
 a = [8,4,2,2,4,4,8]
-b = [0,0,0,0,0,0,0]
+prev = 0
+
+i = 0
+while i < 3:
+	cnt = 0
+	chk = True
+	for i in range(len(a)):
+
+	for i in range(len(a)):
+		if prev == a[i]:
+			a[i - 1] *= 2
+			a[i] = 0
+		prev = a[i]
+	print(prev)
+
+	for i in range(len(a)):
+		if a[i] == 0:
+			chk = False
+			cnt += 1
+
+	if chk == False:
+		for i in range(cnt):
+			a.remove(0)
+	print(a)
+	i += 1

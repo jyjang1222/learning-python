@@ -40,4 +40,7 @@ while i < len(a):
 		b[index + 1] = a[i]
 		index += 1
 	i += 1
-print(b)
+	print(b)
+
+# print(a)
+# print(b)
