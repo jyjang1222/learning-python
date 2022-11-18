@@ -12,17 +12,18 @@ c = []
 for i in b:
 	a.append(i)
 
-while True:
-	chk = True
-	for i in range(len(a)):
-		tmp = a[i]
-		for j in range(i, len(a)):
-			if a[j] < tmp:
-				chk = False
-				print(tmp, a)
-				a[i] = a[j]
-				a[j] = tmp
-				print(tmp, a)
-				break
-	if chk:
-		break
+tmp = 0
+minIdx = 0
+
+for i in range(len(a)):
+	minIdx = i
+	tmp = a[i]
+	for j in range(i, len(a)):
+		if a[j] < a[minIdx]:
+			# min = a[j]
+			minIdx = j
+	print(a, minIdx)
+	a[i] = a[minIdx]
+	a[minIdx] = tmp
+
+print(a)
