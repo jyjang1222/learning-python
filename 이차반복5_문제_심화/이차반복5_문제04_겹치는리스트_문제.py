@@ -15,3 +15,20 @@ a = [1,3,3,6,5,6,1,8,9]
 b = [6,1,8]
 # b = [6,3]
 # b = [3,6,5,6]
+# b = [6,6]
+
+chk = False
+
+for i in range(len(a) - len(b) + 1):
+	cnt = 0
+	for j in range(len(b)):
+		# a[i + 0] b[0], a[i + 1] b[1], a[i + 2] b[2]
+		if a[i + j] == b[j]:
+			cnt += 1
+		else:
+			break
+	print(i, cnt)
+	if cnt == len(b):
+		chk = True
+
+print(chk)

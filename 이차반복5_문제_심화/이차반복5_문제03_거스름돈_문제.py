@@ -10,7 +10,16 @@
     [정답]
         count = [1, 1, 0, 0, 2, 7]
 '''
+
 money = [50000, 10000, 5000, 1000, 500, 100]
 count = [    1,     1,    1,    1,   5,  10]
 
 charge = 7800
+
+while charge > 0:
+    for i in range(len(money)):
+        if money[i] <= charge and count[i] > 0:
+            charge -= money[i]
+            count[i] -= 1
+
+print(count)

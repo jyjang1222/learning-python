@@ -107,26 +107,18 @@ print("#4")
     [예시2]
         [1,1,2,4,3,4] => 1번 
 """
-test1 = [3,1,2,1,2,5]
-test2 = [1,1,2,4,3,4]
+test1 = [3,1,2,1,2,5,1,2,1,1,2]
+test2 = [1,1,2,4,3,4,1,1,2,1,2]
 
-prev = 0
-cnt = 0
+def func(arr) :
+    cnt = 0
+    prev = 0
+    for i in range(len(arr)):
+        if prev == 1:
+            if arr[i] == 2:
+                cnt += 1
+        prev = arr[i]
+    return cnt
 
-for i in range(len(test1)):
-    if prev == 1:
-        if test1[i] == 2:
-            cnt += 1
-    prev = test1[i]
-    
-print("test1", cnt)
-
-cnt = 0
-
-for i in range(len(test2)):
-    if prev == 1:
-        if test2[i] == 2:
-            cnt += 1
-    prev = test2[i]
-
-print("test2", cnt)
+print(func(test1))
+print(func(test2))
