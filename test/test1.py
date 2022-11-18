@@ -67,3 +67,22 @@ while True:
 
 print(a)
 
+# 학생풀이
+import random
+
+a = []
+oddList = []
+
+# 1부터 30까지 홀수 리스트를 먼저 뽑아놓음
+for i in range(30):
+    i += 1
+    if i % 2 != 0:
+        oddList.append(i)
+
+#홀수리스트에서 랜덤으로 가져다가 a 리스트에 추가함
+for i in range(10):
+    idx = random.randint(0, len(oddList) - 1)
+    a.append(oddList[idx])
+    del oddList[idx]
+
+print(a)
