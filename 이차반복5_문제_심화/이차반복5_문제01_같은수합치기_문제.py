@@ -16,28 +16,36 @@
 		b = [32, 0, 0, 0, 0, 0, 0]
 '''
 a = [8,4,2,2,4,4,8]
-prev = 0
 
-i = 0
-while i < 3:
+print(a)
+
+while True:
 	cnt = 0
 	chk = True
-	for i in range(len(a)):
-
+	prev = 0
+	
+	# 연속된 숫자 체크하고 0으로 만듬
 	for i in range(len(a)):
 		if prev == a[i]:
 			a[i - 1] *= 2
 			a[i] = 0
-		prev = a[i]
-	print(prev)
+			chk = False
+		else:
+			prev = a[i]
 
+	print(a)
+
+	# 연속된 숫자가 없다면 break
+	if chk:
+		break
+
+	# 0인값 만큼 cnt += 1
 	for i in range(len(a)):
 		if a[i] == 0:
-			chk = False
 			cnt += 1
 
-	if chk == False:
-		for i in range(cnt):
-			a.remove(0)
+	# cnt만큼 0갯수 삭제
+	for i in range(cnt):
+		a.remove(0)
 	print(a)
-	i += 1
+
