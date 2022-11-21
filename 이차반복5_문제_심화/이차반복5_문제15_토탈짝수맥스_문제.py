@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         [1] 1~50 사이의 랜덤 숫자 중 3의 배수 3개의 합을 total에 추가한다. 
@@ -12,5 +13,26 @@
         
         max = 120
 '''
+
 total = []
 max = 0
+
+for i in range(5):
+    sum = 0
+    cnt = 0
+    while True:
+        r = random.randint(1, 50)
+        if r % 3 == 0:
+            sum += r
+            cnt += 1
+        if cnt == 3:
+            total.append(sum)
+            break
+
+print(total)
+
+for i in total:
+    if i > max:
+        max = i
+
+print(max)
