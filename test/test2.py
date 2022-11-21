@@ -167,19 +167,18 @@ print()
 print("#7")
 a = []
 for i in range(15):
-    r = random.randint(1, 5)
+    r = random.randint(1, 3)
     a.append(r)
 
 # a = [1, 5, 2, 1, 2, 3, 3, 2, 1, 4, 1, 2, 3, 4, 2] 
-# a = [1, 5, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 2] 
+a = [1, 3, 2, 1, 2, 3, 1, 2, 3, 3, 1, 2, 3, 2, 2] 
 # 길이 - 2 까지 비교가능
 cnt = 0
 for i in range(len(a) - 2):
     chk = True
-    for j in range(3):
-        # 1 ~ 3이 아니면 false
-        # a[i + j] < 1 or 3 < a[i + j]
-        if not(1 <= a[i + j] and a[i + j] <= 3):
+    for j in range(1, 4):
+        # 연속 123이 아니면 false
+        if a[i + (j - 1)] != j:
             chk = False
     if chk:
         cnt += 1
