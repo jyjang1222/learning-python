@@ -86,3 +86,4 @@ for i in range(10):
     del oddList[idx]
 
 print(a)
+
