@@ -34,3 +34,32 @@
 
 vending = [7, 5, 3, 5, 3]
 box = [5, 5, 5, 5]
+
+print(vending)
+print(box)
+
+i = 0
+while True:
+    chk = True
+    # 박스가 모두 0아니면 false
+    for j in box:
+        if j != 0:
+            chk = False
+    if chk:
+        break
+
+    # 재고채우기
+    for j in range(len(box)):
+        # 채우고 10이 넘으면 
+        if vending[i] + box[j] >= 10:
+            # 박스에 남은수량넣고 현재수량10넣기
+            box[j] = vending[i] - box[j]
+            vending[i] = 10
+        # 10이 안넘으면
+        else:
+            # 현재수량에 박스만큼 넣고 박스0
+            vending[i] += box[j]
+            box[j] = 0
+    print(vending)
+    print(box)
+    i += 1

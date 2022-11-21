@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		랜덤(1~5) 숫자 하나를 저장하고 그 숫자만큼 a 리스트를 역순환시키시오.
@@ -14,10 +15,17 @@
 '''
 a = [10,20,30,40,50]
 
+r = random.randint(1, 5)
+# r = 1
 
+for i in range(r):
+	tmp = a[0]
 
-    
+	for j in range(len(a) - 1):
+		a[j] = a[j + 1]
 
+	a[len(a) - 1] = tmp
 
+print(r, a)
 
 
