@@ -17,7 +17,7 @@ import random
         [62, 57, 54]
         [48, 40, 23]
 '''
-size = [3, 4, 3]
+size = [3, 3, 3]
 a = []
 
 for i in range(3):
@@ -34,7 +34,7 @@ print(a)
 # tmp 에 넣을 idx 구하기
 # 00 01 02 10 11 12 20 21 22
 for i in range(len(a)):
-    for j in range(len(a)):
+    for j in range(size[i]):
         idx1 = i
         idx2 = j
         # print(idx1, idx2, end = " ")
@@ -43,15 +43,15 @@ for i in range(len(a)):
         # 예) i = 0 j = 1 이라면
         # max 찾기1 
         # 0 1, 0 2 체크. 전의 0 0 은 제외
-        for k in range(j, len(a)):
+        for k in range(j, size[i]):
             if a[i][k] > max:
                 max = a[i][k]
                 idx3 = i
                 idx4 = k
         # max 찾기2
         # 1 0, 1 1, 1 2, 2 0, 2 1, 2 2 체크 
-        for k in range(i + 1, len(a)):
-            for m in range(len(a)):
+        for k in range(i + 1, size[i]):
+            for m in range(size[i]):
                 if a[k][m] > max:
                     max = a[k][m]
                     idx3 = k

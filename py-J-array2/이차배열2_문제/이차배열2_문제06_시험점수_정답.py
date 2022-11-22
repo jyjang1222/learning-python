@@ -104,7 +104,7 @@ print(student[maxIndex][0], maxScore)
 '''
 print("[문제6]")
 for i in range(len(student)):
-    if student[i][1] > student[i][2]:
+    if student[i][2] > student[i][1]:
         print(student[i][0], end=" ")
 print()
 

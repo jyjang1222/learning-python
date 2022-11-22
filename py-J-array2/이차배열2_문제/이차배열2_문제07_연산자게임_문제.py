@@ -27,3 +27,15 @@ game = [
     [4,6,1],
 ]
 total = []
+
+# [n][2] 기준
+for i in range(len(game)):
+    if game[i][2] == 0:
+        n = game[i][0] + game[i][1]
+    if game[i][2] == 1:
+        n = game[i][0] - game[i][1]
+    if game[i][2] == 2:
+        n = game[i][0] * game[i][1]
+    total.append(n)
+
+print(total)

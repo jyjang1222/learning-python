@@ -23,3 +23,19 @@ game = [
 ]
 x = 5
 y = 5
+
+print(x, y)
+for i in range(len(game)):
+    # 북
+    if game[i][1] == 0:
+        y += game[i][0]
+    # 동
+    elif game[i][1] == 1:
+        x += game[i][0]
+    # 남
+    elif game[i][1] == 2:
+        y -= game[i][0]
+    # 서
+    elif game[i][1] == 3:
+        x -= game[i][0]
+    print(x, y)
