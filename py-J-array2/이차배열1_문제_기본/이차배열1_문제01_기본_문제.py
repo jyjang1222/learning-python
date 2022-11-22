@@ -13,6 +13,15 @@ a = []
 '''
 print("[문제1]")
 
+for i in range(3):
+    tmp = []
+    for j in range(3):
+        r = random.randint(1, 100)
+        tmp.append(r)
+    a.append(tmp)
+
+print(a)
+
 '''         
     [문제2]
         a리스트값들 중 50이상을 전부 출력하시오.
@@ -20,6 +29,12 @@ print("[문제1]")
         56 64 100 70
 '''
 print("[문제2]")
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j] >= 50:
+            print(a[i][j], end = " ")
+print()
 
 '''
     [문제3]
@@ -29,6 +44,12 @@ print("[문제2]")
 '''
 print("[문제3]")
 
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j] % 4 == 0:
+            print(a[i][j], end = " ")
+print()
+
 '''        
     [문제4]
          a리스트값들 중 50이상인 수의 합을 출력하시오.
@@ -36,6 +57,13 @@ print("[문제3]")
         total = 290
 '''
 print("[문제4]")
+
+sum = 0
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j] >= 50:
+            sum += a[i][j]
+print(sum)
 
 '''
     [문제5]
@@ -45,3 +73,9 @@ print("[문제4]")
 '''
 print("[문제5]")
 
+cnt = 0
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j] >= 50:
+            cnt += 1
+print(cnt)

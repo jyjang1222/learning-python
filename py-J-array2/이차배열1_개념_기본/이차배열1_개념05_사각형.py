@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
          a 이차리스트에 랜덤(1~100) 값을 9개 저장 후
@@ -7,21 +8,33 @@
         [27, 29, 25]
         [39, 65, 11]
 '''
-import random
 
-a = [
-        [0,0,0],
-        [0,0,0],
-        [0,0,0]
-    ]
+a = []
 
-for i in range(len(a)):
-    for j in range(len(a[i])):
-        a[i][j] = random.randint(1, 100)
+for i in range(3):
+    tmp = []
+    for j in range(3):
+        r = random.randint(1, 100)
+        tmp.append(r)
+    print(tmp)
+    a.append(tmp)
 
-print("a : ", a)
+print(a)
 
-print("사각형출력")
-for i in range(len(a)):
-    print(a[i])
+
+# a = [
+#         [0,0,0],
+#         [0,0,0],
+#         [0,0,0]
+#     ]
+
+# for i in range(len(a)):
+#     for j in range(len(a[i])):
+#         a[i][j] = random.randint(1, 100)
+
+# print("a : ", a)
+
+# print("사각형출력")
+# for i in range(len(a)):
+#     print(a[i])
 

@@ -6,11 +6,24 @@
 '''
 b = [[0,0,0],[0,0,0],[0,0,0]]
 
-num = 1
-for i in range(len(b)):
-    for j in range(len(b[i])):
-        b[i][j] = num
-        num += 1
 
-print("b =", b)
+k = 1
+for i in range(len(b)):
+    for j in range(3):
+        b[i][j] = k
+        k += 1
+
+print(b)
+
+for i in range(len(b)):
+    print(len(b[i]))
+    
+
+# num = 1
+# for i in range(len(b)):
+#     for j in range(len(b[i])):
+#         b[i][j] = num
+#         num += 1
+
+# print("b =", b)
 

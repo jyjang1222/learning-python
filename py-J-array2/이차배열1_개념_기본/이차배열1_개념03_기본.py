@@ -6,13 +6,26 @@
 '''
 c = []
 
+k = 1
 for i in range(3):
-    c.append([0,0,0])
-print("c : " , c)
+    arr = []
+    for j in range(3):
+        arr.append(k)
+        k += 1
+    c.append(arr)
 
-num = 1
-for i in range(len(c)):
-    for j in range(len(c[i])):
-        c[i][j] = num
-        num += 1
-print("c : " , c)
+print(c)
+
+
+# 0으로 초기화
+# for i in range(3):
+#     c.append([0,0,0])
+# print("c : " , c)
+
+
+# num = 1
+# for i in range(len(c)):
+#     for j in range(len(c[i])):
+#         c[i][j] = num
+#         num += 1
+# print("c : " , c)
