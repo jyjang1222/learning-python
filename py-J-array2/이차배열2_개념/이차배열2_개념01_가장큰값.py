@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
          a이차리스트에 랜덤숫자(1~100)을 9개 저장하고,
@@ -9,26 +10,48 @@
         
         max :  85
 '''
+a = []
+max = 0
 
-import random
+for i in range(3):
+    tmp = []
+    for j in range(3):
+        r = random.randint(1, 100)
+        if r > max:
+            max = r
+        tmp.append(r)
+    a.append(tmp)
 
-a = [
-        [0,0,0],
-        [0,0,0],
-        [0,0,0]
-    ]
+print(a, max)
 
-for i in range(len(a)):
-    for j in range(len(a[i])):
-        a[i][j] = random.randint(1, 100)
 
-for i in range(len(a)):
-    print(a[i])
 
-max = a[0][0]
-for i in range(len(a)):
-    for j in range(len(a[i])):
-        if max < a[i][j] :
-            max = a[i][j]
+
+
+
+
+
+
+
+
+
+# a = [
+#         [0,0,0],
+#         [0,0,0],
+#         [0,0,0]
+#     ]
+
+# for i in range(len(a)):
+#     for j in range(len(a[i])):
+#         a[i][j] = random.randint(1, 100)
+
+# for i in range(len(a)):
+#     print(a[i])
+
+# max = a[0][0]
+# for i in range(len(a)):
+#     for j in range(len(a[i])):
+#         if max < a[i][j] :
+#             max = a[i][j]
             
-print("max : ", max)
+# print("max : ", max)

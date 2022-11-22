@@ -90,7 +90,8 @@ temp = []
 for i in range(len(pay)):
     for j in range(len(pay[i])):
         temp.append(pay[i][j])
-
+print(temp)
+temp = [1000, 2100, 1300, 4100, 1000, 1000, 3000, 1600, 800]
 y = 0
 x = 0
 for i in range(len(temp)):

@@ -33,3 +33,25 @@ game = [
     [2,1]
 ]
 pos = 0
+res = ""
+print(pos)
+for i in range(len(game)):
+    # 비기면
+    if game[i][0] == game[i][1]:
+        pos += 1
+        res = "비김"
+    # 이기면
+    elif game[i][0] == 0 and game[i][1] == 2:
+        pos += 3
+        res = "이김"
+    elif game[i][0] == 1 and game[i][1] == 0:
+        pos += 3
+        res = "이김"
+    elif game[i][0] == 2 and game[i][1] == 1:
+        pos += 3
+        res = "이김"
+    # 지면
+    else:
+        pos -= 3
+        res = "짐"
+    print(res, pos)

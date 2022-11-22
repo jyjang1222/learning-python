@@ -9,6 +9,7 @@
     [정답]
         result = [24, 18, 24, 81, 6, 42]
 '''
+
 game = [
     [4,6],
     [3,6],
@@ -17,12 +18,37 @@ game = [
     [2,3],
     [6,7]
 ]
-
 result = []
 
 for i in range(len(game)):
-    z = game[i][0] * game[i][1]
-    print(game[i][0], "*", game[i][1], "=", z)
-    result.append(z)
+    num = 1
+    for j in range(len(game[i])):
+        num *= game[i][j]
+    result.append(num)
 
 print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(len(game)):
+#     z = game[i][0] * game[i][1]
+#     print(game[i][0], "*", game[i][1], "=", z)
+#     result.append(z)
+
+# print(result)
