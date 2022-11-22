@@ -18,7 +18,17 @@ a = [
     [2,1,4,3,3],   
 ]
 
-for i in range(5):
-    for j in range(6):
-        print(a[j][i], end=" ") 
-    print()
+
+
+
+
+
+
+
+
+
+
+# for i in range(5):
+#     for j in range(6):
+#         print(a[j][i], end=" ") 
+#     print()

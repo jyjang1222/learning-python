@@ -22,16 +22,33 @@
 a = [13,14,11,12,0,232,22,234,0,24,14,34,44,54,63,33,63,0,4,32,3]
 b = []		    
 
-temp = []
-for i in range(len(a)):
-    if a[i] != 0:
-        temp.append(a[i])
-    else:
-        b.append(temp)
-        temp = [] 
 
-    if i == len(a) - 1:   
-        b.append(temp)
 
-for i in range(len(b)):
-    print(b[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# temp = []
+# for i in range(len(a)):
+#     if a[i] != 0:
+#         temp.append(a[i])
+#     else:
+#         b.append(temp)
+#         temp = [] 
+
+#     if i == len(a) - 1:   
+#         b.append(temp)
+
+# for i in range(len(b)):
+#     print(b[i])

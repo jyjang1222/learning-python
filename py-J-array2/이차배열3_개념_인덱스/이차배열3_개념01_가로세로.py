@@ -15,16 +15,29 @@ a = [
 garo =[]
 sero =[]
 
-for i in range(3):
-    total = 0
-    for j in range(4):
-        total += a[i][j]
-    garo.append(total)
-print("garo =", garo)
 
-for i in range(4):
-    total  = 0
-    for j in range(3):
-        total += a[j][i]
-    sero.append(total)
-print("sero =", sero)
+
+
+
+
+
+
+
+
+
+
+
+
+# for i in range(3):
+#     total = 0
+#     for j in range(4):
+#         total += a[i][j]
+#     garo.append(total)
+# print("garo =", garo)
+
+# for i in range(4):
+#     total  = 0
+#     for j in range(3):
+#         total += a[j][i]
+#     sero.append(total)
+# print("sero =", sero)
