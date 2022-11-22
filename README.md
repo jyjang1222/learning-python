@@ -4,13 +4,22 @@
 <pre><code># 가운데숫자 구하기
 
 n = 12345
-center = n // 2 + 1
+tmp = n
+cnt = 0
+while True:
+    if tmp == 0:
+        break
+    tmp //= 10
+    cnt += 1
+
+tmp = n
+center = cnt // 2 + 1
 for i in range(center):
-    n %= 10
-    res = n
-    n //= 10
+    res = tmp % 10
+    tmp //= 10
 
 print(res)
+
 </code></pre>
 
 ### 나머지 응용<br>(특정 범위에서 계속 루프하는 수 구하기)
