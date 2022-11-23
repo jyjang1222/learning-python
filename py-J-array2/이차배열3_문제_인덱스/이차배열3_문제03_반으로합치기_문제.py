@@ -23,3 +23,31 @@ a = [
 ]
 
 b = []
+
+for i in range(len(a)):
+    sum = 0
+    cnt = 0
+    tmp = []
+    for j in range(len(a[i])):
+        sum += a[i][j]
+        cnt += 1
+        if cnt >= 2:
+            tmp.append(sum)
+            cnt = 0
+            sum = 0
+    b.append(tmp)
+
+print(b)
+
+b = []
+
+for i in range(len(a)):
+    sum = 0
+    tmp = []
+    for j in range(len(a[i])):
+        if j % 2 == 0:
+            sum = a[i][j] + a[i][j + 1]
+            tmp.append(sum)
+    b.append(tmp)
+
+print(b)

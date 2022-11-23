@@ -19,6 +19,10 @@ a = [
 ]
 
 
+for i in range(len(a[0])):
+    for j in range(len(a)):
+        print(a[j][i], end = " ")
+    print()
 
 
 

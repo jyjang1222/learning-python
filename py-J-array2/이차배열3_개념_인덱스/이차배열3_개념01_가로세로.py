@@ -12,10 +12,23 @@ a = [
     [301, 302, 303, 304],
      ]
 
-garo =[]
-sero =[]
+garo = []
+sero = []
 
+for i in range(len(a)):
+    garoSum = 0
+    for j in range(len(a[i])):
+        garoSum += a[i][j]
+    garo.append(garoSum)
 
+for i in range(len(a[0])):
+    seroSum = 0
+    for j in range(len(a)):
+        seroSum += a[j][i]
+    sero.append(seroSum)
+
+print(garo)
+print(sero)
 
 
 

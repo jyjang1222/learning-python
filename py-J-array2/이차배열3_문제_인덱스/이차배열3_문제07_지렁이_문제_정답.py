@@ -28,7 +28,7 @@ import random
 snake = []
 
 r = random.randint(1, 4)
-r = 4
+r = 1
 print("r =", r)
 
 for i in range(3):
@@ -82,3 +82,5 @@ elif r == 4:
 
 for i in range(len(snake)):
 	print(snake[i])
+
+print(snake)

@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         랜덤(2~100) 숫자를 저장해 그 수의 약수를 모두 리스트에 저장한다.
@@ -11,3 +12,10 @@
 '''
 a = []
 
+r = random.randint(2, 100)
+
+for i in range(1, r + 1):
+    if r % i == 0:
+        a.append(i)
+
+print(r, a)

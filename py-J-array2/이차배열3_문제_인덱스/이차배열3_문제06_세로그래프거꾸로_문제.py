@@ -27,4 +27,13 @@ graph = [
     [0,0,0,0,0,0],
     [0,0,0,0,0,0],
 ]
-	
+
+for i in range(len(graph[0])):
+    for j in range(len(graph) - 1, (len(graph) - 1) - data[i], -1):
+        graph[j][i] = 1
+    # 정답
+    # for j in range(data[i]):
+    # graph[len(graph) - 1 - j][i] = 1
+
+for i in range(len(graph)):
+    print(graph[i])

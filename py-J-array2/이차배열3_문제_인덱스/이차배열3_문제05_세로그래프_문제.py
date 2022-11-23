@@ -29,3 +29,10 @@ graph = [
     [0,0,0,0,0,0],
     [0,0,0,0,0,0],
 ]
+
+for i in range(len(graph[0])):
+    for j in range(data[i]):
+        graph[j][i] = 1
+
+for i in range(len(graph)):
+    print(graph[i])
