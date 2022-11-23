@@ -15,3 +15,9 @@ a = [
     [4,3],
 ]
 b = []
+
+for i in range(len(a)):
+    for j in range(a[i][1]):
+        b.append(a[i][0])
+
+print(b)

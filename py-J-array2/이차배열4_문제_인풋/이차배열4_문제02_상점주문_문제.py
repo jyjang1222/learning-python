@@ -8,7 +8,7 @@
         예를들어 [1001,3]은 1001상품을 3개 주문한 것이다.
         
         count리스트에 오늘 판매한 상품별 개수와 총 금액을 저장 후 출력하시오.   
-    [정답] 
+    [정답] 상품번호, 총판매수, 총가격
         [1001, 8, 4000]
         [1002, 5, 13500]
         [1003, 1, 1200]
@@ -38,3 +38,34 @@ count = [
     [1003,0,0],
     [1004,0,0],
     [1005,0,0]]
+
+
+# 방법1
+for i in range(len(order)):
+    idx = order[i][0] % 1000 - 1
+    # 총판매수
+    count[idx][1] += order[i][1]
+    # 총가격
+    count[idx][2] += order[i][1] * info[idx][1]
+
+for i in range(len(count)):
+    print(count[i])
+
+
+count = [
+    [1001,0,0],
+    [1002,0,0],
+    [1003,0,0],
+    [1004,0,0],
+    [1005,0,0]]
+
+# 방법2 (정답본후 풀이)
+for i in range(len(info)):
+    for j in range(len(order)):
+        # 주문정보에서 100i 모두 찾음
+        if info[i][0] == order[j][0]:
+            count[i][1] += order[j][1]
+            count[i][2] += order[j][1] * info[i][1]
+
+for i in range(len(count)):
+    print(count[i])

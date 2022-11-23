@@ -67,6 +67,10 @@ vending = [
     [1,2,3,4,5,6],
     [1,2,3,4,5,6],
 ]
+# 1 001020 ... 90
+# 2 011121 ... 91
+# 3 021222 ... 92
+# 6 051525 ... 95
 box = [
     [1,4],
     [2,8],
@@ -75,3 +79,43 @@ box = [
     [5,8],
     [6,9],
 ]
+
+for i in range(len(vending[0])):
+    # 비는곳 시작위치 구하기
+    emptyIdx = 0
+    for j in range(len(vending) - 1, -1, -1):
+        # i = 0 ~ 6  j = 9 ~ 0
+        if vending[j][i] == 0:
+            emptyIdx = j
+            break
+    # 비는 공간사이즈 구하기
+    empty = 0
+    for j in range(len(vending)):
+        # i = 0 ~ 6  j = 0 ~ 9
+        if vending[j][i] == 0:
+            empty += 1
+    
+    # 냉장고에 재고 채우기
+    # 남은재고: box[i][1]
+    # 남은재고에 비해 냉장고 빈자리 널널하면
+    if box[i][1] < empty:
+        # 남은재고만큼
+        for j in range(box[i][1]):
+            # 비는 시작위치부터 채워감 emptyIdx - j
+            vending[emptyIdx - j][i] = box[i][0]
+        # 재고 0으로 만듬
+        box[i][1] = 0
+    # 남은재고에 비해 냉장고 빈자리 부족하면
+    elif box[i][1] > empty:
+        # 빈만큼 모두 채움
+        for j in range(empty):
+            # 비는 시작위치부터 채워감 emptyIdx - j
+            vending[emptyIdx - j][i] = box[i][0]
+        box[i][1] -= empty
+
+
+for i in range(len(vending)):
+    print(vending[i])
+print()
+for i in range(len(box)):
+    print(box[i])

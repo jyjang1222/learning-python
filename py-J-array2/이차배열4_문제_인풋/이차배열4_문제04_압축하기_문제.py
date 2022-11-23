@@ -18,3 +18,29 @@
 '''
 a = [3,3,3,3,3,5,5,5,5,5,5,2,4,2,2]
 b = []
+
+tmp = []
+prev = a[0]
+cnt = 1
+
+for i in range(1, len(a)):
+    if prev == a[i]:
+        cnt += 1
+    if prev != a[i] or i == len(a) - 1:
+        tmp.append(prev)
+        tmp.append(cnt)
+        cnt = 1
+    prev = a[i]
+
+print(tmp)
+
+tmp2 = []
+cnt = 0
+for i in range(len(tmp)):
+    tmp2.append(tmp[i])
+    cnt += 1
+    if cnt == 2:
+        b.append(tmp2)
+        tmp2 = []
+        cnt = 0
+print(b)
