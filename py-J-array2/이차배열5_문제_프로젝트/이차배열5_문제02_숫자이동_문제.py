@@ -94,3 +94,41 @@ game = [
 ]
 
 order = [1,3,3,3,4,3,3,4,2]
+
+x = 2
+y = 2
+
+for i in order:
+    print(i)
+    game[y][x] = 0
+    # 북
+    if i == 1:
+        y -= 1
+    # 동
+    if i == 2:
+        x += 1
+    # 남
+    if i == 3:
+        y += 1
+    # 서
+    if i == 4:
+        x -= 1
+    if x < 0:
+        x = 0
+        print("이동불가")
+    if x > 4:
+        x = 4
+        print("이동불가")
+    if y < 0:
+        y = 0
+        print("이동불가")
+    if y > 4:
+        y = 4
+        print("이동불가")
+    game[y][x] = 8
+
+    # game출력
+    for i in range(len(game)):
+        print(game[i])
+        
+

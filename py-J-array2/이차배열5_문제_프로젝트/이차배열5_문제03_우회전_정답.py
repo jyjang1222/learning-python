@@ -33,12 +33,6 @@ rNum = random.randint(1, 4)
 print("rNum =", rNum)
 
 for i in range(rNum):
-    for j in range(3):
-        for k in range(3):
-            print(block[j][k], end=" ")
-        print()
-    print()
-
     temp1 = []
     for j in range(3):
         temp2 = []
@@ -50,7 +44,10 @@ for i in range(rNum):
         for k in range(3):
             block[k][2-j] = temp1[j][k]
 
-
+    # 출력
+    for i in range(len(block)):
+        print(block[i])
+    print()
 
 
 
