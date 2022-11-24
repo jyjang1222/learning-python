@@ -55,7 +55,7 @@ for i in range(len(arr) - 2):
 > len(arr) - 2
   
 위의 코드에서는 예외처리를 위해 반복문의 범위를  
-계산해줘야 한다
+일일히 계산해줘야 한다
   
 <pre><code>arr = [1,1,7,1,7,7,7]
 
@@ -71,6 +71,6 @@ for i in range(len(arr)):
 </code></pre>
   
 > if i+j >= len(arr):  
->     continue
+> <pre>    continue</pre>
   
 continue를 활용하면 손쉽게 예외처리가 가능하다
