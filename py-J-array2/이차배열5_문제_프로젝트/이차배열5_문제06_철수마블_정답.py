@@ -95,7 +95,7 @@ game = [
 
 pY = 0
 pX = 0
-position = 1
+position = 0
 
 count = 0
 

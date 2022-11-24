@@ -16,8 +16,9 @@ import random
 '''
 
 r = random.randint(10000, 99999)
-r = 34567
-cnt = 1
+# r = 34567
+print(r)
+cnt = 0
 tmp = r
 while True:
 	if tmp // 10 == 0:
@@ -25,11 +26,23 @@ while True:
 	tmp //= 10
 	cnt += 1
 
-# print(cnt)
+print(cnt)
+print()
 
 n1 = 0
 n2 = 0
-for i in range(1, cnt):
+# 1
+for i in range(cnt, 0, -1):
 	n1 = r // (10 ** i)
 	n2 = r % (10 ** i)
 	print(n1 + n2)
+
+# 2
+i = 1
+for j in range(cnt):
+	i *= 10
+while i > 1:
+	n1 = r // i
+	n2 = r % i
+	print(n1 + n2)
+	i //= 10

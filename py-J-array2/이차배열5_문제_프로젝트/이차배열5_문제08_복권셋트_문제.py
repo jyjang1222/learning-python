@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		복권 1개당 7칸으로, 총 5개의 복권을 제작하려 한다.
@@ -13,4 +14,45 @@
 			7711771 (꽝)
 			7171717 (꽝)
 '''
-lotto = [0, 0, 0, 0, 0]
+lotto = []
+
+win = 0
+lose = 0
+
+while len(lotto) < 5:
+	# 로또생성
+	tmp = []
+	for j in range(7):
+		r = random.randint(0, 1)
+		if r == 0:
+			r = 7
+		tmp.append(r)
+		
+	# 당첨체크
+	chk = False
+	for j in range(len(tmp) - 2):
+		cnt = 0
+		for k in range(3):
+			if tmp[j + k] == 7:
+				cnt += 1
+		if cnt == 3:
+			chk = True
+			break
+
+	# 당첨이면
+	if chk:
+		# 당첨이 이미나왔으면 
+		if win >= 1:
+			continue
+		lotto.append(tmp)
+		win += 1
+	# 꽝이면
+	else:
+		# 꽝이 이미 4개이면
+		if lose >= 4:
+			continue
+		lotto.append(tmp)
+		lose += 1
+		
+for i in range(len(lotto)):
+	print(lotto[i])

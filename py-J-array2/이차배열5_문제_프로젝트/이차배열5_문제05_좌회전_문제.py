@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         랜덤(1~4)를 저장한다. 랜덤숫자는 회전 횟수이다. 
@@ -25,3 +26,31 @@ block = [
     [4, 5, 6],
     [7, 8, 9]
 ]
+
+for i in range(len(block)):
+    print(block[i])
+
+r = random.randint(1, 4)
+# r = 2
+print(r)
+
+for i in range(r):
+    # 배열은 참조형이기 때문에 원본 복사
+    tmp = []
+    for i in range(len(block)):
+        tmp2 = []
+        for j in range(len(block)):
+            tmp2.append(block[i][j])
+        tmp.append(tmp2)
+
+    # for i in range(len(tmp)):
+    #     print(tmp[i])
+    # 회전
+    for i in range(len(tmp)):
+        for j in range(len(tmp)):
+            block[2-j][i] = tmp[i][j]
+
+    # 출력
+    for i in range(len(block)):
+        print(block[i])
+    print()
