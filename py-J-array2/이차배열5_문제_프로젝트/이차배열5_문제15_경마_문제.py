@@ -1,3 +1,4 @@
+import random
 '''
     [경마]
         horse_race리스트는 경마 게임을 표현한 것이다. 
@@ -14,7 +15,7 @@
         [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         [0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 '''
-horse_race = [
+race = [
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -31,3 +32,45 @@ position = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ]
 total = [0, 0, 0, 0, 0]
+
+for i in range(len(race)):
+    print(race[i])
+print()
+chk = True
+
+while chk:
+    for i in range(len(race)):
+        r = random.randint(2, 5)
+        # 현재위치 체크
+        k = 0
+        for j in range(len(race[i])):
+            if i+1 == race[i][j]:
+                k = j
+        
+        race[i][k] = 0
+        if k + r >= len(race[i]):
+            race[i][len(race[i])-1] = i+1
+            chk = False
+            break
+        if chk:    
+            race[i][k + r] = i+1
+    for i in range(len(race)):
+        print(race[i])
+    print()
+
+# 등수체크
+posArr = []
+for i in range(len(race)):
+    for j in range(len(race[i])):
+        if race[i][j] != 0:
+            posArr.append(j)
+print(posArr)
+
+rank = []
+for i in posArr:
+    cnt = 1
+    for j in posArr:
+        if i < j:
+            cnt += 1
+    rank.append(cnt)
+print(rank)

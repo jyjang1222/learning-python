@@ -19,8 +19,9 @@ import random
 '''
 numList = []
 
-i = 0
-while i < 5:
+while True:
+	if len(numList) == 5:
+		break
 	r = random.randint(1, 9)
 	chk = True
 	for j in range(len(numList)):
@@ -28,19 +29,50 @@ while i < 5:
 			chk = False
 	if chk:
 		numList.append(r)
-		i += 1
+
 
 print(numList)
 print()
 
 arr = []
 
-for i in range(len(numList)):
+while True:
+	if len(arr) == 5:
+		break
 	tmp = []
-	for j in range(len(numList)):
+	# 로또생성
+	for i in range(len(numList)):
 		r = random.randint(0, len(numList) - 1)
 		tmp.append(numList[r])
-	arr.append(tmp)
+	# 중복체크
+	chk = True
+	for i in range(len(tmp)):
+		for j in range(len(tmp)):
+			if i != j:
+				if tmp[i] == tmp[j]:
+					chk = False
+	if chk:
+		arr.append(tmp)
+		
 
 for i in range(len(arr)):
 	print(arr[i])
+
+sumArr = []
+
+for i in range(len(arr)):
+	sum = 0
+	k = 1
+	for j in range(len(arr[i])-1,-1,-1):
+		sum += arr[i][j] * k
+		k *= 10
+	sumArr.append(sum)
+
+print(sumArr)
+
+total = 0
+
+for i in sumArr:
+	total += i
+
+print(total)

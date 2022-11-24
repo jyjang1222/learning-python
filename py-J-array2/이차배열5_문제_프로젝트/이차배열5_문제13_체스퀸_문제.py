@@ -26,41 +26,34 @@ x = random.randint(0, 4)
 print("y:",y,"x:",x)
 list[y][x] = 1
 
-for i in range(len(list)):
-	for j in range(len(list)):
-		# 1시방향
-		for k in range(len(list)):
-			if y-k < 0 or x+k >= len(list):
-				continue
-			list[y-k][x+k] = 1
-		# 5시방향
-		for k in range(len(list)):
-			if y+k >= len(list) or x+k >= len(list):
-				continue
-			list[y+k][x+k] = 1
-		# 7시방향
-		for k in range(len(list)):
-			if y+k >= len(list) or x-k < 0:
-				continue
-			list[y+k][x-k] = 1
-		# 11시방향
-		for k in range(len(list)):
-			if y-k < 0 or x-k < 0:
-				continue
-			list[y-k][x-k] = 1
-		# 12시방향
-		for k in range(len(list)):
-			if y-k < 0:
-				continue
-			list[y-k][x] = 1
-		# 가로
-		for k in range(len(list)):
-			list[y][k] = 1
-		# 6시방향
-		for k in range(len(list)):
-			if y+k >= len(list):
-				continue
-			list[y+k][x] = 1
+
+# 1시방향
+for k in range(len(list)):
+	if y-k < 0 or x+k >= len(list):
+		continue
+	list[y-k][x+k] = 1
+# 5시방향
+for k in range(len(list)):
+	if y+k >= len(list) or x+k >= len(list):
+		continue
+	list[y+k][x+k] = 1
+# 7시방향
+for k in range(len(list)):
+	if y+k >= len(list) or x-k < 0:
+		continue
+	list[y+k][x-k] = 1
+# 11시방향
+for k in range(len(list)):
+	if y-k < 0 or x-k < 0:
+		continue
+	list[y-k][x-k] = 1
+# 가로세로
+for k in range(len(list)):
+	# 가로
+	list[y][k] = 1
+	# 세로
+	list[k][x] = 1
+				
 
 for i in range(len(list)):
 	print(list[i])
