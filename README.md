@@ -70,7 +70,7 @@ for i in range(len(arr)):
         print("당첨")
 </code></pre>
   
-> if i+j >= len(arr):
+> if i+j >= len(arr):  
 >     continue
   
 continue를 활용하면 손쉽게 예외처리가 가능하다
