@@ -24,4 +24,45 @@ score = [
 			[1003, 65, 13, 55, 0],
 			[1004, 76, 63,  4, 0]
 		]
+		# 01 11 21 31
+		# ...
+		# 03 13 23 33
 
+gradeList = []
+
+# 1 10 10 13
+for i in range(len(score)):
+	tmp = []
+	for j in range(1, 4):
+		# tmp = score[i][j]
+		# 등수 체크
+		grade = 1
+		for m in range(len(score)):
+			if score[m][j] > score[i][j]:
+				grade += 1
+		tmp.append(grade)
+	gradeList.append(tmp)
+
+for i in range(len(gradeList)):
+	print(gradeList[i])
+
+total = []
+
+for i in range(len(gradeList)):
+	sum = 0
+	for j in range(len(gradeList[i])):
+		sum += gradeList[i][j]
+	total.append(sum)
+
+
+print(total)
+
+for i in range(len(total)):
+	grade = 1
+	for j in range(len(total)):
+		if total[i] > total[j]:
+			grade += 1
+	score[i][4] = grade
+
+for i in range(len(score)):
+	print(score[i])
