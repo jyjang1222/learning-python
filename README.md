@@ -36,3 +36,30 @@ while True:
     n += 1
 
 </code></pre>
+
+### 배열 예외처리하는 방법
+<b>(배열에서 반복문으로 값의 체크가 필요한데 배열의 범위를 벗어나는 반복문일때 벗어나는 부분만 예외처리 하는 법)</b>
+<pre><code>arr = [1,1,7,1,7,7,7]
+
+for i in range(<mark>len(arr) - 2</mark>):
+    count = 0
+    for j in range(3):
+        if i+j >= len(arr):
+            continue
+        if arr[i+j] == 7:
+            count += 1
+    if count == 3:
+        print("당첨")
+</code></pre>
+<pre><code>arr = [1,1,7,1,7,7,7]
+
+for i in range(len(arr)):
+    count = 0
+    for j in range(3):
+        if i+j >= len(arr):
+            continue
+        if arr[i+j] == 7:
+            count += 1
+    if count == 3:
+        print("당첨")
+</code></pre>
