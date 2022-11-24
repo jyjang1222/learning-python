@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		철수는 게임을 만들려고 한다.
@@ -17,3 +18,9 @@
 			정답 : 13597 + 51397 + 37951 + 91537 = 194482
 '''
 numList = []
+
+for i in range(5):
+	r = random.randint(1, 9)
+	numList.append(r)
+
+print(numList)
