@@ -52,7 +52,7 @@ for i in range(len(arr) - 2):
         print("당첨")
 </code></pre>
   
-> len(arr) - 2
+<pre><code>for i in range(len(arr) - 2)</code></pre>
   
 위의 코드에서는 예외처리를 위해 반복문의 범위를  
 일일히 계산해줘야 한다
@@ -70,7 +70,7 @@ for i in range(len(arr)):
         print("당첨")
 </code></pre>
   
-> if i+j >= len(arr):  
-> <pre>    continue</pre>
+<pre><code>if i+j >= len(arr):
+    continue</code></pre>
   
 continue를 활용하면 손쉽게 예외처리가 가능하다
