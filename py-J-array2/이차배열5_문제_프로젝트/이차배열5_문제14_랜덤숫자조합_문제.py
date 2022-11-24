@@ -19,8 +19,28 @@ import random
 '''
 numList = []
 
-for i in range(5):
+i = 0
+while i < 5:
 	r = random.randint(1, 9)
-	numList.append(r)
+	chk = True
+	for j in range(len(numList)):
+		if numList[j] == r:
+			chk = False
+	if chk:
+		numList.append(r)
+		i += 1
 
 print(numList)
+print()
+
+arr = []
+
+for i in range(len(numList)):
+	tmp = []
+	for j in range(len(numList)):
+		r = random.randint(0, len(numList) - 1)
+		tmp.append(numList[r])
+	arr.append(tmp)
+
+for i in range(len(arr)):
+	print(arr[i])
