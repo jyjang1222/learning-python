@@ -1,7 +1,8 @@
 # python 문제풀이 모음
 ## 중요한 기억사항
 ### 나머지 응용<br>(특정자리 구하기)
-<pre><code># 가운데숫자 구하기
+```python
+# 가운데숫자 구하기
 
 n = 12345
 tmp = n
@@ -19,11 +20,11 @@ for i in range(center):
     tmp //= 10
 
 print(res)
-
-</code></pre>
+```
 
 ### 나머지 응용<br>(특정 범위에서 계속 루프하는 수 구하기)
-<pre><code># 루프하는 수 
+```python
+# 루프하는 수 
 while True:
     n = 0
 
@@ -34,13 +35,14 @@ while True:
     loop2 = n % 3
 
     n += 1
+```
 
-</code></pre>
 
 ### 배열 예외처리하는 방법
 <b>배열에서 반복문으로 값의 체크가 필요한데 배열의 범위를<br>벗어나는 반복문일때 벗어나는 부분만 예외처리 하는 법</b>
   
-<pre><code>import random
+```python
+import random
 '''
 	[문제]
 		세로 가로 인덱스 두 개를 랜덤으로 저장한다. 
@@ -94,7 +96,7 @@ for k in range(len(list)):
 
 for i in range(len(list)):
 	print(list[i])
-</code></pre>  
+```
 
 1. continue를 활용하면 손쉽게 예외처리가 가능하다
   

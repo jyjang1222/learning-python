@@ -1,14 +1,15 @@
 # 파이썬 이차배열 문제풀이
 ## 기억사항
+```python
 1. 2차배열 내부배열 길이설정 
-<pre><code>b = [[0,0,0],[0,0,0],[0,0,0]]
+b = [[0,0,0],[0,0,0],[0,0,0]]
 
 num = 1
 for i in range(len(b)):
     for j in range(len(b[i])):
         b[i][j] = num
         num += 1
-</code></pre>
+```
   
 중첩된 배열의 길이 표현 : len(b[index])  
 
@@ -19,7 +20,8 @@ for i in range(len(b)):
 
 3. 순위 구하는 방법  
 순위 = 1 + 자기자신보다 큰수의 갯수  
-<pre><code>arr = [1000, 2100, 1300, 4100, 1000, 1000, 3000, 1600, 800]  
+```python
+arr = [1000, 2100, 1300, 4100, 1000, 1000, 3000, 1600, 800]  
 
 rank = []
 for i in range(len(arr)):
@@ -29,7 +31,7 @@ for i in range(len(arr)):
             count += 1
     rank.append(count)
 print(rank)
-</code></pre>
+```
 
 
 ## 다시풀어볼문제
