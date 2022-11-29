@@ -15,11 +15,23 @@
 password = "qwer1234"
 
 for i in range(3):
-    temp = ""
-    for j in range(len(password)):
-        if j == len(password) - 1:
-            temp += password[0]
-        else:
-            temp += password[j + 1]
-    password = temp
-    print(password)
+    str = ''
+    for j in range(1, len(password)):
+        str += password[j]
+    str += password[0]
+    password = str
+
+print(password)
+
+
+
+# 정답
+# for i in range(3):
+#     temp = ""
+#     for j in range(len(password)):
+#         if j == len(password) - 1:
+#             temp += password[0]
+#         else:
+#             temp += password[j + 1]
+#     password = temp
+#     print(password)

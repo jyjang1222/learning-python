@@ -6,6 +6,16 @@
 '''
 
 regist = ["김철민" ,"이민정" , "오사랑" , "최면술" , "김밥집" , "박대한" ,"조정민"]
-cancle = ["이민정" , "최면술" , "조정민"]
+cancel = ["이민정" , "최면술" , "조정민"]
 
 last_regist = []
+
+for i in regist:
+    chk = True
+    for j in cancel:
+        if i == j:
+            chk = False
+    if chk:
+        last_regist.append(i)
+
+print(last_regist)

@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         철수는 영어단어 타자 게임을 만들고 있다.
@@ -12,3 +13,13 @@
         *avascript
 '''
 wordList = ["java", "python", "c++", "node", "javascript"]
+
+for i in range(len(wordList)):
+    r = random.randint(0, len(wordList[i]) - 1)
+    tmp = ''
+    for j in range(len(wordList[i])):
+        if j != r:
+            tmp += wordList[i][j]
+        else:
+            tmp += '*'
+    print(tmp)

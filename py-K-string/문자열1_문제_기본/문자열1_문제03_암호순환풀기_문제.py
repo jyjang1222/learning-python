@@ -11,4 +11,13 @@
 '''
 password = "r1234qwe"
 
+for i in range(3):
+    pw = ''
+    pw += password[-1]
+    for j in range(len(password) - 1):
+        pw += password[j]
+    password = pw
 
+print(password)
+
+    

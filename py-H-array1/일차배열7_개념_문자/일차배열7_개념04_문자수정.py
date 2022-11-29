@@ -27,10 +27,10 @@ print("--------------------")
     [문제]
         h를 k로 변경하시오.
 '''
-c = 'hello world'
+c = 'hello horld'
 print(c)
 c = c.replace('h' , 'k')
-c.replace('k', 'h')
+# c.replace('k', 'h')
 print(c)
 
 a = [1, 2]

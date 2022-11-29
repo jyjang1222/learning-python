@@ -10,19 +10,30 @@
 info = ["김철수" , "이민수" , "유영희", "이민정", "조아라"]
 search = ["이민수", "김철수", "김상진"]
 
-for i in range(len(search)):
+for i in search:
+    chk = 'x'
+    for j in info:
+        if i == j:
+            chk = 'o'
+    print(i, chk)
 
-    check = False
-    for j in range(len(info)):
-        if search[i] == info[j]:
-            check = True
-            break
+
+
+
+
+# for i in range(len(search)):
+
+#     check = False
+#     for j in range(len(info)):
+#         if search[i] == info[j]:
+#             check = True
+#             break
     
-    result = search[i]
-    if check == True:
-        result += "O"
-    else:
-        result += "X"
-    print(result)
+#     result = search[i]
+#     if check == True:
+#         result += "O"
+#     else:
+#         result += "X"
+#     print(result)
     
 

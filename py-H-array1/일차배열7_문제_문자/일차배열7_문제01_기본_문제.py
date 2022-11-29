@@ -17,3 +17,12 @@ for i in range(len(text)):
     tmp += text[len(text) - 1 - i]
 
 print(tmp)
+
+# 3
+text = "hello"
+text2 = ''
+
+for i in range(len(text) - 1, -1, -1):
+    text2 += text[i]
+
+print(text2)

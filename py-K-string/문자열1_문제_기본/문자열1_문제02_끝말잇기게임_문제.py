@@ -15,5 +15,13 @@
         print("마지막글자 :", text[-1])
 '''
 game = ["자전거", "거미", "미용실", "실업자", "자석", "서유기", "기러기"]
-
-
+f = ''
+for i in range(len(game) - 1):
+    txt = game[i]
+    txt2 = game[i + 1]
+    chk = True
+    if txt[-1] != txt2[0]:
+        f = txt2[0]
+        chk = False
+    print(game[i], game[i + 1], chk)
+print(f)

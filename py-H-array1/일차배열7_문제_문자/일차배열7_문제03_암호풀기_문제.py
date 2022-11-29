@@ -10,6 +10,16 @@
 '''
 pw = "qawbecrd1e2f3g4h"
 
+
+# 4
+origin = ''
+
+for i in range(0, len(pw), 2):
+    origin += pw[i]
+
+print(origin)
+
+
 # 1 틀림
 # c = 'a'
 # tmp = int(c)
@@ -32,9 +42,9 @@ pw = "qawbecrd1e2f3g4h"
 
 # 3 맞춤
 # tmp에 짝수만 넣기
-tmp = ""
-for i in range(len(pw)):
-    if i % 2 == 0:
-        tmp += pw[i]
+# tmp = ""
+# for i in range(len(pw)):
+#     if i % 2 == 0:
+#         tmp += pw[i]
 
-print(tmp)
+# print(tmp)
