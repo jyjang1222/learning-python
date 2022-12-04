@@ -25,3 +25,13 @@ while i < 100:
         count += 1
     print(i, count)
     i += 1
+
+# 1000까지 369갯수세기
+count = 0
+for i in range(1, 1001):
+    j = i
+    while j != 0:
+        if j % 10 == 3 or j % 10 == 6 or j % 10 == 9:
+            count += 1
+        j //= 10
+print(count)    

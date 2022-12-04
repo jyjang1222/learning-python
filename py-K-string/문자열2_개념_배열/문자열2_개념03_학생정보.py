@@ -16,8 +16,16 @@ student = [
 		1002 이영희
 '''
 print("[문제3]")
-i = 1
-while i < len(student):
-	if student[i][3] > student[i][4]:
-		print(student[i][0], student[i][1])
-	i += 1
+
+
+
+
+
+
+
+
+# i = 1
+# while i < len(student):
+# 	if student[i][3] > student[i][4]:
+# 		print(student[i][0], student[i][1])
+# 	i += 1

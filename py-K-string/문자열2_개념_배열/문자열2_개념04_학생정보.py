@@ -17,17 +17,26 @@ student = [
 		1005 오만석
 '''
 print("[문제4]")
-max = 0
-i = 1
-while i < len(student):
-	total = student[i][3] + student[i][4]
-	if max < total:
-		max = total
-	i += 1
 
-i = 1
-while i < len(student):
-	total = student[i][3] + student[i][4]
-	if max == total:
-		print(student[i][0], student[i][1])
-	i += 1
+
+
+
+
+
+
+
+
+# max = 0
+# i = 1
+# while i < len(student):
+# 	total = student[i][3] + student[i][4]
+# 	if max < total:
+# 		max = total
+# 	i += 1
+
+# i = 1
+# while i < len(student):
+# 	total = student[i][3] + student[i][4]
+# 	if max == total:
+# 		print(student[i][0], student[i][1])
+# 	i += 1

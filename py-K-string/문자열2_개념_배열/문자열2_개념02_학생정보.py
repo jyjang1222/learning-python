@@ -17,10 +17,19 @@ student = [
 		1005 오만석 64.5
 '''
 print("[문제2]")
-i = 1
-while i < len(student):
-	total = student[i][3] + student[i][4]
-	avg = total / 2
+
+for i in range(1, len(student)):
+	avg = (student[i][3] + student[i][4]) / 2
 	if avg >= 60:
 		print(student[i][0], student[i][1], avg)
-	i += 1
+
+
+
+
+# i = 1
+# while i < len(student):
+# 	total = student[i][3] + student[i][4]
+# 	avg = total / 2
+# 	if avg >= 60:
+# 		print(student[i][0], student[i][1], avg)
+# 	i += 1

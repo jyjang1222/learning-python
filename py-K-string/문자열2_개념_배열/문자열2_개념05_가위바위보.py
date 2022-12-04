@@ -23,23 +23,33 @@ arr = [
 		["바위","바위"],
 		["보",  "바위"]
 	]
-pos = 50
 
-for i in range(len(arr)):
-	if arr[i][0] == arr[i][1]:
-		pos += 1
-		print("비겼다!")
-	elif arr[i][0] == "가위" and arr[i][1] == "보":
-		pos += 5
-		print("철수가 이겼다!")
-	elif arr[i][0] == "바위" and arr[i][1] == "가위":
-		pos += 5
-		print("철수가 이겼다!")
-	elif arr[i][0] == "보" and arr[i][1] == "바위":
-		pos += 5
-		print("철수가 이겼다!")
-	else:
-		pos -= 3
-		print("철수가 졌다!")
 
-print("철수의 현재 위치 =", pos)
+
+
+
+
+
+
+
+	
+# pos = 50
+
+# for i in range(len(arr)):
+# 	if arr[i][0] == arr[i][1]:
+# 		pos += 1
+# 		print("비겼다!")
+# 	elif arr[i][0] == "가위" and arr[i][1] == "보":
+# 		pos += 5
+# 		print("철수가 이겼다!")
+# 	elif arr[i][0] == "바위" and arr[i][1] == "가위":
+# 		pos += 5
+# 		print("철수가 이겼다!")
+# 	elif arr[i][0] == "보" and arr[i][1] == "바위":
+# 		pos += 5
+# 		print("철수가 이겼다!")
+# 	else:
+# 		pos -= 3
+# 		print("철수가 졌다!")
+
+# print("철수의 현재 위치 =", pos)

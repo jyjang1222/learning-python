@@ -16,19 +16,37 @@ student = [
 		333
 '''
 print("[문제1]")
-total = [0, 0]
 
-max = 0
-i = 1
-while i < len(student):
-	if student[i][2] == "남":
-		total[0] += student[i][3] + student[i][4]
-		if max < total[0]:
-			max = total[0]
+
+menSum = 0
+womenSum = 0
+for i in range(1, len(student)):
+	if student[i][2] == '남':
+		menSum += student[i][3] + student[i][4]
 	else:
-		total[1] += student[i][3] + student[i][4]
-		if max < total[1]:
-			max = total[1]
-	i += 1
-print(total)
-print(max)
+		womenSum += student[i][3] + student[i][4]
+
+if menSum > womenSum:
+	print(menSum)
+else:
+	print(womenSum)
+
+
+
+
+# total = [0, 0]
+
+# max = 0
+# i = 1
+# while i < len(student):
+# 	if student[i][2] == "남":
+# 		total[0] += student[i][3] + student[i][4]
+# 		if max < total[0]:
+# 			max = total[0]
+# 	else:
+# 		total[1] += student[i][3] + student[i][4]
+# 		if max < total[1]:
+# 			max = total[1]
+# 	i += 1
+# print(total)
+# print(max)
