@@ -24,6 +24,9 @@ print("[문제3]")
 
 
 
+
+
+
 # i = 1
 # while i < len(student):
 # 	if student[i][3] > student[i][4]:
