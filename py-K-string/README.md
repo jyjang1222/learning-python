@@ -96,7 +96,7 @@ if a[0] < a[4]:
     print(True)
 ```
 
-## 객체 (딕셔너리)
+## 딕셔너리
 
 - 리스트에서는 인덱스가 자동으로 0,1,2 이처럼 순서대로 설정이 되지만, 딕셔너리는 리스트의 인덱스에 해당하는 부분을 내가 직접 설정할 수 있다.
 - 중괄호{}로 표현하며, 리스트와 딕셔너리를 구분하기위해 리스트의 인덱스를 딕셔너리는 키 라고 표현한다.
@@ -113,19 +113,96 @@ b = {0 : 10, 1 : 20 , 2 : 30} # 직접 인덱스를 설정해야한다.
 for i in range(len(a)):
     print(a[i] , end=" ")
 print()
+```
 
+### 배열과 딕셔너리의 차이
+
+```python
+# 어떤 학생의 번호 , 이름 , 국어 ,수학 , 영어점수를 표현한다고 할때,
+
+a = [1003 , "김철수" , 100, 10, 30]
+#  예를들어 리스트는 국어 점수를 출력하고싶다면 ,
+print("리스트의 국어 : " , a[2]) # 직관적이지 않다.
+
+# 딕셔너리는 리스트의 인덱스에 해당하는 키를 직접 설정할수있다.
+b = {"number" : 1003 , "name" : "김철수" , "국어" : 100 , "수학" : 10 , "영어"  : 30}
+print("딕셔너리의 국어 : " , b["국어"]) # 직관적이다.
+```
+
+### 추가와 삭제
+
+```python
+# [추가] 위 b딕셔너리에 "총점" 키를 추가하시오.
+b["총점"] = b["국어"] + b["수학"] + b["영어"]
+for i in b.keys():
+    print(i  , b[i] , end=" ")
+# number 1003 name 김철수 국어 100 수학 10 영어 30 총
+점 140
+
+#[삭제] 위 b딕셔너리에 "총점" 키를 삭제하시오.
+del(b["총점"])
+for i in b.keys():
+    print(i  , b[i] , end=" ")
+# number 1003 name 김철수 국어 100 수학 10 영어 30
+```
+
+- 새로운 속성을 정하고 값을 넣으면 자동으로 늘어난다.
+- 삭제는 del 키워드를 사용한다. del(dict[key])
+
+### 딕셔너리 응용
+
+```python
+studentList = []
+info = {"이름":"김철수", "수학":100, "국어":32}
+studentList.append(info)
+
+info = {"이름":"이만수", "수학":11, "국어":84}
+studentList.append(info)
+
+info = {"이름":"박영희", "수학":95, "국어":58}
+studentList.append(info)
+
+# studentList = [{'이름': '김철수', '수학': 100, '국어': 32}, {'이름': '이만수', '수학': 11, '국어': 84}, {'이름': '박영희', '수학': 95, '국어': 58}]
+```
+
+- 딕셔너리는 단독으로 사용하기보다는 리스트와 함께 2차원 모양으로 사용된다.
+
+## 딕셔너리 메서드 모음
+
+### keys() 메서드
+
+```python
 # 딕셔너리 출력
 keyList = b.keys() # 키만 리스트로 반환
-print(keyList)
-
-valueList = b.values() # 값만 리스트로 반환
-print(valueList)
+print(keyList) # dict_keys([0, 1, 2])
 
 # 딕셔너리 개별출력
 for i in b.keys():
     print(b[i] , end=" ")
-print()
+print() # 10 20 30
 ```
+
+### values() 메서드
+
+```python
+# 딕셔너리 출력
+valueList = b.values() # 값만 리스트로 반환
+print(valueList) # dict_values([10, 20, 30])
+```
+
+### None 값
+
+```python
+item = {"name" : "새우깡" , "price" : 1000}
+
+value = item.get("name")
+print(value) # 새우깡
+
+value = item.get("count")
+print(value) # None
+```
+
+- 파이썬에서는 Undefined, Null 구분하지않고 None으로 통칭한다.
 
 ## 다시 풀어볼 문제
 

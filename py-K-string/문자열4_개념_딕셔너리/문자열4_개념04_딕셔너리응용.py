@@ -12,17 +12,34 @@ studentList.append(info)
 info = {"이름":"박영희", "수학":95, "국어":58}
 studentList.append(info)
 
-for i in range(len(studentList)):
-    print(studentList[i])
+print(studentList)
 print("----------------------------")
 """
     [문제]
         studentList리스트에 각학생점수들의 총점과 평균을 추가하시오.
 """
-for i in range(len(studentList)):
-    studentList[i]["총점"] = studentList[i]["수학"] + studentList[i]["국어"]
-    studentList[i]["평균"] = studentList[i]["총점"] / 2
-
 
 for i in range(len(studentList)):
-    print(studentList[i])
+    sum = studentList[i]['수학'] + studentList[i]['국어'] 
+    avg = round((studentList[i]['수학'] + studentList[i]['국어'] ) / 2, 2)
+    studentList[i]['총점'] = sum
+    studentList[i]['평균'] = avg
+
+print(studentList)
+
+
+
+
+
+
+
+
+
+
+# for i in range(len(studentList)):
+#     studentList[i]["총점"] = studentList[i]["수학"] + studentList[i]["국어"]
+#     studentList[i]["평균"] = studentList[i]["총점"] / 2
+
+
+# for i in range(len(studentList)):
+#     print(studentList[i])

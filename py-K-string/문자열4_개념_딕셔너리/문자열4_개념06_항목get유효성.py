@@ -19,5 +19,7 @@ if value == None:
     print("찾는값이 없습니다2.")
 else:
     print(value)
+print(value)
+print(type(value))
 
 
