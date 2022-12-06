@@ -61,45 +61,45 @@ orderList = [
     {"membernumber" : 3001 , "itemnumber" : 100006},
     {"membernumber" : 3003 , "itemnumber" : 100002},
 ]
-totalList = []
 
-for i in range(len(itemList)):
-    name = ""
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# totalList = []
+
+# for i in range(len(itemList)):
+#     name = ""
         
-    item = itemList[i]
-    for j in range(len(orderList)):
-        order = orderList[j]
-        for k in range(len(memberList)):
-            member = memberList[k]
-            if member["membernumber"] == order["membernumber"]:
-                name = member["name"]
-                break 
-        if item["itemnumber"] == order["itemnumber"]:           
-            check = False
-            for k in range(len(totalList)):
-                total = totalList[k]
-                if total["itemname"] == item["itemname"] and name == total["name"]:
-                    check = True
-                    total["count"] += 1
-                    break                
-            if check == False:
-                temp = {"itemname" : item["itemname"] , "name" :  name , "count" : 1}
-                totalList.append(temp)
+#     item = itemList[i]
+#     for j in range(len(orderList)):
+#         order = orderList[j]
+#         for k in range(len(memberList)):
+#             member = memberList[k]
+#             if member["membernumber"] == order["membernumber"]:
+#                 name = member["name"]
+#                 break 
+#         if item["itemnumber"] == order["itemnumber"]:           
+#             check = False
+#             for k in range(len(totalList)):
+#                 total = totalList[k]
+#                 if total["itemname"] == item["itemname"] and name == total["name"]:
+#                     check = True
+#                     total["count"] += 1
+#                     break                
+#             if check == False:
+#                 temp = {"itemname" : item["itemname"] , "name" :  name , "count" : 1}
+#                 totalList.append(temp)
 
-for i in range(len(totalList)):
-    print(totalList[i])
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
+# for i in range(len(totalList)):
+#     print(totalList[i])
 

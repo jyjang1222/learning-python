@@ -47,36 +47,51 @@ orderList = [
     {"orderid" : "cccddd" , "itemname" : "사과" , "count" : 2},
 ]
 
-totalList = []
 
-for i in range(len(memberList)):
-    member = memberList[i]
-    for j in range(len(orderList)):
-        order = orderList[j]
-        if member["id"] == order["orderid"]:
-            itemname = ""
-            itemprice = 0
-            for k in range(len(itemList)):
-                item = itemList[k]
-                if item["itemname"] == order["itemname"]:
-                    itemname = item["itemname"]
-                    itemprice = item["price"]
-                    break
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# totalList = []
+
+# for i in range(len(memberList)):
+#     member = memberList[i]
+#     for j in range(len(orderList)):
+#         order = orderList[j]
+#         if member["id"] == order["orderid"]:
+#             itemname = ""
+#             itemprice = 0
+#             for k in range(len(itemList)):
+#                 item = itemList[k]
+#                 if item["itemname"] == order["itemname"]:
+#                     itemname = item["itemname"]
+#                     itemprice = item["price"]
+#                     break
                     
-            check = False
-            for k in range(len(totalList)):
-                total = totalList[k]
-                if total["id"] == order["orderid"] and itemname == total["itemname"]:
-                    total["count"] += order["count"]
-                    total["total"] += itemprice
-                    check = True
-                    break
-            if check == False:
-                temp = { "id" : order["orderid"] , "itemname" : itemname , "count" : order["count"] , "total" : itemprice}
-                totalList.append(temp)
+#             check = False
+#             for k in range(len(totalList)):
+#                 total = totalList[k]
+#                 if total["id"] == order["orderid"] and itemname == total["itemname"]:
+#                     total["count"] += order["count"]
+#                     total["total"] += itemprice
+#                     check = True
+#                     break
+#             if check == False:
+#                 temp = { "id" : order["orderid"] , "itemname" : itemname , "count" : order["count"] , "total" : itemprice}
+#                 totalList.append(temp)
 
-for i in range(len(totalList)):
-    print(totalList[i])
+# for i in range(len(totalList)):
+#     print(totalList[i])
              
 
 

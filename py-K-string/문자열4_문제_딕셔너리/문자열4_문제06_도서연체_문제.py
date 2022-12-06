@@ -26,31 +26,50 @@ memberList = [
 
 monList = [31,28,31,30,31,30,31,31,30,31,30,31]
 today = [2020,12,4]
-for i in range(len(rentalList)):
-	rental = rentalList[i]
-	date = rental["rentaldate"]
-	temp = date.split("-")
-	year = int(temp[0])
-	mon = int(temp[1])
-	day = int(temp[2])
-	rentaltotal = int(temp[0]) * 365;
-	todaytotal = today[0] * 365;	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# for i in range(len(rentalList)):
+# 	rental = rentalList[i]
+# 	date = rental["rentaldate"]
+# 	temp = date.split("-")
+# 	year = int(temp[0])
+# 	mon = int(temp[1])
+# 	day = int(temp[2])
+# 	rentaltotal = int(temp[0]) * 365;
+# 	todaytotal = today[0] * 365;	
     
-	for j in range(len(monList)):
-		# print(mon , " " , j)
-		if mon > j :
-			rentaltotal += monList[j]
-		if today[1] > j:
-			todaytotal  += monList[j]
+# 	for j in range(len(monList)):
+# 		# print(mon , " " , j)
+# 		if mon > j :
+# 			rentaltotal += monList[j]
+# 		if today[1] > j:
+# 			todaytotal  += monList[j]
 	
-	rentaltotal += day
-	todaytotal += today[2]
-	for j in range(len(memberList)):
-		member = memberList[j]
-		if(member["booknumber"] == rental["booknumber"]):
-			rentaltotal += member["rentalperiod"];
-			break
-	if rentaltotal > todaytotal:
-		print("연체한회원번호 : " , member["membernumber"] , " , 책제목 : " , rental["bootsubject"])
+# 	rentaltotal += day
+# 	todaytotal += today[2]
+# 	for j in range(len(memberList)):
+# 		member = memberList[j]
+# 		if(member["booknumber"] == rental["booknumber"]):
+# 			rentaltotal += member["rentalperiod"];
+# 			break
+# 	if rentaltotal > todaytotal:
+# 		print("연체한회원번호 : " , member["membernumber"] , " , 책제목 : " , rental["bootsubject"])
      
 

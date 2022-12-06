@@ -39,24 +39,36 @@ orderList = [
     {"orderid" : "qwer1234" , "itemname" : "사과" , "count" : 1}, 
 ]
 
-totalList = []
-for i in range(len(memberList)):
-    total = {"id" : memberList[i]["id"] , "total" : 0}
-    totalList.append(total)
-# print(totalList)
 
-for i in range(len(orderList)):
-    order = orderList[i]
-    for j in range(len(memberList)):
-        member = memberList[j]       
-        if order["orderid"] == member["id"]:
-            for k in range(len(itemList)):
-                item = itemList[k]
-                if item["itemname"] == order["itemname"]:
-                    totalList[j]["total"] += (item["price"] * order["count"])
+
+
+
+
+
+
+
+
+
+
+# 정답
+# totalList = []
+# for i in range(len(memberList)):
+#     total = {"id" : memberList[i]["id"] , "total" : 0}
+#     totalList.append(total)
+# # print(totalList)
+
+# for i in range(len(orderList)):
+#     order = orderList[i]
+#     for j in range(len(memberList)):
+#         member = memberList[j]       
+#         if order["orderid"] == member["id"]:
+#             for k in range(len(itemList)):
+#                 item = itemList[k]
+#                 if item["itemname"] == order["itemname"]:
+#                     totalList[j]["total"] += (item["price"] * order["count"])
                     
-for i in range(len(totalList)):
-    print(totalList[i])
+# for i in range(len(totalList)):
+#     print(totalList[i])
 
 
 

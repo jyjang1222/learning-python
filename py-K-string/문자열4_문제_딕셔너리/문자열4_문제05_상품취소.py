@@ -34,34 +34,48 @@ orderList = [
     {"ordernumber" : 100006 , "orderid" : "qwer1234" , "itemname" : "사과" , "count" : 2}, 
     {"ordernumber" : 100007 , "orderid" : "testid" , "itemname" : "사과" , "count" : 3}, 
 ]
-cancleList = [
-    {"canclenumber" : 100003 },
-    {"canclenumber" : 100002 },
-    {"canclenumber" : 100005 },
+cancelList = [
+    {"cancelnumber" : 100003 },
+    {"cancelnumber" : 100002 },
+    {"cancelnumber" : 100005 },
 ]
 
-totalList = []
-for i in range(len(cancleList)):
-    cancle = cancleList[i]
-    for j in range(len(orderList)):
-        order = orderList[j]
-        if cancle["canclenumber"] == order["ordernumber"]:
-            price = 0
-            for k in range(len(itemList)):
-                item = itemList[k]
-                if item["itemname"] == order["itemname"]:
-                    price = item["price"] * order["count"]
-            check = False
-            for k in range(len(totalList)):
-                total = totalList[k]
-                if total["itemname"] == order["itemname"]:
-                    total["total"] += price
-                    check = True
-                    break
-            if check == False:
-                temp = {"itemname" : order["itemname"], "total" : price}
-                totalList.append(temp)
-print(totalList)                
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# totalList = []
+# for i in range(len(cancleList)):
+#     cancle = cancleList[i]
+#     for j in range(len(orderList)):
+#         order = orderList[j]
+#         if cancle["canclenumber"] == order["ordernumber"]:
+#             price = 0
+#             for k in range(len(itemList)):
+#                 item = itemList[k]
+#                 if item["itemname"] == order["itemname"]:
+#                     price = item["price"] * order["count"]
+#             check = False
+#             for k in range(len(totalList)):
+#                 total = totalList[k]
+#                 if total["itemname"] == order["itemname"]:
+#                     total["total"] += price
+#                     check = True
+#                     break
+#             if check == False:
+#                 temp = {"itemname" : order["itemname"], "total" : price}
+#                 totalList.append(temp)
+# print(totalList)                
 
 
 
