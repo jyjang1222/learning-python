@@ -11,3 +11,27 @@
 
 text = "Life is too short."
 change = "short,long"
+
+
+text2 = text[:-1] # . 제외
+arr = text2.split(' ')
+seed = change.split(',')
+print(arr)
+
+for i in range(len(arr)):
+    if arr[i] == seed[0]:
+        arr[i] = seed[1]
+
+print(arr)
+
+changedText = ''
+
+for i in range(len(arr)):
+    changedText += arr[i]
+    if i != len(arr) - 1:
+        changedText += ' '
+
+changedText += '.'
+
+print(changedText)
+

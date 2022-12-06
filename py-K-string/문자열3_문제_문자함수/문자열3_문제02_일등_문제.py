@@ -8,4 +8,19 @@
 '''
 text = "13,32,80,3,23"
 
+strArr = text.split(',')
+intArr = []
 
+sum = 0
+best = 0
+for i in strArr:
+    sum += int(i)
+    if int(i) > best:
+        best = int(i)
+    intArr.append(int(i))
+
+avg = round(sum / len(strArr), 2)
+
+print(avg, best)
+print(strArr)
+print(intArr)

@@ -10,6 +10,20 @@
 '''
 
 
-a =["school", "teacher", "child","father", "love"]
+a = ["school", "teacher", "child", "father", "love"]
 
 search = "ch"
+
+for i in range(len(a)):
+    # for j in range(len(a[i])):
+    for j in range(len(a[i]) - len(search)):
+        cnt = 0
+        # 검색
+        for k in range(len(search)):
+            # 검색범위 벗어나면 예외처리
+            # if j + k > len(a[i]) - 1:
+            #     continue
+            if a[i][j+k] == search[k]:
+                cnt += 1
+        if cnt == len(search):
+            print(a[i])

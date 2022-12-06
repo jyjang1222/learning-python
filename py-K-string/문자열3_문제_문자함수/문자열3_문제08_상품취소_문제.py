@@ -4,7 +4,7 @@
         item은 쇼핑몰 판매상품이다. 상품이름과 가격이 기록되어있다.
         
         order는 오늘 주문 목록이다. 주문한회원아이디와 아이템이름 그리고, 주문개수가 기록되어있다. 
-        cancel은 주문취소 목록이다. 취소한회원아이디와 아이템이름 그리고, 주무개수가 기록되어있다.
+        cancel은 주문취소 목록이다. 취소한회원아이디와 아이템이름 그리고, 주문개수가 기록되어있다.
         오늘의 매출을 출력하시오.
     [정답]
         7700
@@ -15,3 +15,39 @@ item   = "사과,1100/바나나,2000/딸기,4300"
 order  = "qwer1234,사과,3/phthongood,바나나,2/qwer1234,딸기,5/testid,사과,4"
 cancel = "qwer1234,딸기,5/phthongood,바나나,2"
 
+member = member.split(',')
+item = item.split('/')
+order = order.split('/')
+cancel = cancel.split('/')
+
+def separate(chr, arr):
+    emptyArr = []
+    for i in arr:
+        tmp = i.split(chr)
+        emptyArr.append(tmp)
+    return emptyArr
+
+itemArr = separate(',', item)
+orderArr = separate(',', order)
+cancelArr = separate(',', cancel)
+
+print(member)
+print(itemArr)
+print(orderArr)
+print(cancelArr)
+
+total = 0
+for i in range(len(orderArr)):
+    for j in range(len(itemArr)):
+        if orderArr[i][1] == itemArr[j][0]:
+            calc = int(itemArr[j][1]) * int(orderArr[i][2])
+            total += calc
+            break
+for i in range(len(cancelArr)):
+    for j in range(len(itemArr)):
+        if cancelArr[i][1] == itemArr[j][0]:
+            calc = int(itemArr[j][1]) * int(cancelArr[i][2])
+            total -= calc
+            break
+
+print(total)

@@ -13,3 +13,30 @@
 member = "qwer1234,pythongood,testid"
 item = "사과,1100/바나나,2000/딸기,4300"
 order = "qwer1234,사과,3/phthongood,바나나,2/qwer1234,딸기,5/testid,사과,4"
+
+member = member.split(',')
+item = item.split('/')
+order = order.split('/')
+
+itemArr = []
+for i in item:
+    tmp = i.split(',')
+    itemArr.append(tmp)
+
+orderArr = []
+for i in order:
+    tmp = i.split(',')
+    orderArr.append(tmp)
+
+print(member)
+print(itemArr)
+print(orderArr)
+
+total = 0
+for i in range(len(orderArr)):
+    for j in range(len(itemArr)):
+        if orderArr[i][1] == itemArr[j][0]:
+            calc = int(itemArr[j][1]) * int(orderArr[i][2])
+            total += calc
+            break
+print(total)

@@ -13,5 +13,23 @@
 '''
 
 a = "1"
+print(a)
 
+for i in range(6):
+	tmp = ''
+	i = 0
+	while i < len(a):
+		cnt = 0
+		for j in range(i, len(a)):
+			if a[i] == a[j]:
+				cnt += 1
+			else:
+				break
+		tmp += a[i]
+		tmp += str(cnt)
+		i += cnt # 같은숫자 갯수 만큼 건너뜀
+	a = tmp
+
+	print(a)
+		
 		
