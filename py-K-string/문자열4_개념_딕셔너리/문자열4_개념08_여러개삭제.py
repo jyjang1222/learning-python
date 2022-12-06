@@ -25,27 +25,52 @@ orderList = [
     {"ordernumber" : 100005 , "orderid" : "testid" , "itemName" : "바나나" , "count" : 7},
     {"ordernumber" : 100006 , "orderid" : "qwer1234" , "itemName" : "사과" , "count" : 1}, 
 ]
-cancleList = [
-    {"canclenumber" : 100003 },
-    {"canclenumber" : 100002 },
-    {"canclenumber" : 100005 },
+cancelList = [
+    {"cancelnumber" : 100003 },
+    {"cancelnumber" : 100002 },
+    {"cancelnumber" : 100005 },
 ]
 
-# 여러개 삭제는 리스트 개수가 계속 변하기때문에 아래와 같이 해야한다. 
-while True:
-    if len(cancleList) == 0:
-        break
-    cancle = cancleList[0]
-    for i in range(len(orderList)):
-        order = orderList[i]
-        if order["ordernumber"] == cancle["canclenumber"]:
-            del(orderList[i])
-            break
-    del(cancleList[0])
 
+tmp = []
 for i in range(len(orderList)):
-    print(orderList[i])
-print()
+    chk = True
+    for j in range(len(cancelList)):
+        if orderList[i]['ordernumber'] == cancelList[j]['cancelnumber']:
+            chk = False
+    if chk:
+        tmp.append(orderList[i])
+orderList = tmp
+
+for i in orderList:
+    print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+# 여러개 삭제는 리스트 개수가 계속 변하기때문에 아래와 같이 해야한다. 
+# while True:
+#     if len(cancleList) == 0:
+#         break
+#     cancle = cancleList[0]
+#     for i in range(len(orderList)):
+#         order = orderList[i]
+#         if order["ordernumber"] == cancle["canclenumber"]:
+#             del(orderList[i])
+#             break
+#     del(cancleList[0])
+
+# for i in range(len(orderList)):
+#     print(orderList[i])
+# print()
 
 
 

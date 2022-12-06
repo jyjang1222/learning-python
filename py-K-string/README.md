@@ -52,10 +52,23 @@ bool = False
 if 'hell' in str:
     bool = True
 print(bool) # True
+
+item = {"name" : "새우깡" , "price" : 1000}
+
+if "name" in item:
+    print(item["name"])
+else:
+    print("찾는값이 없습니다1.")
+
+if "count" in item:
+    print(item["count"])
+else:
+    print("찾는값이 없습니다2.")
 ```
 
 - 데이터 안에 값이 있는지없는지 반환하는 키워드이다.
 - in 키워드는 안에 있으면 true반환 없으면 false반환 이고 not in은 그 반대이다.
+- 딕셔너리를 대상으로 사용하면 해당 key값이 있는지 확인이 가능하다.
 
 ### 문자열 슬라이싱
 
@@ -167,6 +180,34 @@ studentList.append(info)
 
 - 딕셔너리는 단독으로 사용하기보다는 리스트와 함께 2차원 모양으로 사용된다.
 
+### 빈 딕셔너리 만들기
+
+- 빈 딕셔너리 만들기
+    1. a = dict()
+    2. b = {}
+- 빈 리스트 만들기
+    1. a = list()
+    2. b = []
+
+```python
+a = dict() 
+
+a["number"] = 10001
+a["name"] = "김철수"
+
+b = {}
+b["number"] = 10002
+b["name"] = "이영수"
+
+c = list()
+c.append(10001)
+c.append("김철수")
+
+d = []
+d.append(10002)
+d.append("이영수")
+```
+
 ## 딕셔너리 메서드 모음
 
 ### keys() 메서드
@@ -189,8 +230,12 @@ print() # 10 20 30
 valueList = b.values() # 값만 리스트로 반환
 print(valueList) # dict_values([10, 20, 30])
 ```
+### get()
+- dict.get(key, default = None)
+- 첫번째 인자로 key를 넣어주면 해당 key의 값을 반환해준다.
+- 두번째 인자는 해당 키가 없을때 반환할 디폴트값을 설정해줄수 있다.
 
-### None 값
+## None 값
 
 ```python
 item = {"name" : "새우깡" , "price" : 1000}
