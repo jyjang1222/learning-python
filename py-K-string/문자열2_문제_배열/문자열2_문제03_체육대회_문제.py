@@ -20,3 +20,32 @@
 	    ]
 
 c = []
+
+run = []
+volleyball = []
+
+
+for i in range(len(달리기)):
+	for j in range(len(달리기[i])):
+		run.append(달리기[i][j])
+		volleyball.append(배구[i][j])
+
+print(run)
+print(volleyball)
+
+for i in run:
+	chk = True
+	for j in volleyball:
+		if i == j:
+			chk = False
+	if chk:
+		c.append(i)
+for i in volleyball:
+	chk = True
+	for j in run:
+		if i == j:
+			chk = False
+	if chk:
+		c.append(i)
+		
+print(c)

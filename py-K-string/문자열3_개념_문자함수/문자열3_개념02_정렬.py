@@ -14,3 +14,4 @@ for i in range(len(a)):
             a[j] = temp
 print(a)
 
+

@@ -23,3 +23,18 @@ print(a)
     
 
 
+
+
+
+
+
+
+# text = "1001,김철수/1002,이민수/1003,신영희"
+# tmp = text.split('/')
+
+# arr = []
+# for i in tmp:
+#     tmp2 = i.split(',')
+#     arr.append(tmp2)
+# print(arr)
+

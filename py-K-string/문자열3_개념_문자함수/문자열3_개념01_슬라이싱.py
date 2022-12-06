@@ -24,3 +24,9 @@ print(c)
 
 d =  text[7:]
 print(d)
+
+e = text[5:11]
+print(e)
+
+f = text[12:22]
+print(f)

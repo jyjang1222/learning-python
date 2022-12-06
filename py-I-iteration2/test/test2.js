@@ -52,7 +52,7 @@ for (var i = 0; i < arr.length; i++) {
     idx = i;
   }
 }
-res = chk ? (r = `r = ${r} : ${idx}`) : `r = ${r} : x`;
+res = chk ? `r = ${r} : ${idx}` : `r = ${r} : x`;
 console.log(res);
 
 // 3

@@ -24,10 +24,28 @@ arr = [
 		["보",  "바위"]
 	]
 
+SCISSORS = "가위"
+ROCK = "바위"
+PAPER = "보"
 
+pos = 50
 
+for i in range(len(arr)):
+	# 비기면
+	if arr[i][0] == arr[i][1]:
+		pos += 1
+	# 이기면
+	elif arr[i][0] == SCISSORS and arr[i][1] == PAPER:
+		pos += 5
+	elif arr[i][0] == ROCK and arr[i][1] == SCISSORS:
+		pos += 5
+	elif arr[i][0] == PAPER and arr[i][1] == ROCK:
+		pos += 5
+	# 지면
+	else:
+		pos -= 3
 
-
+print(pos)
 
 
 

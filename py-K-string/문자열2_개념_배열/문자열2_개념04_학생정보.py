@@ -18,6 +18,14 @@ student = [
 '''
 print("[문제4]")
 
+best = 0
+for i in range(1, len(student)):
+	if student[i][3] + student[i][4] > best:
+		best = student[i][3] + student[i][4]
+
+for i in range(1, len(student)):
+	if student[i][3] + student[i][4] == best:
+		print(student[i][0], student[i][1])
 
 
 

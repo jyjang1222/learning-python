@@ -17,6 +17,9 @@ student = [
 '''
 print("[문제3]")
 
+for i in range(1, len(student)):
+	if student[i][3] > student[i][4]:
+		print(student[i][0], student[i][1])
 
 
 

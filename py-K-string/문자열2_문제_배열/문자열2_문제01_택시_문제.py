@@ -11,15 +11,32 @@
 			
 		6번 모두 이동한 후 택시의 위치를 출력하시오. 
 	[정답]
-		x : -1 y : 2
+		x : -1 y : 8
 '''
 arr = [
-		[4,"북"],
-		[2,"동"],
-		[1,"남"],
-		[5,"서"],
-		[4,"서"],
-		[1,"동"]
+		[4, "북"],
+		[2, "동"],
+		[1, "남"],
+		[5, "서"],
+		[4, "서"],
+		[1, "동"]
 	]
 x = 5
 y = 5
+
+NORTH = '북'
+EAST = '동'
+SOUTH = '남'
+WEST = '서'
+
+for i in range(len(arr)):
+	if arr[i][1] == NORTH:
+		y += arr[i][0]
+	elif arr[i][1] == EAST:
+		x += arr[i][0]
+	elif arr[i][1] == SOUTH:
+		y -= arr[i][0]
+	elif arr[i][1] == WEST:
+		x -= arr[i][0]
+
+print(x, y)

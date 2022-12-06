@@ -24,6 +24,26 @@ score = [
 	[정답1]
 		333
 '''
+print(1)
+boyTotal = 0
+girlTotal = 0
+BOY = '남'
+GIRL = '여'
+max = 0
+
+for i in range(1, len(student)):
+	sum = score[i][1] + score[i][2]
+	if student[i][2] == BOY:
+		boyTotal += sum
+	elif student[i][2] == GIRL:
+		girlTotal += sum
+	if sum > max:
+		max = sum
+
+if boyTotal > girlTotal:
+	print(boyTotal)
+else:
+	print(girlTotal)
 
 '''
 	[문제2]
@@ -33,6 +53,11 @@ score = [
 		1003 김민정 64.5
 		1005 오만석 64.5
 '''
+print(2)
+for i in range(1, len(score)):
+	avg = round((score[i][1] + score[i][2]) / 2, 2)
+	if avg >= 60:
+		print(score[i][0], student[i][1], avg)
 
 '''
 	[문제3]
@@ -41,6 +66,10 @@ score = [
 	[정답3]
 		1002 이영희
 '''
+print(3)
+for i in range(1, len(score)):
+	if score[i][1] > score[i][2]:
+		print(score[i][0], student[i][1])
 
 '''
 	[문제4]
@@ -50,3 +79,8 @@ score = [
 		1003 김민정
 		1005 오만석
 '''
+print(4)
+for i in range(1, len(score)):
+	sum = score[i][1] + score[i][2]
+	if sum == max:
+		print(score[i][0], student[i][1])

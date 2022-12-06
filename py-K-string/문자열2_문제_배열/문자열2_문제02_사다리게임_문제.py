@@ -1,3 +1,4 @@
+import random
 '''
 	[문제]
 		1. 랜덤(0~4)를 하나를 선택한다. 
@@ -25,3 +26,13 @@ ladder= [
 		[0,0,1,2,0],
 		[0,0,0,0,0]
 	]
+
+r = random.randint(0, 4)
+idx = r
+for i in range(len(ladder)):
+	if ladder[i][idx] == 1:
+		idx += 1
+	elif ladder[i][idx] == 2:
+		idx -= 1
+
+print(r, menu[idx])
