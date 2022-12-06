@@ -13,11 +13,27 @@ member = {"새우깡" : 10 , "감자깡" : 4, "칸쵸" : 6}
 
 orderList = ["새우깡" , "감자깡" ,"감자깡" , "새우깡" , "빼빼로" , "빼빼로" , "감자칩" , "칸쵸"]
 
-for i in range(len(orderList)):
-   order = orderList[i]
-   if order in member:
-      member[order] += 1
-   else:
-      member[order] = 1
+for i in orderList:
+   if member.get(i):
+   # if i in member:
+      member[i] += 1
+   else: 
+      member[i] = 1
+
 print(member)
+
+
+
+
+
+
+
+
+# for i in range(len(orderList)):
+#    order = orderList[i]
+#    if order in member:
+#       member[order] += 1
+#    else:
+#       member[order] = 1
+# print(member)
 

@@ -190,7 +190,7 @@ studentList.append(info)
     2. b = []
 
 ```python
-a = dict() 
+a = dict()
 
 a["number"] = 10001
 a["name"] = "김철수"
