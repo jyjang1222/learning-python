@@ -119,6 +119,11 @@ today = [2020,12,12]
 rentDate = [2020,11,30]
 
 todayTotal = 0
+
+oneYear = 0
+for i in monList:
+	oneYear += i
+
 # 년
 todayTotal += oneYear * (today[0] - 1)
 # 월
