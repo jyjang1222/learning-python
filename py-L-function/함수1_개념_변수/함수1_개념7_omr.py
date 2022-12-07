@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         철수는 수학 시험을 치렀다. 시험 점수를 채점하시오.
@@ -9,23 +10,45 @@
         [2,4,4,3,1]
         [x,o,x,x,o]
 '''
-import random
-
-def omrCheck(omr, me):
-    ox = []
-    for i in range(len(omr)):
-        if omr[i] == me[i]:
-            ox.append("o")
-        else:
-            ox.append("x")
-    print("omr =", omr)
-    print("me =", me)
-    print("정오표 =", ox)
 
 omr = [1,4,3,2,1]
 me = []
 
-for i in range(len(omr)):
-    r = random.randint(1, 4)
-    me.append(r)
-omrCheck(omr, me)
+for i in range(5):
+        r = random.randint(1, 4)
+        me.append(r)
+
+def chk(chkList, answerList):
+    res = []
+    for i in range(len(me)):
+        if chkList[i] == answerList[i]:
+            res.append('o')
+        else:
+            res.append('x')
+    print(chkList)
+    print(answerList)
+    print(res)
+
+chk(me, omr)
+
+
+
+
+# def omrCheck(omr, me):
+#     ox = []
+#     for i in range(len(omr)):
+#         if omr[i] == me[i]:
+#             ox.append("o")
+#         else:
+#             ox.append("x")
+#     print("omr =", omr)
+#     print("me =", me)
+#     print("정오표 =", ox)
+
+# omr = [1,4,3,2,1]
+# me = []
+
+# for i in range(len(omr)):
+#     r = random.randint(1, 4)
+#     me.append(r)
+# omrCheck(omr, me)

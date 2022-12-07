@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
          1~10 사이의 숫자를 랜덤으로 저장하고,  
@@ -10,14 +11,35 @@
         15
         1부터 5 까지의 합 : 15    
 '''
-import random
-
-def numberTotal(a):
-    total = 0
-    for i in range(a):
-        total += (i + 1)
-        print(total)
-    print("1부터", a, "까지의 합 :", total)
 
 r = random.randint(1, 10)
-numberTotal(r)
+
+def sum(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+        print(sum)
+
+print(r)
+sum(r)
+
+
+
+
+
+
+
+
+
+
+
+
+# def numberTotal(a):
+#     total = 0
+#     for i in range(a):
+#         total += (i + 1)
+#         print(total)
+#     print("1부터", a, "까지의 합 :", total)
+
+# r = random.randint(1, 10)
+# numberTotal(r)

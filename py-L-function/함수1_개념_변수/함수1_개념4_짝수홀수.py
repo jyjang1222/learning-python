@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         1~100 사이의 숫자를 랜덤으로 저장하고
@@ -15,15 +16,35 @@
         52 : 짝수
         7 : 홀수   
 '''
-import random
 
-def checkNumber(a):
-    print(a, end=" : ")
-    if a % 2 == 0:
-        print("짝수")
-    else:
-        print("홀수")
+def isOddOrEven(n):
+    msg = '홀수'
+    if r % 2 == 0:
+        msg = '짝수'
+    print(n, msg)
 
-for i in range(10):
-    r = random.randint(1, 100)
-    checkNumber(r)
+r = random.randint(1, 100)
+
+isOddOrEven(r)
+
+
+
+
+
+
+
+
+
+
+
+
+# def checkNumber(a):
+#     print(a, end=" : ")
+#     if a % 2 == 0:
+#         print("짝수")
+#     else:
+#         print("홀수")
+
+# for i in range(10):
+#     r = random.randint(1, 100)
+#     checkNumber(r)
