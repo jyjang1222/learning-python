@@ -8,7 +8,7 @@
 	[정답]
 		연체한회원번호 :  1001  , 책제목 :  연필로쓰기
 		연체한회원번호 :  1041  , 책제목 :  컴퓨터활용능력
-'''	
+'''
 
 rentalList = [ 
 	{"booknumber" : 20122, "bootsubject" : "연필로쓰기", "rentaldate" : "2020-11-25", "membernumber" : 1001},
@@ -26,9 +26,71 @@ memberList = [
 
 monList = [31,28,31,30,31,30,31,31,30,31,30,31]
 today = [2020,12,4]
+# today = [2021,1,4]
 
 
+for i in range(len(rentalList)):
+	for j in range(len(memberList)):
+		if rentalList[i]['membernumber'] == memberList[j]['membernumber']:
+			rentalList[i]['rentalperiod'] = memberList[j]['rentalperiod']
 
+# for i in rentalList:
+# 	print(i)
+
+for i in range(len(rentalList)):
+	rentDate = rentalList[i]['rentaldate'].split('-')
+	tmp = []
+	for j in rentDate:
+		tmp.append(int(j))
+	rentDate = tmp
+
+# print(rentDate)
+oneYear = 0
+for i in monList:
+	oneYear += i
+
+# 오늘일자 총일수 구하기
+todayTotal = 0
+# 년
+todayTotal += oneYear * (today[0] - 1)
+# 월
+for i in range(today[1] - 1):
+	todayTotal += monList[i]
+# 일
+todayTotal += today[2]
+
+# print(todayTotal)
+
+# 빌린일수 구하기
+for i in range(len(rentalList)):
+	rentDayTotal = 0
+
+	# 빌린날짜 배열로 변경
+	rentalDate = rentalList[i]['rentaldate'].split('-')
+	tmp = []
+	for j in rentalDate:
+		tmp.append(int(j))
+	rentalDate = tmp
+
+	# 빌린날짜기준 총일수
+	rentDayTotal += oneYear * (rentalDate[0] - 1)
+	for j in range(rentalDate[1] - 1):
+		rentDayTotal += monList[j]
+	rentDayTotal += rentalDate[2]
+	
+	# 빌린일수
+	rentedTotal = todayTotal - rentDayTotal
+
+	rentalList[i]['rentedTotal'] = rentedTotal
+	
+for i in rentalList:
+	print(i)
+print(today)
+
+# 연체한 회원번호와 책이름
+for i in range(len(rentalList)):
+	if rentalList[i]['rentalperiod'] < rentalList[i]['rentedTotal']:
+		print(rentalList[i]['membernumber'], rentalList[i]['bootsubject'])
 
 
 

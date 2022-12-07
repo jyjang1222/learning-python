@@ -1,6 +1,6 @@
 # python 문제풀이 모음
 
-## 중요한 기억사항
+## 중요 문제
 
 ### 나머지 응용<br>(특정자리 구하기)
 
@@ -108,3 +108,38 @@ for i in range(len(list)):
 
 1. 이차배열5*문제09*구의개수\_문제
 2. 이차배열5*문제11*체스비숍\_문제
+
+### 날짜계산
+
+```python
+
+# 빌린일수 구하기
+monList = [31,28,31,30,31,30,31,31,30,31,30,31]
+today = [2020,12,12]
+rentDate = [2020,11,30]
+
+todayTotal = 0
+# 년
+todayTotal += oneYear * (today[0] - 1)
+# 월
+for i in range(today[1] - 1):
+	todayTotal += monList[i]
+# 일
+todayTotal += today[2]
+
+
+rentDayTotal = 0
+# 년
+rentDayTotal += oneYear * (rentDate[0] - 1)
+# 월
+for i in range(rentDate[1] - 1):
+	rentDayTotal += monList[i]
+# 일
+rentDayTotal += rentDate[2]
+
+# 총일수 차이
+rentedTotal = todayTotal - rentDayTotal
+```
+
+- 날짜의 총일수를 구하면 일수의 차이를 구할수 있다.
+- 총일수의 날짜를 구할때는 몫과 나머지 계산을 활용한다.

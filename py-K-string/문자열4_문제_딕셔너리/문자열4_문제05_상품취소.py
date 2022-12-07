@@ -63,13 +63,17 @@ for i in range(len(cancelList)):
     if chk:
         tmp.append(cancelList[i])
 
+# for i in tmp:
+#     print(i)
+
+for i in range(len(tmp)):
+    for j in range(len(itemList)):
+        if tmp[i]['itemname'] == itemList[j]['itemname']:
+            calc = itemList[j]['price'] * tmp[i]['count']
+            tmp[i]['total'] = calc
+
 for i in tmp:
     print(i)
-
-
-
-
-
 
 
 # 정답
