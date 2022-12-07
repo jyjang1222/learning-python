@@ -41,11 +41,30 @@ cancelList = [
 ]
 
 
+for i in range(len(cancelList)):
+    for j in range(len(orderList)):
+        if cancelList[i]['cancelnumber'] == orderList[j]['ordernumber']:
+            cancelList[i]['itemname'] = orderList[j]['itemname']
+            cancelList[i]['count'] = orderList[j]['count']
 
+for i in range(len(cancelList)):
+    del cancelList[i]['cancelnumber']
 
+# for i in cancelList:
+#     print(i)
 
+tmp = []
+for i in range(len(cancelList)):
+    chk = True
+    for j in range(len(tmp)):
+        if cancelList[i]['itemname'] == tmp[j]['itemname']:
+            chk = False
+            tmp[j]['count'] += cancelList[i]['count']
+    if chk:
+        tmp.append(cancelList[i])
 
-
+for i in tmp:
+    print(i)
 
 
 

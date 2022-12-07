@@ -183,11 +183,11 @@ studentList.append(info)
 ### 빈 딕셔너리 만들기
 
 - 빈 딕셔너리 만들기
-    1. a = dict()
-    2. b = {}
+  1. a = dict()
+  2. b = {}
 - 빈 리스트 만들기
-    1. a = list()
-    2. b = []
+  1. a = list()
+  2. b = []
 
 ```python
 a = dict()
@@ -230,7 +230,9 @@ print() # 10 20 30
 valueList = b.values() # 값만 리스트로 반환
 print(valueList) # dict_values([10, 20, 30])
 ```
+
 ### get()
+
 - dict.get(key, default = None)
 - 첫번째 인자로 key를 넣어주면 해당 key의 값을 반환해준다.
 - 두번째 인자는 해당 키가 없을때 반환할 디폴트값을 설정해줄수 있다.
@@ -252,3 +254,4 @@ print(value) # None
 ## 다시 풀어볼 문제
 
 1. 문자열3\_문제06\_말하기수열\_문제
+2. 문자열4\_문제03\_상품통계 -> 딕셔너리 중복합치기 연습

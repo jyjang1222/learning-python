@@ -39,12 +39,28 @@ orderList = [
     {"orderid" : "qwer1234" , "itemname" : "사과" , "count" : 1}, 
 ]
 
+for i in range(len(orderList)):
+    for j in range(len(itemList)):
+        if orderList[i]['itemname'] == itemList[j]['itemname']:
+            calc = itemList[j]['price'] * orderList[i]['count']
+            if 'price' not in orderList[i]:
+                orderList[i]['price'] = calc
+            else:
+                orderList[i]['price'] += calc
 
+for i in orderList:
+    print(i)
 
+for i in range(len(memberList)):
+    for j in range(len(orderList)):
+        if memberList[i]['id'] == orderList[j]['orderid']:
+            if 'total' not in memberList[i]:
+                memberList[i]['total'] = orderList[j]['price']
+            else:
+                memberList[i]['total'] += orderList[j]['price']
 
-
-
-
+for i in memberList:
+    print(i)
 
 
 

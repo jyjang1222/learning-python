@@ -27,6 +27,28 @@ pointList = [
   {"userno" : 1003 , "point" : 1},
 ]
 
+for i in range(len(userList)):
+  for j in range(len(pointList)):
+    if userList[i]['userno'] == pointList[j]['userno']:
+      if 'point' not in userList[i]:
+        userList[i]['point'] = pointList[j]['point']
+      else:
+        userList[i]['point'] += pointList[j]['point']
+
+# for i in userList:
+#   print(i)
+
+for i in range(len(userList)):
+  rank = 1
+  for j in range(len(userList)):
+    if userList[i]['point'] < userList[j]['point']:
+      rank += 1
+  userList[i]['rank'] = rank
+  if rank == 1:
+    print(userList[i]['point'], userList[i]['username'])
+
+for i in userList:
+  print(i)
 
 
 

@@ -47,13 +47,32 @@ orderList = [
     {"orderid" : "cccddd" , "itemname" : "사과" , "count" : 2},
 ]
 
+tmp = []
+# orderList 중복합치기
+for i in range(len(orderList)):
+    chk = True
+    # 넣을값이 이미 tmp에 있다면 false
+    for j in range(len(tmp)):
+        if orderList[i]['orderid'] == tmp[j]['orderid']:
+            if orderList[i]['itemname'] == tmp[j]['itemname']:
+                chk = False
+                tmp[j]['count'] += orderList[i]['count']
+    if chk:
+        tmp.append(orderList[i])
 
+orderList = tmp
 
+# for i in orderList:
+#     print(i)
 
+for i in range(len(orderList)):
+    for j in range(len(itemList)):
+        if orderList[i]['itemname'] == itemList[j]['itemname']:
+            total = itemList[j]['price'] * orderList[i]['count']
+            orderList[i]['total'] = total
 
-
-
-
+for i in orderList:
+    print(i)
 
 
 

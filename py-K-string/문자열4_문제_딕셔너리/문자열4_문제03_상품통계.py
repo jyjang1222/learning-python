@@ -62,8 +62,43 @@ orderList = [
     {"membernumber" : 3003 , "itemnumber" : 100002},
 ]
 
+for i in range(len(itemList)):
+    for j in range(len(orderList)):
+        if itemList[i]['itemnumber'] == orderList[j]['itemnumber']:
+            orderList[j]['itemname'] = itemList[i]['itemname']
 
 
+for i in range(len(orderList)):
+    for j in range(len(memberList)):
+        if orderList[i]['membernumber'] == memberList[j]['membernumber']:
+            orderList[i]['name'] = memberList[j]['name']
+
+# for i in orderList:
+#     print(i)
+
+dict = []
+k = 0
+for i in range(len(orderList)):
+    count = 0
+    chk = True
+    # 중복체크
+    for j in range(len(orderList)):
+        if orderList[i]['itemname'] == orderList[j]['itemname']:
+            if orderList[i]['name'] == orderList[j]['name']:
+                count += 1
+    # 한번만들어가게 (넣을값이 이미 dict에 있다면 false)
+    for j in range(len(dict)):
+        if orderList[i]['itemname'] == dict[j]['itemname']:
+            if orderList[i]['name'] == dict[j]['name']:
+                chk = False
+    
+    if chk:
+        dict.append(orderList[i])
+        dict[k]['count'] = count
+        k += 1
+
+for i in dict:
+    print(i)
 
 
 
