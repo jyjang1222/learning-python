@@ -8,21 +8,29 @@
 '''
 import random
 def setLotto():
-    while True:
-        a = []
-        count7 = 0
-        count1 = 0
-        for i in range(7):
-            r = random.randint(0,1)
-            if r == 0:
-                a.append(7)
-                count7 += 1
-            if r == 1:
-                a.append(1)
-                count1 += 1
-        # print(count7 , " " , count1)
-        if count7 == 3 and count1 == 4:
-            return a
+    a = [1,1,1,1,7,7,7]
+
+    for i in range(100):
+        r1 = random.randint(0, len(a)-1)
+        r2 = random.randint(0, len(a)-1)
+        tmp = a[r1]
+        a[r1] = a[r2]
+        a[r2] = tmp
+        
+    return a
+    #     a = []
+    #     count7 = 0
+    #     count1 = 0
+    #     for i in range(7):
+    #         r = random.randint(0,1)
+    #         if r == 0:
+    #             a.append(7)
+    #             count7 += 1
+    #         if r == 1:
+    #             a.append(1)
+    #             count1 += 1
+    #     if count7 == 3 and count1 == 4:
+    #         return a
 
 def checkLotto(a):
     count = 0

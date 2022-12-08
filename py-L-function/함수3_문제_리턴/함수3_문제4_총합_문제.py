@@ -14,54 +14,6 @@
 from pickle import FALSE
 
 
-def mySplit(str, d):
-	arr = []
-	temp = ""
-	for i in range(len(str)):
-		if str[i] == d :
-			arr.append(temp)
-			temp = ""
-		else:
-			temp += str[i]
-	arr.append(temp)
-	return arr
-
-def getSplit(data):
-	arr = []
-	token1 = mySplit(data , "\n")
-	#print(token1)
-	for i in range(len(token1)):
-		token2 = mySplit(token1[i] , "/")
-		arr.append(token2)
-	return arr
-
-def getTotal(dataList):
-	# print(dataList)
-	memberList = []
-	for i in range(len(dataList)):
-		check = False
-		for j in range(len(memberList)):
-			if memberList[j]["number"] == dataList[i][0]:
-				check = True
-				break
-		if check == False:
-			temp = {"number" : dataList[i][0] ,"name" : dataList[i][1] ,  "total" : 0}
-			memberList.append(temp)
-
-	for i in range(len(memberList)):
-		for j in range(len(dataList)):
-			if memberList[i]["number"] == dataList[j][0]:
-				memberList[i]["total"] += int(dataList[j][2])
-
-	return memberList
-
-
-def quiz1(data):
-	dataList = getSplit(data)
-	# print(dataList)
-	totalList = getTotal(dataList)
-	for i in range(len(totalList)):
-		print(totalList[i])
 
 
 data =""
@@ -77,4 +29,73 @@ data += "10002/이영희/200\n"
 data += "10004/박명수/6800\n"
 data = data[0:-1] # 마지막글자  (\n)  삭제
 #print(data)
-quiz1(data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# def mySplit(str, d):
+# 	arr = []
+# 	temp = ""
+# 	for i in range(len(str)):
+# 		if str[i] == d :
+# 			arr.append(temp)
+# 			temp = ""
+# 		else:
+# 			temp += str[i]
+# 	arr.append(temp)
+# 	return arr
+
+# def getSplit(data):
+# 	arr = []
+# 	token1 = mySplit(data , "\n")
+# 	#print(token1)
+# 	for i in range(len(token1)):
+# 		token2 = mySplit(token1[i] , "/")
+# 		arr.append(token2)
+# 	return arr
+
+# def getTotal(dataList):
+# 	# print(dataList)
+# 	memberList = []
+# 	for i in range(len(dataList)):
+# 		check = False
+# 		for j in range(len(memberList)):
+# 			if memberList[j]["number"] == dataList[i][0]:
+# 				check = True
+# 				break
+# 		if check == False:
+# 			temp = {"number" : dataList[i][0] ,"name" : dataList[i][1] ,  "total" : 0}
+# 			memberList.append(temp)
+
+# 	for i in range(len(memberList)):
+# 		for j in range(len(dataList)):
+# 			if memberList[i]["number"] == dataList[j][0]:
+# 				memberList[i]["total"] += int(dataList[j][2])
+
+# 	return memberList
+
+
+# def quiz1(data):
+# 	dataList = getSplit(data)
+# 	# print(dataList)
+# 	totalList = getTotal(dataList)
+# 	for i in range(len(totalList)):
+# 		print(totalList[i])
+# quiz1(data)

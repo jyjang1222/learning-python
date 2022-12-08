@@ -6,21 +6,52 @@
 	[정답]
 		[12, 43]
 """
-def quiz(a, b):
-    c = []
-    for i in range(len(a)):
-        for j in range(len(b)):
-            if a[i] == b[j]: 
-                check = False
-                for k in range(len(c)):
-                    if c[k] == a[i]:
-                        check = True
-                if check == False:
-                    c.append(a[i]) 
-    return c
-                
-a = [12, 32, 32, 43, 65, 43];
-b = [21, 12, 43, 2, 4, 5];
 
-c = quiz(a, b)
-print(c)
+
+a = [12, 32, 32, 43, 65, 43]
+b = [21, 12, 43, 2, 4, 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# def quiz(a, b):
+#     c = []
+#     for i in range(len(a)):
+#         for j in range(len(b)):
+#             if a[i] == b[j]: 
+#                 check = False
+#                 for k in range(len(c)):
+#                     if c[k] == a[i]:
+#                         check = True
+#                 if check == False:
+#                     c.append(a[i]) 
+#     return c
+# c = quiz(a, b)
+# print(c)
+                
+
+
+

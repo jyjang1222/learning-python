@@ -23,3 +23,7 @@ test = "1001,1002,1003,1004"
 test = mySplit(test, ",")
 print(test)
 
+str = 'abc,,efg'
+strr = mySplit(str, ',,')
+print(strr)
+

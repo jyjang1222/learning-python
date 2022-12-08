@@ -13,29 +13,53 @@
             java*cr*pt
  """
 import random
-def getStarWord(word):
-    sample = ""
-    while True:
-        r1 = random.randint(0, len(word)-1)
-        r2 = random.randint(0, len(word)-1)
-        if r1 != r2:
-            for i in range(len(word)):
-                if i == r1 or i == r2:
-                    sample += "*"
-                else:
-                    sample += word[i]
-            break
-    return sample
-
-def getChangeWord(wordList):
-    sampleList = []
-    for i in range(len(wordList)):
-        word = wordList[i]
-        starWord = getStarWord(word)
-        sampleList.append(starWord)
-    print(sampleList)
 
 
 wordList = ["html" , "react" , "spring" , "frontend" , "javascript"]
 
-getChangeWord(wordList)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# def getStarWord(word):
+#     sample = ""
+#     while True:
+#         r1 = random.randint(0, len(word)-1)
+#         r2 = random.randint(0, len(word)-1)
+#         if r1 != r2:
+#             for i in range(len(word)):
+#                 if i == r1 or i == r2:
+#                     sample += "*"
+#                 else:
+#                     sample += word[i]
+#             break
+#     return sample
+
+# def getChangeWord(wordList):
+#     sampleList = []
+#     for i in range(len(wordList)):
+#         word = wordList[i]
+#         starWord = getStarWord(word)
+#         sampleList.append(starWord)
+#     print(sampleList)
+# getChangeWord(wordList)
