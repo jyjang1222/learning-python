@@ -1,15 +1,6 @@
 """
 	[문제]
 		아래 문제수만큼 함수를 만들어서 풀어보시오.
-
-		문제 1) 각층별 관리비 합 출력
-		정답 1) 4400, 7100, 5400		
-	
-		문제 2) 관리비가 가장 많이 나온 집, 적게 나온 집 출력
-		정답 2) 가장 많이 나온 집(201), 가장 적게 나온 집(303)		
-
-		문제 3) 관리비 많이 나온순서대로 관리비와 호수 출력 
-		정답 3) 정렬해서 출력한다.
 """
 
 aptList = [
@@ -25,25 +16,99 @@ payList = [
 	]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
+문제 1) 각층별 관리비 합 출력
+정답 1) 4400, 7100, 5400
+'''
+def printTotalCost(payArr):
+	for i in range(len(payArr)):
+		sum = 0
+		for j in range(len(payArr[i])):
+			sum += payArr[i][j]
+		print(sum, end = " ")
+printTotalCost(payList)
+print()
+'''
+문제 2) 관리비가 가장 많이 나온 집, 적게 나온 집 출력
+정답 2) 가장 많이 나온 집(201), 가장 적게 나온 집(303)
+'''
+def printMaxMinCost(payArr):
 	
+	max = 0
+	maxIdx1 = 0
+	maxIdx2 = 0
+	min = 10000
+	minIdx1 = 0
+	minIdx2 = 0
+	for i in range(len(payArr)):
+		for j in range(len(payArr[i])):
+			if payArr[i][j] > max:
+				max = payArr[i][j]
+				maxIdx1 = i
+				maxIdx2 = j
+			if payArr[i][j] < min:
+				min = payArr[i][j]
+				minIdx1 = i
+				minIdx2 = j
+	print(aptList[maxIdx1][maxIdx2], aptList[minIdx1][minIdx2])
+
+printMaxMinCost(payList)
+print()
+'''
+문제 3) 관리비 많이 나온순서대로 관리비와 호수 출력 
+정답 3) 정렬해서 출력한다.
+'''
+
+def printDescSorting(aptArr, payArr):
+	aptTmp = []
+	payTmp = []
+	# 2차를 1차배열로
+	for i in range(len(payArr)):
+		for j in range(len(payArr[i])):
+			aptTmp.append(aptArr[i][j])
+			payTmp.append(payArr[i][j])
+
+	# 정렬
+	for i in range(len(payTmp)):
+		max = payTmp[i]
+		maxIdx = i
+		for j in range(i, len(payTmp)):
+			if payTmp[j] > max:
+				max = payTmp[j]
+				maxIdx = j
+		tmp1 = payTmp[i]
+		payTmp[i] = max
+		payTmp[maxIdx] = tmp1
+		tmp2 = aptTmp[i]
+		aptTmp[i] = aptTmp[maxIdx]
+		aptTmp[maxIdx] = tmp2
+
+	# print(aptTmp)
+	# print(payTmp)
+	# 1차를 2차로
+	aptTmp2 = []
+	payTmp2 = []
+	tmp1 = []
+	tmp2 = []
+	for i in range(len(aptTmp)):
+		tmp1.append(aptTmp[i])
+		tmp2.append(payTmp[i])
+		if i % 3 == 2:
+			aptTmp2.append(tmp1)
+			payTmp2.append(tmp2)
+			tmp1 = []
+			tmp2 = []
+	# 출력
+	print(aptTmp2)
+	print(payTmp2)
+
+
+printDescSorting(aptList, payList)
+
+
+
+
+
 # def quiz1(aptList , payList , totalList):
 	
 # 	for i in range(len(payList)):

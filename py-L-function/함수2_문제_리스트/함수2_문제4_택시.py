@@ -43,10 +43,27 @@ SOUTH = '남'
 WEST = '서'
 
 def chkPos(posDict, moveLog):
-	for i in moveLog:
+	for i in range(len(moveLog)):
+		dict = {}
+		x = pos[i]['x']
+		y = pos[i]['y']
 		speed = moveLog[i][0]
 		dir = moveLog[i][1]
+		if dir == NORTH:
+			y += speed
+		elif dir == EAST:
+			x += speed
+		elif dir == SOUTH:
+			y -= speed
+		elif dir == WEST:
+			x -= speed
+		dict['x'] = x
+		dict['y'] = y
+		posDict.append(dict)
 
+chkPos(pos, taxi)
+for i in pos:
+	print(i)
 
 
 
