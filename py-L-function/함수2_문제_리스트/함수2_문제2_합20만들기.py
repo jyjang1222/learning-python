@@ -1,3 +1,4 @@
+import random
 """
 	[문제]
 		sum 리스트에 랜덤으로 1~10 사이의숫자  3개를 저장하는 함수를 만든다.
@@ -10,28 +11,65 @@
  		8,8,4 (x)
 	
 """
-import random
-def make20(sum):
-    count = 0;
-    total = 0
-    while(True):     
-        if count == 3 and total == 20 :
+sum = []
+
+def rrr(arr):
+    while True:
+        tmp = []
+        for i in range(3):
+            r = random.randint(1, 10)
+            tmp.append(r)
+        sum = 0
+        for i in tmp:
+            sum += i
+        if sum == 20:
+            for i in tmp:
+                arr.append(i)
             break
-        elif count == 3 and total != 20:
-            count = 0
-            total = 0        
-            
-        r = random.randint(1, 10)
-        check = False
-        for i in range(len(sum)):
-            if r == sum[i]:
-                check = True
-                break
-        if check == False:
-            sum[count] = r
-            total += r		
-            count += 1
-sum = [0,0,0]
-make20(sum)
+
+rrr(sum)
 print(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def make20(sum):
+#     count = 0
+#     total = 0
+#     while(True):     
+#         if count == 3 and total == 20 :
+#             break
+#         elif count == 3 and total != 20:
+#             count = 0
+#             total = 0        
+            
+#         r = random.randint(1, 10)
+#         check = False
+#         for i in range(len(sum)):
+#             if r == sum[i]:
+#                 check = True
+#                 break
+#         if check == False:
+#             sum[count] = r
+#             total += r		
+#             count += 1
+# make20(sum)
+# print(sum)
 

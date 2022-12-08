@@ -12,13 +12,39 @@
 		 2   : **
 '''
 
-def makeGraph(graph):
-	for i in range(len(graph)):
-		print(graph[i], end=" :\t")
-
-		for j in range(graph[i]):
-			print("*", end="")
-		print()
-
 graph = [3, 7, 5, 0, 10, 2]
-makeGraph(graph)
+
+def printGraphToStar(graphArr):
+	for i in graphArr:
+		str = ''
+		for j in range(i):
+			str += '*'
+		print(i, ':', str)
+
+printGraphToStar(graph)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 정답
+# def makeGraph(graph):
+# 	for i in range(len(graph)):
+# 		print(graph[i], end=" :\t")
+
+# 		for j in range(graph[i]):
+# 			print("*", end="")
+# 		print()
+
+# graph = [3, 7, 5, 0, 10, 2]
+# makeGraph(graph)

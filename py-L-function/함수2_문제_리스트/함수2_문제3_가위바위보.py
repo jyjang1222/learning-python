@@ -15,22 +15,6 @@
 
 """
 
-def gameStart(a , pos):
-    lastpos = pos[0]
-    for i in range(len(a)):
-        b = a[i][0]
-        c = a[i][1]
-        if b == c:
-            lastpos += 1
-        elif b == "가위" and c == "보":
-            lastpos += 5
-        elif b == "바위" and c == "가위":
-            lastpos += 5
-        elif b == "보" and c == "바위":
-            lastpos += 5
-        else:
-            lastpos -= 3
-        pos.append(lastpos)
     
 pos = [50]
 a = [
@@ -41,5 +25,61 @@ a = [
 	["바위","바위"],
 	["보","바위"]
 ]
-gameStart(a, pos)
+
+SCISSORS = '가위'
+ROCK = '바위' 
+PAPER = '보'
+
+def chkPos(posArr ,battleLog):
+	currentPos = pos[0]
+	for i in range(len(battleLog)):
+		chulsu = battleLog[i][0]
+		minsu = battleLog[i][1]
+		# 무승부
+		if chulsu == minsu:
+			currentPos += 1
+		# 이길때
+		elif chulsu == SCISSORS and minsu == PAPER:
+			currentPos += 5
+		elif chulsu == ROCK and minsu == SCISSORS:
+			currentPos += 5
+		elif chulsu == PAPER and minsu == ROCK:
+			currentPos += 5
+		else:
+			currentPos -= 3
+		posArr.append(currentPos)
+
+
+chkPos(pos, a)
 print(pos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def gameStart(a , pos):
+#     lastpos = pos[0]
+#     for i in range(len(a)):
+#         b = a[i][0]
+#         c = a[i][1]
+#         if b == c:
+#             lastpos += 1
+#         elif b == "가위" and c == "보":
+#             lastpos += 5
+#         elif b == "바위" and c == "가위":
+#             lastpos += 5
+#         elif b == "보" and c == "바위":
+#             lastpos += 5
+#         else:
+#             lastpos -= 3
+#         pos.append(lastpos)
+# gameStart(a, pos)
+# print(pos)

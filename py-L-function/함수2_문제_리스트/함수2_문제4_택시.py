@@ -23,22 +23,6 @@
 		{'y': 8, 'x': 0}
 		{'y': 8, 'x': 2}
 """
-def movetaxi(taxi, pos):
-
-	for i in range(len(taxi)):
-		lastpos = {"y" : 0 , "x" : 0}
-		lastpos["y"] = pos[-1]["y"]
-		lastpos["x"] = pos[-1]["x"]
-		next = taxi[i]
-		if next[1] == "북":
-			lastpos["y"] += next[0]
-		if next[1] == "동":
-			lastpos["x"] += next[0]
-		if next[1] == "남":
-			lastpos["y"] -= next[0]
-		if next[1] == "서":
-			lastpos["x"] -= next[0]
-		pos.append(lastpos)
 
 taxi = [
 	[4,"북"],
@@ -53,6 +37,47 @@ pos = [
 	{"y" : 5 , "x" : 5}
 ]
 
-movetaxi(taxi , pos)
-for i in range(len(pos)):
-	print(pos[i])
+NORTH = '북'
+EAST = '동'
+SOUTH = '남'
+WEST = '서'
+
+def chkPos(posDict, moveLog):
+	for i in moveLog:
+		speed = moveLog[i][0]
+		dir = moveLog[i][1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def movetaxi(taxi, pos):
+# 	for i in range(len(taxi)):
+# 		lastpos = {"y" : 0 , "x" : 0}
+# 		lastpos["y"] = pos[-1]["y"]
+# 		lastpos["x"] = pos[-1]["x"]
+# 		next = taxi[i]
+# 		if next[1] == "북":
+# 			lastpos["y"] += next[0]
+# 		if next[1] == "동":
+# 			lastpos["x"] += next[0]
+# 		if next[1] == "남":
+# 			lastpos["y"] -= next[0]
+# 		if next[1] == "서":
+# 			lastpos["x"] -= next[0]
+# 		pos.append(lastpos)
+# movetaxi(taxi , pos)
+# for i in range(len(pos)):
+# 	print(pos[i])
