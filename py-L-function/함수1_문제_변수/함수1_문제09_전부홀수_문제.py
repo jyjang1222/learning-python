@@ -1,3 +1,4 @@
+import random
 '''
     [문제]
         리스트에 랜덤으로 -100 ~ 100 사이의 홀수 4개를 저장 후,
@@ -7,4 +8,21 @@
         [0, 22, -41, 21] 전부 홀수가 아니다.
 '''
 
-a = []
+def isAllOdd(arr):
+    chk = True
+    for i in arr:
+        if i % 2 == 0 and i != 0:
+            chk = False
+    print(arr)
+    print(chk)
+
+randomArr = []
+
+while True:
+    r = random.randint(-100, 100)
+    if r % 2 == 1:
+        randomArr.append(r)
+    if len(randomArr) == 4:
+        break
+
+isAllOdd(randomArr)

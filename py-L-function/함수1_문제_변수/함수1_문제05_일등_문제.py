@@ -9,4 +9,16 @@
 name = ["이만수", "김철수", "박민지"]  
 score = [54, 32, 92]
 
-   
+def printBestStudent(nameArr, scoreArr):
+    rankArr = []
+    for i in score:
+        rank = 1
+        for j in score:
+            if i < j:
+                rank += 1
+        rankArr.append(rank)
+    for i in range(len(rankArr)):
+        if rankArr[i] == 1:
+            print(score[i], name[i])
+
+printBestStudent(name, score)

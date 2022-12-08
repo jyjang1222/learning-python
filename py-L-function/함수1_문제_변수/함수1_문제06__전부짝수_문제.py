@@ -9,3 +9,12 @@
 
 arr = [10, 0, 2, 6]
 
+def isAllEven(arr):
+	chk = True
+	for i in arr:
+		if i % 2 == 1:
+			chk = False
+	if chk:
+		print(chk)
+
+isAllEven(arr)

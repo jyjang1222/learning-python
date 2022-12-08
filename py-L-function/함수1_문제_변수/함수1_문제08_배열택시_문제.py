@@ -16,8 +16,27 @@
 	 	   	y가 2감소해  x : 5, y : 7이 된다. 
 '''
 
+NORTH = 0
+EAST = 1
+SOUTH = 2
+WEST = 3
+
+def printTaxiPos(dirArr, speedArr, x, y):
+	for i in range(len(dirArr)):
+		if dirArr[i] == NORTH:
+			y += speedArr[i]
+		elif dirArr[i] == EAST:
+			x += speedArr[i]
+		elif dirArr[i] == SOUTH:
+			y -= speedArr[i]
+		elif dirArr[i] == WEST:
+			x -= speedArr[i]
+	print(x, y)
+
 speed = [4, 2, 1, 5, 4, 2]
 dir = [0, 1, 3, 2, 2, 1]
 
 x = 5
 y = 5
+
+printTaxiPos(dir, speed, x , y)

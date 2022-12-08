@@ -6,3 +6,12 @@
         2
 '''
 arr = [2, 45, 1, 12]
+
+def evenCount(arr):
+    count = 0
+    for i in arr:
+        if i % 2 == 0 and i != 0:
+            count += 1
+    print(count)
+
+evenCount(arr)

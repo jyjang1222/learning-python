@@ -7,3 +7,17 @@
 '''
 
 lotto = [1, 7, 7, 1, 7, 7, 7]
+
+def lottery(arr):
+    cnt = 0
+    for i in arr:
+        if i == 7:
+            cnt += 1
+        else:
+            cnt = 0
+    if cnt == 3:
+        print('당첨')
+    else:
+        print('꽝')
+
+lottery(lotto)
