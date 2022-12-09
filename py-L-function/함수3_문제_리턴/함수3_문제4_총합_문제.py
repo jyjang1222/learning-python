@@ -1,3 +1,4 @@
+# from pickle import FALSE
 '''
     # \n 은 줄바꿈이다.  구분자도 (\n 으로 넣으면 자르기할수있다.)
 
@@ -11,12 +12,35 @@
 		{'number': '10003', 'name': '유재석', 'total': 4080}
 		{'number': '10004', 'name': '박명수', 'total': 7130}
 '''
-from pickle import FALSE
+
+def mySplit(str, data):
+    i = 0
+    arr = []
+    tmp = ''
+    while i < len(data):
+        cnt = 0
+        # 입력된 str과 같은지 체크
+        if data[i] == str[0]:
+            for j in range(len(str)):
+                # 예외처리
+                if i + j >= len(data):
+                    break
+                if data[i+j] == str[j]:
+                    cnt += 1
+        # 같으면
+        if cnt == len(str):
+            arr.append(tmp)
+            tmp = ''
+            i += len(str) # len(str)만큼 건너뜀
+        else:
+            tmp += data[i]
+            i += 1
+    arr.append(tmp)
+        
+    return arr
 
 
-
-
-data =""
+data = ""
 data += "10001/김철수/600\n"
 data += "10002/이영희/800\n"
 data += "10001/김철수/1400\n"
@@ -30,16 +54,47 @@ data += "10004/박명수/6800\n"
 data = data[0:-1] # 마지막글자  (\n)  삭제
 #print(data)
 
+tmp1 = mySplit('\n', data)
+# print(tmp1)
+tmp2 = []
+for i in tmp1:
+	tmp = mySplit('/', i)
+	tmp2.append(tmp)
+# print(tmp2)
 
+def arrToDict(arr):
+	tmp = []
+	for i in arr:
+		dict = {}
+		for j in range(len(i)):
+			dict['number'] = int(i[0])
+			dict['name'] = i[1]
+			dict['total'] = int(i[2])
+		tmp.append(dict)
+	return tmp
 
+dataDict = arrToDict(tmp2)
 
+# for i in dataDict:
+# 	print(i)
 
+# 중복데이터 합치기
+def combineDuplicatedData(dict):
+	tmp = []
+	for i in dict:
+		chk = True
+		for j in tmp:
+			if i['number'] == j['number']:
+				chk = False
+				j['total'] += i['total']
+		if chk:
+			tmp.append(i)
+	return tmp
 
+totalDict = combineDuplicatedData(dataDict)
 
-
-
-
-
+for i in totalDict:
+	print(i)
 
 
 

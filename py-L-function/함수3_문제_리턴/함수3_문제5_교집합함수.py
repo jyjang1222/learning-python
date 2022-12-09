@@ -11,10 +11,22 @@
 a = [12, 32, 32, 43, 65, 43]
 b = [21, 12, 43, 2, 4, 5]
 
+def getListDuplicatedValue(arr1, arr2):
+	tmp = []
+	for i in arr1:
+		for j in arr2:
+			if i == j:
+				# 중복체크
+				chk = True
+				for k in tmp:
+					if j == k:
+						chk = False
+				if chk:
+					tmp.append(j)
+	return tmp
 
-
-
-
+res = getListDuplicatedValue(a, b)
+print(res)
 
 
 

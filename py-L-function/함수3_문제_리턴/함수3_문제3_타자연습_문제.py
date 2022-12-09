@@ -1,3 +1,4 @@
+import random
 """
     [문제]
         철수는 타자연습 게임을 만들기 위해 단어들을 선정했다. 
@@ -12,16 +13,28 @@
             fr*nt*nd
             java*cr*pt
  """
-import random
-
 
 wordList = ["html" , "react" , "spring" , "frontend" , "javascript"]
 
+def censorStr(data):
+    arr = []
+    for i in data:
+        tmp = ''
+        while True:
+            r1 = random.randint(0, len(i) - 1)
+            r2 = random.randint(0, len(i) - 1)
+            if r1 != r2:
+                break
+        for j in range(len(i)):
+            if j == r1 or j == r2:
+                tmp += '*'
+            else:
+                tmp += i[j]
+        arr.append(tmp)
+    return arr
 
-
-
-
-
+res = censorStr(wordList)
+print(res)
 
 
 

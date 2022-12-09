@@ -6,8 +6,7 @@
 		책을 연체한 회원번호 와 책이름을 구하시오.
 		단, 윤년은 무시한다. 
 	[정답]
-		연체한회원번호 :  1001  , 책제목 :  연필로쓰기
-		연체한회원번호 :  1041  , 책제목 :  컴퓨터활용능력
+		1034 아무튼,외국어
 '''
 
 rentalList = [ 
@@ -92,46 +91,4 @@ for i in range(len(rentalList)):
 	if rentalList[i]['rentalperiod'] < rentalList[i]['rentedTotal']:
 		print(rentalList[i]['membernumber'], rentalList[i]['bootsubject'])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 정답
-# for i in range(len(rentalList)):
-# 	rental = rentalList[i]
-# 	date = rental["rentaldate"]
-# 	temp = date.split("-")
-# 	year = int(temp[0])
-# 	mon = int(temp[1])
-# 	day = int(temp[2])
-# 	rentaltotal = int(temp[0]) * 365;
-# 	todaytotal = today[0] * 365;	
-    
-# 	for j in range(len(monList)):
-# 		# print(mon , " " , j)
-# 		if mon > j :
-# 			rentaltotal += monList[j]
-# 		if today[1] > j:
-# 			todaytotal  += monList[j]
-	
-# 	rentaltotal += day
-# 	todaytotal += today[2]
-# 	for j in range(len(memberList)):
-# 		member = memberList[j]
-# 		if(member["booknumber"] == rental["booknumber"]):
-# 			rentaltotal += member["rentalperiod"];
-# 			break
-# 	if rentaltotal > todaytotal:
-# 		print("연체한회원번호 : " , member["membernumber"] , " , 책제목 : " , rental["bootsubject"])
-     
 

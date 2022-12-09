@@ -128,13 +128,23 @@ pointDictArr = tmp
 for i in pointDictArr:
     print(i)
 
+for i in range(len(pointDictArr)):
+    rank = 1
+    for j in range(len(pointDictArr)):
+        if pointDictArr[i]['point'] < pointDictArr[j]['point']:
+            rank += 1
+    pointDictArr[i]['rank'] = rank
 
+for i in pointDictArr:
+    print(i)
 
+bestMember = []
+for i in range(len(pointDictArr)):
+    if pointDictArr[i]['rank'] == 1:
+        bestMember.append(userDictArr[i]['name'])
+        bestMember.append(pointDictArr[i]['memberNumber'])
 
-
-
-
-
+print(bestMember)
 
 
 

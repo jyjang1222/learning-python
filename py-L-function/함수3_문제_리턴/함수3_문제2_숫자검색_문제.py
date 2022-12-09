@@ -9,9 +9,23 @@
 
 stringList = ["qwer1234dasd" , "dasdasd" , "1234" , "45345" , "12das23"]
 
+str = 'abcdefghijklmnopqrstuvwxyz'
 
+def stringTest(arr):
+    tmp = []
+    for i in stringList:
+        chk = True
+        # 숫자만있는지 체크
+        for j in i:
+            for k in str:
+                if j == k:
+                    chk = False
+        if chk:
+            tmp.append(i)
+    return tmp
 
-
+res = stringTest(stringList)
+print(res)
 
 
 
