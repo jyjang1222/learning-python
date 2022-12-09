@@ -16,7 +16,6 @@ print(type(age))    # <class 'str'> # 문자열이므로 형변환 해야한다.
 age = int(age)
 print(type(age))    # <class 'int'>
 
-
 # 방법 1)
 print("[1] 당신의 나이를 입력하세요 : " , end="")
 age = input()
@@ -27,5 +26,5 @@ age = input("[2] 당신의 나이를 입력하세요 : ")
 age = int(age)
 
 # 방법 3)
-age = int(input("[3]당신의 나이를 입력하세요 : "))
+age = int(input("[3] 당신의 나이를 입력하세요 : "))
 print(age)
