@@ -41,4 +41,39 @@ orderList = [
 
 totalList = []
 
+# 중복데이터 합치기
+def combineDuplicatedData(dictList):
+    tmp = []
+    for i in dictList:
+        chk = True
+        for j in tmp:
+            if j['orderid'] == i['orderid']:
+                if j['itemname'] == i['itemname']:
+                    chk = False
+                    j['count'] += i['count']
+        if chk:
+            tmp.append(i)
+    return tmp
 
+orderList = combineDuplicatedData(orderList)
+
+for i in orderList:
+    print(i)
+
+# 주문총액 딕셔너리 얻기
+def getOrderTotal(itemDictList, orderDictList):
+    tmp = []
+    for i in orderDictList:
+        dict = {}
+        for j in itemDictList:
+            if i['itemname'] == j['itemname']:
+                dict['orderid'] = i['orderid']
+                calc = i['count'] * j['price']
+                dict['total'] = calc
+        tmp.append(dict)
+    return tmp
+
+orderTotalList = getOrderTotal(itemList, orderList)
+
+for i in orderTotalList:
+    print(i)

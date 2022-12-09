@@ -10,8 +10,8 @@
         itemName 는 주문한 상품이름이다. 
         count 는 주문한 상품개수이다. 
 
-        cancleList 는 주문취소 목록이다. 
-        canclenumber 는 주문을 취소한 번호이다. 
+        cancelList 는 주문취소 목록이다. 
+        cancelnumber 는 주문을 취소한 번호이다. 
 
         취소한 상품이름별 총가격을 구하는 함수를 만드시오.
         
@@ -33,16 +33,63 @@ orderList = [
     {"ordernumber" : 100006 , "orderid" : "qwer1234" , "itemname" : "사과" , "count" : 2}, 
     {"ordernumber" : 100007 , "orderid" : "testid" , "itemname" : "사과" , "count" : 3}, 
 ]
-cancleList = [
-    {"canclenumber" : 100003 },
-    {"canclenumber" : 100002 },
-    {"canclenumber" : 100005 },
+cancelList = [
+    {"cancelnumber" : 100003 },
+    {"cancelnumber" : 100002 },
+    {"cancelnumber" : 100005 },
 ]
 
 totalList = []
 
+def combineOrderCancelInfo(orderDictList, cancelDictList):
+    tmp = []
+    for i in cancelDictList:
+        dict = {}
+        for j in orderDictList:
+            cancelNumber = i['cancelnumber']
+            orderNumber = j['ordernumber']
+            if cancelNumber == orderNumber:
+                dict['itemname'] = j['itemname']
+                dict['count'] = j['count']
+        tmp.append(dict)
+    return tmp
 
+cancelList = combineOrderCancelInfo(orderList, cancelList)
 
+for i in cancelList:
+    print(i)
 
+# 중복데이터 합치기
+def combineDuplicatedData(dictList):
+    tmp = []
+    for i in dictList:
+        chk = True
+        for j in tmp:
+            if j['itemname'] == i['itemname']:
+                chk = False
+                j['count'] += i['count']
+        if chk:
+            tmp.append(i)
+    return tmp
 
+cancelList = combineDuplicatedData(cancelList)
 
+for i in cancelList:
+    print(i)
+
+def getTotalList(data, itemDictList):
+    tmp = []
+    for i in data:
+        dict = {}
+        for j in itemDictList:
+            if i['itemname'] == j['itemname']:
+                calc = i['count'] * j['price']
+                dict['itemname'] = i['itemname']
+                dict['total'] = calc
+        tmp.append(dict)
+    return tmp
+
+cancelList = getTotalList(cancelList, itemList)
+
+for i in cancelList:
+    print(i)

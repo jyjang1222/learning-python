@@ -16,12 +16,12 @@
         각회원별 상품별 이름과 총가격을 구하는 함수를 만드시오. 
         단, 아무것도 주문하지않은 회원은 출력하지않는다.
     [정답]
-        {'id': 'qwer1234', 'itemname': '사과', 'count': 4, 'total': 2200}
-        {'id': 'pythongood', 'itemname': '딸기', 'count': 6, 'total': 4300}
-        {'id': 'pythongood', 'itemname': '사과', 'count': 2, 'total': 1100}
-        {'id': 'testid', 'itemname': '바나나', 'count': 8, 'total': 4000}
-        {'id': 'cccddd', 'itemname': '바나나', 'count': 3, 'total': 2000}
-        {'id': 'cccddd', 'itemname': '사과', 'count': 2, 'total': 1100}
+        {'orderid': 'qwer1234', 'itemname': '사과', 'total': 4400}        
+        {'orderid': 'pythongood', 'itemname': '딸기', 'total': 25800}     
+        {'orderid': 'testid', 'itemname': '바나나', 'total': 16000}       
+        {'orderid': 'pythongood', 'itemname': '사과', 'total': 2200}      
+        {'orderid': 'cccddd', 'itemname': '바나나', 'total': 6000}        
+        {'orderid': 'cccddd', 'itemname': '사과', 'total': 2200}
        
 '''
 memberList = [
@@ -49,5 +49,40 @@ orderList = [
 
 totalList = []
 
+# 중복데이터 합치기
+def combineDuplicatedData(dictList):
+    tmp = []
+    for i in dictList:
+        chk = True
+        for j in tmp:
+            if j['orderid'] == i['orderid']:
+                if j['itemname'] == i['itemname']:
+                    chk = False
+                    j['count'] += i['count']
+        if chk:
+            tmp.append(i)
+    return tmp
 
+orderList = combineDuplicatedData(orderList)
 
+for i in orderList:
+    print(i)
+
+# 주문총액 딕셔너리 얻기
+def getOrderTotal(itemDictList, orderDictList):
+    tmp = []
+    for i in orderDictList:
+        dict = {}
+        for j in itemDictList:
+            if i['itemname'] == j['itemname']:
+                dict['orderid'] = i['orderid']
+                dict['itemname'] = i['itemname']
+                calc = i['count'] * j['price']
+                dict['total'] = calc
+        tmp.append(dict)
+    return tmp
+
+orderTotalList = getOrderTotal(itemList, orderList)
+
+for i in orderTotalList:
+    print(i)
