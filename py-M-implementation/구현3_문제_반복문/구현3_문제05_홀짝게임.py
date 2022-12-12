@@ -1,3 +1,4 @@
+import random
 """
 	[홀짝게임]		  
 		[1] 1~10사이의 숫자를 랜덤으로 저장한다.
@@ -9,3 +10,32 @@
 		[7] 돈이 부족하면 게임은 자동종료된다. 
  
 """
+
+
+ODD = '홀'
+EVEN = '짝'
+
+gold = 3000
+res = ODD
+
+while True:
+	while True:
+		userInput = input('홀짝입력\n')
+		if userInput == ODD or userInput == EVEN:
+			break
+
+	r = random.randint(1, 10)
+	if r % 2 == 0:
+		res = EVEN
+
+	if userInput == res:
+		gold += 700
+	else:
+		gold -= 1000
+	print('게이머:', userInput, '결과:', res)
+	print('남은돈:', gold)
+	userInput2 = int(input('[1.한번더][2.종료]\n'))
+	if userInput2 == 1:
+		continue
+	else:
+		break

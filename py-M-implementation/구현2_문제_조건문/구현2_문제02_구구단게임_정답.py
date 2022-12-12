@@ -9,8 +9,8 @@
 """
 a = input("구구단 숫자1을 입력 : ")
 b = input("구구단 숫자2를 입력 : ")
-massage = a + " * " + b + " = "
-print(massage , end="")
+message = a + " * " + b + " = "
+print(message , end="")
 c = input()
 if int(a) * int(b) == int(c):
     print("정답")

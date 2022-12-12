@@ -31,6 +31,7 @@ a = [
 	[4,5,6],
 	[7,8,9]
 ]
+
 while True:
 	inputNumber = int(input('1 ~ 9 사이의 수를 입력해주세요.\n'))
 	if 1 <= inputNumber and inputNumber <= 9:
@@ -43,16 +44,16 @@ posY = 0
 posX = 0
 
 for i in range(len(a)):
-		for j in range(len(a[i])):
-			if a[i][j] == inputNumber:
-				a[i][j] = 0
-				dict = {}
+	for j in range(len(a[i])):
+		if a[i][j] == inputNumber:
+			a[i][j] = 0
+			dict = {}
 
-				dict['y'] = i
-				dict['x'] = j
-				posY = i
-				posX = j
-				posData.append(dict)
+			dict['y'] = i
+			dict['x'] = j
+			posY = i
+			posX = j
+			posData.append(dict)
 		
 for i in a:
 	print(i)
