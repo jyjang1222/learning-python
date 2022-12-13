@@ -9,3 +9,37 @@
 
 
 a = [10,54,345,656,87]
+
+def chkZero(arr):
+	chk = True
+	for i in arr:
+		if i != 0:
+			chk = False
+	return chk
+
+def findMax(arr):
+	max = 0
+	for i in arr:
+		if i > max:
+			max = i
+	return max
+
+def findMaxIdx(arr, val):
+	idx = 0
+	for i in range(len(arr)):
+		if arr[i] == val:
+			idx = i
+	return idx
+
+while True:
+	max = findMax(a)
+	maxIdx = findMaxIdx(a, max)
+
+	print(a)
+	userInput = int(input('가장 큰 값을 입력하세요.\n'))
+	if userInput == max:
+		a[maxIdx] = 0
+	chk = chkZero(a)
+	if chk:
+		print(a)
+		break
