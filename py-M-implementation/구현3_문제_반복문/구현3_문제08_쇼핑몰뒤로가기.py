@@ -17,3 +17,26 @@
 	 		0. 뒤로가기
 		0. 종료
 """
+
+category = [{'cloth':'남성의류'}, {'cloth':'여성의류'}]
+man = [{'남성의류': '티셔츠'}, {'남성의류': '바지'}]
+woman = [{'여성의류': '가디건'}, {'여성의류': '치마'}]
+
+while True:
+	for i in category:
+		print(i)
+	select = int(input('[1.남성의류][2.여성의류][0.종료]\n'))
+	if select == 1:
+		for j in man:
+			print(j)
+		select2 = int(input('[0.뒤로가기]\n'))
+		if select2 == 0:
+			continue
+	if select == 2:
+		for j in woman:
+			print(j)
+		select2 = int(input('[0.뒤로가기]\n'))
+		if select2 == 0:
+			continue
+	if select == 0:
+		break

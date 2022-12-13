@@ -1,3 +1,4 @@
+import random
 """
 	[택시게임]
 		1. 손님을 태워 목적지까지 이동하는 게임이다.
@@ -18,9 +19,60 @@
 		1을 선택한경우 : [1.동][2.서][3.남][4.북] 메뉴를 보여주며, 1~4를 선택할수있다.
 		2를 선택한경우 : [1.한칸이동][2.두칸이동][3.세칸이동] 메뉴를 보여주며, 1~3을 선택할수있다.
 """
+EAST = '동'
+WEST = '서'
+SOUTH = '남'
+NORTH = '북'
+
 x = 0
 y = 0
-dir = "동"
+dir = EAST
 price = 0
-rx = 0
-ry = 0
+rx = random.randint(-10, 10)
+ry = random.randint(-10, 10)
+
+def printInfo():
+	print('목적지: rx =', rx, 'ry =', ry)
+	print('현재위치 : x =', x, 'y =', y)
+	print('현재방향 :', dir)
+	print('요금 :', price)
+
+def setDirection():
+	select = int(input('[1.동][2.서][3.남][4.북]\n'))
+	if select == 1:
+		dir = EAST
+	elif select == 2:
+		dir = WEST
+	elif select == 3:
+		dir = SOUTH
+	elif select == 4:
+		dir = NORTH
+	return dir
+
+while True:
+	printInfo()
+	select = int(input('[1.방향설정][2.이동하기][0.영업종료]\n'))
+
+	if select == 1:
+		dir = setDirection()
+		continue
+	if select == 2:
+		speed = int(input('[1.한칸이동][2.두칸이동][3.세칸이동]\n'))
+		
+		if dir == EAST:
+			x += speed
+		if dir == WEST:
+			x -= speed
+		if dir == SOUTH:
+			y -= speed
+		if dir == NORTH:
+			y += speed
+
+		price += speed * 50
+
+		if x == rx and y == ry:
+			rx = random.randint(-10, 10)
+			ry = random.randint(-10, 10)
+		continue
+	if select == 0:
+		break

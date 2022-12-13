@@ -27,6 +27,8 @@ while True:
 	r = random.randint(1, 10)
 	if r % 2 == 0:
 		res = EVEN
+	else:
+		res = ODD
 
 	if userInput == res:
 		gold += 700

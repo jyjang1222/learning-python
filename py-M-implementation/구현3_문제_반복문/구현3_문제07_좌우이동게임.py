@@ -1,3 +1,4 @@
+import random
 """
 	[좌우이동게임]
 		[1] x 는 플레이어의 위치이다.
@@ -17,4 +18,17 @@
 """
 
 x = 0
-r = 0
+r = random.randint(-5, 5)
+
+while True:
+	while True:
+		select = int(input('[1.left] [2.right]\n'))
+		if select == 1:
+			x -= 1
+			break
+		if select == 2:
+			x += 1
+			break
+	print(x, r)
+	if x == r:
+		break
