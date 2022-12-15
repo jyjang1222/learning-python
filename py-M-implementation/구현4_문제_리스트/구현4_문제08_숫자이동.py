@@ -28,4 +28,39 @@ a = [
 	1,8,0,0,1,
 	1,0,0,0,3,
 	1,1,1,1,1
- ];
+ ]
+
+LEFT = 'LEFT'
+RIGHT = 'RIGHT'
+UP = 'UP'
+DOWN = 'DOWN'
+
+current = 11
+
+def move(direction, map):
+	pos = map[current - 1]
+	if direction == LEFT:
+		# if pos == 1:
+		# 	print('이동불가합니다.')
+		# 	return
+		# pos = 8
+		# map[current] = 0
+		current -= 1
+	elif direction == RIGHT:
+		pos = map[current + 1]
+		current += 1
+	if pos == 1:
+		print('이동불가합니다.')
+		return
+		pos = 8
+		map[current] = 0
+
+while True:
+	userInput = input('1.left  2.right 3.up 4.down')
+	userInput = userInput.upper()
+
+	move(userInput, a)
+
+	break
+	
+
