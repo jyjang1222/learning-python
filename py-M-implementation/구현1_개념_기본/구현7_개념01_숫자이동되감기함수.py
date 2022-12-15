@@ -60,39 +60,74 @@ for i in a:
 	print(i)
 
 # 1) left 2)right 3)up 4)down 5)replay
-def left(y, x):
-	# 값교체
+# def left(y, x):
+# 	# 값교체
+# 	dict = {}
+# 	tmp = a[y][x-1]
+# 	a[y][x-1] = 0
+# 	a[y][x] = tmp
+# 	# 로그저장
+# 	dict['y'] = y
+# 	dict['x'] = x-1
+# 	posData.append(dict)
+
+# def right(y, x):
+# 	tmp = a[y][x+1]
+# 	a[y][x+1] = 0
+# 	a[y][x] = tmp
+# 	dict['y'] = y
+# 	dict['x'] = x+1
+# 	posData.append(dict)
+
+# def up(y, x):
+# 	tmp = a[y-1][x]
+# 	a[y-1][x] = 0
+# 	a[y][x] = tmp
+# 	dict['y'] = y-1
+# 	dict['x'] = x
+# 	posData.append(dict)
+
+# def down(y, x):
+# 	tmp = a[y+1][x]
+# 	a[y+1][x] = 0
+# 	a[y][x] = tmp
+# 	dict['y'] = y+1
+# 	dict['x'] = x
+# 	posData.append(dict)
+
+LEFT = 'left'
+RIGHT = 'right'
+UP = 'up'
+DOWN = 'down'
+
+def move(y, x, direction):
 	dict = {}
 	tmp = a[y][x-1]
-	a[y][x-1] = 0
-	a[y][x] = tmp
-	# 로그저장
-	dict['y'] = y
-	dict['x'] = x-1
-	posData.append(dict)
-
-def right(y, x):
-	tmp = a[y][x+1]
-	a[y][x+1] = 0
-	a[y][x] = tmp
-	dict['y'] = y
-	dict['x'] = x+1
-	posData.append(dict)
-
-def up(y, x):
-	tmp = a[y-1][x]
-	a[y-1][x] = 0
-	a[y][x] = tmp
-	dict['y'] = y-1
-	dict['x'] = x
-	posData.append(dict)
-
-def down(y, x):
-	tmp = a[y+1][x]
-	a[y+1][x] = 0
-	a[y][x] = tmp
-	dict['y'] = y+1
-	dict['x'] = x
+	if direction == LEFT or direction == RIGHT:
+		dict['y'] = y
+		if direction == LEFT:
+			tmp = a[y][x-1]
+			a[y][x-1] = 0
+			a[y][x] = tmp
+			# 로그저장
+			dict['x'] = x-1
+		if direction == RIGHT:
+			tmp = a[y][x+1]
+			a[y][x+1] = 0
+			a[y][x] = tmp
+			dict['x'] = x+1
+	elif direction == DOWN or direction == UP:
+		dict['x'] = x
+		if direction == UP:
+			tmp = a[y-1][x]
+			a[y-1][x] = 0
+			a[y][x] = tmp
+			dict['y'] = y-1
+		if direction == DOWN:
+			tmp = a[y+1][x]
+			a[y+1][x] = 0
+			a[y][x] = tmp
+			dict['y'] = y+1
 	posData.append(dict)
 
 while True:
@@ -107,26 +142,26 @@ while True:
 		if posX-1 < 0:
 			print('끝이라서 이동할수 없습니다.')
 			continue
-		left(posY, posX)
+		move(posY, posX, LEFT)
 		# 현재인덱스이동
 		posX -= 1
 	elif inputNumber == 2:
 		if posX+1 >= len(a[posY]):
 			print('끝이라서 이동할수 없습니다.')
 			continue
-		right(posY, posX)
+		move(posY, posX, RIGHT)
 		posX += 1
 	elif inputNumber == 3:
 		if posY-1 < 0:
 			print('끝이라서 이동할수 없습니다.')
 			continue
-		up(posY, posX)
+		move(posY, posX, UP)
 		posY -= 1
 	elif inputNumber == 4:
 		if posY+1 >= len(a):
 			print('끝이라서 이동할수 없습니다.')
 			continue
-		down(posY, posX)
+		move(posY, posX, DOWN)
 		posY += 1
 	elif inputNumber == 5:
 		if len(posData) == 1:

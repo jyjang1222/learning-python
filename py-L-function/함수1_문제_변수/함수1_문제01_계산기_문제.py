@@ -14,10 +14,10 @@ import random
 x = 10
 y = 3
 
-def plus(a, b):
+def add(a, b):
     res = a + b
     print(res)
-def minus(a, b):
+def subtract(a, b):
     res = a - b
     print(res)
 def multiply(a, b):
@@ -31,9 +31,9 @@ for i in range(5):
     r = random.randint(0, 3)
     print(r)
     if r == 0:
-        plus(x, y)
+        add(x, y)
     elif r == 1:
-        minus(x, y)
+        subtract(x, y)
     elif r == 2:
         multiply(x, y)
     elif r == 3:
