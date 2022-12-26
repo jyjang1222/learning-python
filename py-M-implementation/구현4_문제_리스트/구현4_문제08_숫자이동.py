@@ -30,37 +30,56 @@ a = [
 	1,1,1,1,1
  ]
 
-LEFT = 'LEFT'
-RIGHT = 'RIGHT'
-UP = 'UP'
-DOWN = 'DOWN'
+LEFT = 1
+RIGHT = 2
+UP = 3
+DOWN = 4
+WALL = 1
+GOAL = 3
+PLAYER = 8
 
-current = 11
+pos = 11
 
-def move(direction, map):
-	pos = map[current - 1]
-	if direction == LEFT:
-		# if pos == 1:
-		# 	print('이동불가합니다.')
-		# 	return
-		# pos = 8
-		# map[current] = 0
-		current -= 1
-	elif direction == RIGHT:
-		pos = map[current + 1]
-		current += 1
-	if pos == 1:
-		print('이동불가합니다.')
-		return
-		pos = 8
-		map[current] = 0
+def printMap(arr):
+	for i in range(len(arr)):
+		print(arr[i], end=' ')
+		if i % 5 == 4:
+			print()
 
 while True:
-	userInput = input('1.left  2.right 3.up 4.down')
-	userInput = userInput.upper()
+	printMap(a)
 
-	move(userInput, a)
+	userInput = int(input('1.left  2.right 3.up 4.down\n'))
+	
+	if userInput == LEFT:
+		if a[pos - 1] == WALL:
+			print('이동불가')
+			continue
+		a[pos] = 0
+		pos -= 1
+	elif userInput == RIGHT:
+		if a[pos + 1] == WALL:
+			print('이동불가')
+			continue
+		a[pos] = 0
+		pos += 1
+	elif userInput == UP:
+		if a[pos - 5] == WALL:
+			print('이동불가')
+			continue
+		a[pos] = 0
+		pos -= 5
+	elif userInput == DOWN:
+		if a[pos + 5] == WALL:
+			print('이동불가')
+			continue
+		a[pos] = 0
+		pos += 5
 
-	break
+	if a[pos] == GOAL:
+		a[pos] = PLAYER
+		printMap(a)
+		break
+	a[pos] = PLAYER
 	
 
