@@ -97,20 +97,20 @@
 # 	fakeFloor += 1
 
 
-# 3트
-# fakeFloor = 1
-# realFloor = 1
+# 50층 까지
+elevator = 1
+realFloor = 1
 
-# while realFloor <= 50:
-# 	if fakeFloor % 10 == 4:
-# 		fakeFloor += 1
-# 	if fakeFloor // 10 == 4:
-# 		fakeFloor += 10
-# 	print(realFloor, fakeFloor)
-# 	fakeFloor += 1
-# 	realFloor += 1
+while realFloor <= 50:
+	if elevator % 10 == 4:
+		elevator += 1
+	if elevator // 10 == 4:
+		elevator += 10
+	print(realFloor, elevator)
+	elevator += 1
+	realFloor += 1
 
-# 4트
+# 500층 까지
 realFloor = 1
 elevator = 1
 
@@ -130,3 +130,68 @@ while realFloor <= 500:
 	print(realFloor, elevator)
 	elevator += 1
 	realFloor += 1
+
+# 학생풀이
+# fl = 1
+# el = 1
+# while fl <= 50:
+# 	el = str(el)
+# 	chk = False
+	
+# 	if '4' in el:
+# 		chk = True
+	
+# 	if chk == False:
+# 		print(fl, el)
+# 		fl += 1
+	
+# 	el = int(el)
+# 	el += 1
+
+# 학생풀이 응용
+# fl = 1
+# el = 1
+# while fl <= 50:
+# 	el = str(el)
+# 	chk = False
+
+# 	if '4' in el:
+# 		chk = True
+# 		# 14
+# 		total = 10 ** (len(el)-1 - el.index('4'))
+
+# 		if total != 1:
+# 			el = int(el)
+# 			el += total-1
+	
+# 	if chk == False:
+# 		print(fl, el)
+# 		fl += 1
+	
+# 	el = int(el)
+# 	el += 1
+
+# 학생풀이 응용2
+fl = 1
+el = 1
+while fl <= 50:
+	el = str(el)
+	chk = False
+
+	if '4' in el:
+		chk = True
+		# 14
+		# 40
+		digit = (len(el)-1 - el.index('4'))
+		total = 10 ** digit
+
+		if total != 1:
+			el = int(el)
+			el += total-1
+	
+	if chk == False:
+		print(fl, el)
+		fl += 1
+	
+	el = int(el)
+	el += 1
