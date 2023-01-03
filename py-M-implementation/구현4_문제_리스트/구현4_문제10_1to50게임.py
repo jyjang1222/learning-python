@@ -50,10 +50,10 @@ i = 1
 while i <= 50:
 	# 출력
 	printField(field)
-	inputNum = int(input('\n없앨 숫자를 입력하세요. \n'))
+	idx = int(input('\n없앨 숫자의 위치를 입력하세요.\n')) - 1
 
 	for j in range(len(field)):
-		if field[j]['front'] == inputNum and i == inputNum:
+		if field[j]['front'] == field[idx]['front'] and i == field[idx]['front']:
 			if field[j]['front'] == field[j]['back']:
 				field[j]['front'] = '0'
 				del field[j]

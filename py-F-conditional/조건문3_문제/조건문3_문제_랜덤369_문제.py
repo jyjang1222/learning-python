@@ -15,10 +15,6 @@ import random
 		16	==> 짝
 		 7	==> 7
 '''
-60 // 10
-
-num = random.randint(1, 99)
-박수 = ""
 
 # 내가푼풀이 - 1차
 # if num >= 10:
@@ -29,13 +25,22 @@ num = random.randint(1, 99)
 # if num < 10:
 # 	if num % 3 == 0:
 # 		박수 += "짝"
-
 # print(num, 박수)
 
 # 2차 풀이
-if num // 10 % 3 == 0 and num >= 10:
-		박수 += "짝"
-if num % 10 % 3 == 0 and num % 10 != 0:
-		박수 += "짝"
+# if num // 10 % 3 == 0 and num >= 10:
+# 		박수 += "짝"
+# if num % 10 % 3 == 0 and num % 10 != 0:
+# 		박수 += "짝"
+# print(num, 박수)
 
-print(num, 박수)
+# 3트
+r = random.randint(1, 99)
+arr = [3,6,9]
+n = r
+박수 = ''
+while n != 0:
+	if n % 10 in arr:
+		박수 += '짝'
+	n //= 10
+print(r, 박수)
