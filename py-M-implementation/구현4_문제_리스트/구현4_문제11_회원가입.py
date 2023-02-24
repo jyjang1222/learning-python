@@ -11,3 +11,27 @@
 member_id = []
 member_pw = []
 member_name = []
+menuList = ['0. 종료', '1. 회원가입', '2. 정보수정', '3. 회원탈퇴', '4. 전체출력']
+
+def printMenu():
+    for menu in menuList:
+        print(menu)
+
+def join():
+    userId = input('아이디를 입력해주세요.\n')
+    userPw = input('비밀번호를 입력해주세요.\n')
+    userName = input('이름을 입력해주세요.\n')
+    member_id.append(userId)
+    member_pw.append(userPw)
+    member_name.append(userName)
+
+while True:
+    printMenu()
+    userInput = int(input('메뉴를 입력해주세요.\n'))
+    if userInput == 0:
+        break
+    elif userInput == 1:
+        join()
+    elif userInput == 4:
+        for i in range(len(member_id)):
+            pass
