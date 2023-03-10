@@ -10,10 +10,12 @@
 	13	12	11	10	9
 '''
 a = []
+row = 10
+col = 15
 
-for i in range(5):
+for i in range(row):
 	tmp = []
-	for j in range(5):
+	for j in range(col):
 		tmp.append(0)
 	a.append(tmp)
 
@@ -24,11 +26,11 @@ a[x][y] = 1
 chk = True
 cnt = 0
 n = 2
-while n <= 25:
+while n <= row * col:
 	if chk:
-		if x + 1 < len(a) and a[y][x+1] == 0:
+		if x + 1 < len(a[1]) and a[y][x+1] == 0:
 			x += 1
-			if x == len(a) - 1 or a[y][x+1] != 0:
+			if x == len(a[1]) - 1 or a[y][x+1] != 0:
 				cnt += 1
 		elif y + 1 < len(a) and a[y+1][x] == 0:
 			y += 1
